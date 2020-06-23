@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>人工智能导读课堂笔记（一）</title>
+    <url>/2020/05/31/AInotes1/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="人工智能导读课堂笔记（一）"><a href="#人工智能导读课堂笔记（一）" class="headerlink" title="人工智能导读课堂笔记（一）"></a>人工智能导读课堂笔记（一）</h1><h3 id="一，绪论"><a href="#一，绪论" class="headerlink" title="一，绪论"></a>一，绪论</h3><p>1956年正式提出人工智能（artificial intelligence,AI）这个术语并把它作为一门新兴科学的名称。</p>
+<h4 id="智能的特征"><a href="#智能的特征" class="headerlink" title="智能的特征"></a>智能的特征</h4><ol>
+<li>感知能力：通过视觉、听觉、嗅觉等感知器官感知外部世界的能力；</li>
+<li>记忆与思维能力：存储由感觉器官感知到的外部信息以及由思维所产生的知识，对记忆的信息进行处理；<h4 id="人工智能的主要研究领域"><a href="#人工智能的主要研究领域" class="headerlink" title="人工智能的主要研究领域"></a>人工智能的主要研究领域</h4></li>
+<li>自动定理证明；</li>
+<li>博弈；</li>
+<li>模式识别；</li>
+<li>机器视觉；</li>
+<li>自然语言理解；</li>
+<li>智能信息检索；</li>
+<li>数据挖掘与知识发现；</li>
+<li>专家系统；</li>
+<li>机器人</li>
+<li>自动程序设计；</li>
+<li>组合优化问题；</li>
+<li>人工神经网络；</li>
+<li>分布式人工智能与多智能体；</li>
+<li>智能控制；</li>
+<li>智能仿真；</li>
+<li>智能CAD；</li>
+<li>智能CAI；</li>
+<li>智能管理与智能决策；</li>
+<li>智能多媒体系统；</li>
+<li>智能操作系统；</li>
+<li>智能计算机系统；</li>
+<li>智能通信；</li>
+<li>智能网络系统；</li>
+<li>人工生命；</li>
+</ol>
+</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/31/AInotes2/">人工智能课堂笔记（二）</a></li></ul></div>]]></content>
+      <categories>
+        <category>课堂笔记</category>
+      </categories>
+      <tags>
+        <tag>AI,人工智能导论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人工智能课堂笔记（二）</title>
+    <url>/2020/05/31/AInotes2/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="人工智能课堂笔记（二）"><a href="#人工智能课堂笔记（二）" class="headerlink" title="人工智能课堂笔记（二）"></a>人工智能课堂笔记（二）</h1><h2 id="知识表示"><a href="#知识表示" class="headerlink" title="知识表示"></a>知识表示</h2><p>  人类的智能活动主要是获得并运用知识。知识是智能的基础。为了使计算机具有智能，能模拟人类的智能行为, 就必须使它具有知识。但知识需要用适当的模式表示出来才能存储到计算机中去，因此, 知识的表示成为人工智能中一个十分重要的研究课题。 本章将首先介绍知识与知识表示的概念，然后介绍 一阶谓词逻辑、产生式， 框架、语义网络等当前人工智能中应用比较广泛的知识表示方法，为后面介绍推理方法、专家系统等奠定基础。</p>
+<h3 id="知识与知识表示的概念"><a href="#知识与知识表示的概念" class="headerlink" title="知识与知识表示的概念"></a>知识与知识表示的概念</h3><ul>
+<li>知识：在长期的生活及社会实践中、在科学研究及实验中积累起来的对客观世界的认识与经验。<ul>
+<li>知识：把有关信息关联在一起所形成的信息结构。 </li>
+<li>知识反映了客观世界中事物之间的关系，不同事物或者相同事物间的不同关系形成了不同的知识。</li>
+</ul>
+</li>
+</ul>
+<h4 id="知识的特性"><a href="#知识的特性" class="headerlink" title="知识的特性"></a>知识的特性</h4><ol>
+<li><p>相对正确性： 任何知识都是在一定的条件和环境下产生的，在这种条件和环境下才是正确的；<br><code>1+1=2  （十进制）
+1+1=10  (二进制）</code></p>
+</li>
+<li><p>不确定性</p>
+<ol>
+<li>随机性引起的不确定性；</li>
+<li>模糊性引起的不确定性；</li>
+<li>经验引起的不确定性；</li>
+<li>不完全性引起的不确定性；</li>
+</ol>
+</li>
+<li><p>可表达性与可利用性</p>
+</li>
+</ol>
+<h4 id="知识的表示"><a href="#知识的表示" class="headerlink" title="知识的表示"></a>知识的表示</h4><ul>
+<li>知识表示（knowledge representation）：将人类知识形式化或者模型化；</li>
+<li>知识表示是对知识的一种描述，或者说是一组约定，一种计算机可以接受的用于描述知识的数据结构。</li>
+<li>选择知识表示方法的原则：<ul>
+<li>充分表示领域知识。 </li>
+<li>有利于对知识的利用。</li>
+<li>便于对知识的组织、维护与管理。 </li>
+<li>便于理解与实现。</li>
+</ul>
+</li>
+</ul>
+<h3 id="一阶谓词逻辑表达式"><a href="#一阶谓词逻辑表达式" class="headerlink" title="一阶谓词逻辑表达式"></a>一阶谓词逻辑表达式</h3><p>  <img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531150451.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531150559.png" alt></p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531150833.png" alt></p>
+<h3 id="产生式表达法"><a href="#产生式表达法" class="headerlink" title="产生式表达法"></a>产生式表达法</h3><h4 id="产生式"><a href="#产生式" class="headerlink" title="产生式"></a>产生式</h4><p>  产生式通常用于表示事实、规则以及它们的不确定性度量，适合于表示事实性知识和规则性知识。</p>
+<ol>
+<li>确定性规则知识的产生式表达</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151227.png" alt></p>
+<ol start="2">
+<li>不确定性规则知识的产生式表达</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151303.png" alt></p>
+<ol start="3">
+<li>确定性事实性知识的产生式表示</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151504.png" alt></p>
+<p>4.不确定性事实性知识的产生式表示</p>
+<p>  <img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151522.png" alt></p>
+<p><strong>产生式与谓词逻辑中的蕴涵式的区别：</strong><br>（1）除逻辑蕴涵外，产生式还包括各种操作、规则、变换、算子、函数等。例如，“如果炉温超过上限，则立即关闭风门”是一个产生式，但不是蕴含式。<br>（2）蕴涵式只能表示精确知识，而产生式不仅可以表示精确的知识，还可以表示不精确知识。蕴涵式的匹配总要求是精确的。产生式匹配可以是精确的，也可以是不精确的，只要按某种算法求出的相似度落在预先指定的范围内就认为是可匹配的。</p>
+<p>*<em>产生式的形式描述及语义——巴科斯范式BNF（backus normal form）<br>*</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151748.png" alt></p>
+<p>符号“::=”表示“定义为”；符号“|”表示“或者是”；符号“[ ]”表示“可缺省”</p>
+<h4 id="产生式系统"><a href="#产生式系统" class="headerlink" title="产生式系统"></a>产生式系统</h4><p>把一组产生式放在一起，让它们互相配合，协同作用，一个产生式生成的结论可以供另一个产生式作为已知事实使用，以求得问题的解，这样的系统称为产生式系统。<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531152247.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531152442.png" alt></p>
+<h3 id="框架表示法"><a href="#框架表示法" class="headerlink" title="框架表示法"></a>框架表示法</h3><p>一种结构化的表示方法，已在多种系统中得到应用。</p>
+<ul>
+<li><strong>框架表示法的一般结构：</strong><ul>
+<li>框架（frame）：一种描述所论对象（一个事物、事件或概念）属性的数据结构。</li>
+<li>一个框架由若干个被称为“槽”（slot）的结构组成，每一个槽又可根据实际情况划分为若干个“侧面”（faced）。</li>
+<li>一个槽用于描述所论对象某一方面的属性。</li>
+<li>一个侧面用于描述相应属性的一个方面。</li>
+<li>槽和侧面所具有的属性值分别被称为槽值和侧面值。<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531152801.png" alt></li>
+</ul>
+</li>
+<li><strong>框架表示法的特点：</strong></li>
+</ul>
+<p>（1） 结构性：便于表达结构性知识，能够将知识的内部结构关系及知识间的联系表示出来。<br>（2）继承性：框架网络中，下层框架可以继承上层框架的槽值，也可以进行补充和修改。<br>（3）自然性： 框架表示法与人在观察事物时的思维活动是一致的。</p>
+</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/31/AInotes1/">人工智能导读课堂笔记（一）</a></li></ul></div>]]></content>
+      <categories>
+        <category>课堂笔记</category>
+      </categories>
+      <tags>
+        <tag>AI,人工智能导论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于CNN的垃圾分类模型</title>
+    <url>/2020/05/26/CNN/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="基于CNN的垃圾分类模型"><a href="#基于CNN的垃圾分类模型" class="headerlink" title="基于CNN的垃圾分类模型"></a>基于CNN的垃圾分类模型</h1><h2 id="分类模型实现"><a href="#分类模型实现" class="headerlink" title="分类模型实现"></a>分类模型实现</h2><p>基本思路如下：</p>
+<h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><ul>
+<li>将输入的图像转化为向量；</li>
+<li>对数据进行归一化处理，归一化的目的在于计算距离时保证各个维度的量纲一致；</li>
+<li>对标签进行one-hot编码；</li>
+<li>构造训练集，验证集和测试集；</li>
+</ul>
+<h3 id="利用TensorFlow构建CNN模型"><a href="#利用TensorFlow构建CNN模型" class="headerlink" title="利用TensorFlow构建CNN模型"></a>利用TensorFlow构建CNN模型</h3><p>用TensorFlow打造一张计算图并在python中执行，一张 TensorFlow 图包含以下几个部分：</p>
+<ul>
+<li>占位符变量，用于输入数据到图。</li>
+<li>优化向量，使卷积网络表现更好。</li>
+<li>卷积网络的数学公式。</li>
+<li>可用于指导变量优化的</li>
+<li>成本衡量标准。</li>
+<li>更新变量的优化方法。</li>
+<li>CNN 架构由一堆不同的层组成，这些层通过可微分函数可把输入量转化为输出量。</li>
+</ul>
+<p>神经网络结构如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200526174117.png" alt></p>
+<p>同时在第一个全连接层加入 dropout 正则化防止过拟合，并加快训练速度。</p>
+</body></html>]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>CNN,深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/04/02/Hello%20World/</url>
+    <content><![CDATA[<html><head></head><body><p> 欢迎来到此站点，小站初步建成，尚在完善之中，文章正在搬运，将持续更新！ 如有疑问请在下方评论！</p>
+</body></html>]]></content>
+  </entry>
+  <entry>
+    <title>用onedrive和虚拟空间搭建私有云</title>
+    <url>/2020/05/07/clouds/</url>
+    <content><![CDATA[<html><head></head><body><p>用onedrive+oneindex+挖站否的免费虚机搭建私有云，走OneDrive流量，不走服务器流量。</p>
+<h5 id="原材料"><a href="#原材料" class="headerlink" title="原材料"></a>原材料</h5><ol>
+<li>OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留言附上前缀获取）</li>
+<li>一个VPS或者Linux虚拟主机（<a href="http://wzfou.com/" target="_blank" rel="noopener">本人使用挖站否的虚机</a>,注册后收藏几篇文章即可拿到30积分换取免费虚机)</li>
+</ol>
+<h4 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h4><h5 id="虚拟主机设置"><a href="#虚拟主机设置" class="headerlink" title="虚拟主机设置"></a>虚拟主机设置</h5><p>登录到后台，，点击“登录到DirectAdmin”登录。</p>
+<img src="1.jpg">
+
+<p>进入后选择“文件夹管理”，点击进入“public_html”</p>
+<img src="2.jpg">
+
+
+<h5 id="oneindex下载"><a href="#oneindex下载" class="headerlink" title="oneindex下载"></a>oneindex下载</h5><p>某热心老哥的魔改版<a href="https://github.com/newcdn/oneindex" target="_blank" rel="noopener">下载地址</a></p>
+<p>本人自建站<a href="http://xiheye.wzfou.me/oneindex/Oneindex-master.zip" target="_blank" rel="noopener">下载地址</a></p>
+<p>然后我们上传到public_html里面并解压，把oneindex-master里面的东西移出来，像这样:</p>
+<img src="3.jpg">
+
+<p>然后进入你在注册主机时用的域名或主机商给你的二级域名，开始进行安装</p>
+<img src="4.jpg">
+
+<p>以上就是全部安装教程啦，我们下次再见！</p>
+<h5 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h5><h2 id="OneDrive另类用法-搭建OneIndex"><a href="#OneDrive另类用法-搭建OneIndex" class="headerlink" title="OneDrive另类用法-搭建OneIndex"></a><a href="https://zhuanlan.zhihu.com/p/79678905" target="_blank" rel="noopener">OneDrive另类用法-搭建OneIndex</a></h2><hr>
+<h4 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h4><p>由于挖站否空间的域名莫名其妙挂掉，本人改用 <a href="http://freela.ml/" target="_blank" rel="noopener">http://freela.ml/</a> 的空间</p>
+</body></html>]]></content>
+      <categories>
+        <category>-私有云</category>
+      </categories>
+      <tags>
+        <tag>onedrive</tag>
+        <tag>私有云</tag>
+        <tag>oneindex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>navigation</title>
+    <url>/2020/05/18/navigation/</url>
+    <content><![CDATA[<html><head></head><body><p>CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，可以使用它在一分钟内搭建属于自己的导航页面。</p>
+<p>CF-Worker-Dir提供丰富的自定义配置，同时它还可以预留了接口帮助你售出自己域名。</p>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h4><p>项目：<a href="https://github.com/sleepwood/CF-Worker-Dir/" target="_blank" rel="noopener">https://github.com/sleepwood/CF-Worker-Dir/</a></p>
+<p>演示：<a href="http://gethe.best/" target="_blank" rel="noopener">http://gethe.best/</a></p>
+<p>演示1：<a href="https://navigation.yexihe.workers.dev/" target="_blank" rel="noopener">https://navigation.yexihe.workers.dev/</a></p>
+<h4 id="2-申请worker"><a href="#2-申请worker" class="headerlink" title="2. 申请worker"></a>2. 申请worker</h4><p>登录cloudflare之后在左侧即可看到CF-Worker</p>
+<img src="CF-Worker-Dir-1.png">
+
+<p>点击进去之后，选择一个子域，具体如图：</p>
+<img src="CF-Worker-Dir-2.png">
+
+<p>点击“set up”之后，我们选择免费套餐，如图：</p>
+<img src="CF-Worker-Dir-3.png">
+
+<h4 id="3-创建worker"><a href="#3-创建worker" class="headerlink" title="3. 创建worker"></a>3. 创建worker</h4><p>申请好之后，开始创建一个Worker，如图：</p>
+<img src="CF-Worker-Dir-4.png">
+
+<p>之后，我们在Worker编辑页面左边粘贴 index.js 中的代码，具体代码如下：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="STATA"><figure class="iseeu highlight /stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义网站配置 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> config = {</span><br><span class="line">  title: <span class="string">"自定义导航"</span>,                 <span class="comment">//write your website title</span></span><br><span class="line">  subtitle: <span class="string">"Cloudflare Workers Dir"</span>, <span class="comment">//write your website subtitle</span></span><br><span class="line">  logo_icon: <span class="string">"sitemap"</span>,               <span class="comment">//select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)</span></span><br><span class="line">  hitokoto: true,                     <span class="comment">//use hitokoto or not</span></span><br><span class="line">  <span class="keyword">search</span>:true,                        <span class="comment">//enable search function</span></span><br><span class="line">  search_engine:[                     <span class="comment">//choose search engine which you use</span></span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"百 度"</span>,</span><br><span class="line">      template:<span class="string">"https://www.baidu.com/s?wd=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"谷 歌"</span>,</span><br><span class="line">      template:<span class="string">"https://www.google.com/search?q=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"必 应"</span>,</span><br><span class="line">      template:<span class="string">"https://www.bing.com/search?q=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"搜 狗"</span>,</span><br><span class="line">      template:<span class="string">"https://www.sogou.com/web?query=$s"</span></span><br><span class="line">    }</span><br><span class="line">  ],</span><br><span class="line">  selling_ads: true,                  <span class="comment">//Selling your domain or not.(turning on may be helpful for selling this domain by showing some ads.)</span></span><br><span class="line">  sell_info:{</span><br><span class="line">    domain:<span class="string">"example.com"</span>,</span><br><span class="line">    price:500,                        <span class="comment">//domain price</span></span><br><span class="line">    mon_unit:<span class="string">"yen sign"</span>,              <span class="comment">//monetary unit </span></span><br><span class="line">    contact:[                         <span class="comment">//how to contact you</span></span><br><span class="line">      {</span><br><span class="line">        <span class="keyword">type</span>:<span class="string">"envelope"</span>,               <span class="comment">//contact type ("weixin","qq","telegram plane","envelope" or "phone")</span></span><br><span class="line">        content:<span class="string">"info@example.com"</span></span><br><span class="line">      }</span><br><span class="line">    ]                        </span><br><span class="line">  },</span><br><span class="line">  lists: [                            <span class="comment">//Url list</span></span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"技术"</span>,</span><br><span class="line">      icon:<span class="string">"code"</span>,</span><br><span class="line">      <span class="keyword">list</span>:[</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://oschina.net/"</span>,</span><br><span class="line">          name:<span class="string">"开源中国"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://v2ex.com"</span>,</span><br><span class="line">          name:<span class="string">"V2EX"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://csdn.net/"</span>,</span><br><span class="line">          name:<span class="string">"CSDN技术社区"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://github.com/"</span>,</span><br><span class="line">          name:<span class="string">"Github"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">      ]</span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"学习"</span>,</span><br><span class="line">      icon:<span class="string">"graduation cap"</span>,</span><br><span class="line">      <span class="keyword">list</span>:[</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://w3school.com.cn/"</span>,</span><br><span class="line">          name:<span class="string">"W3school在线教程"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://runoob.com/"</span>,</span><br><span class="line">          name:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://segmentfault.com/"</span>,</span><br><span class="line">          name:<span class="string">"思否社区"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://jianshu.com/"</span>,</span><br><span class="line">          name:<span class="string">"简书"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">      ]</span><br><span class="line">    }</span><br><span class="line">  ]</span><br><span class="line">}</span><br><span class="line"><span class="keyword">const</span> el = (tag, attrs, content) => `<<span class="variable">${tag}</span> <span class="variable">${attrs</span>.join(<span class="string">" "</span>)}><span class="variable">${content}</span></<span class="variable">${tag}</span>>`;</span><br><span class="line"></span><br><span class="line">async function handleRequest(request) {</span><br><span class="line">  <span class="keyword">const</span> init = {</span><br><span class="line">    headers: {</span><br><span class="line">      'content-<span class="keyword">type</span>': 'text/html;charset=UTF-8',</span><br><span class="line">    },</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> new Response(renderHTML(renderIndex(),config.selling_ads? renderSeller() :null), init);</span><br><span class="line">}</span><br><span class="line">addEventListener('fetch', event => {</span><br><span class="line">  <span class="keyword">return</span> event.respondWith(handleRequest(event.request))</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">/*通过分析链接 实时获取favicon</span></span><br><span class="line"><span class="comment">* @url 需要分析的Url地址</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">function getFavicon(url){</span><br><span class="line">  <span class="keyword">if</span>(url.<span class="built_in">match</span>(/https{0,1}:\/\<span class="comment">//)){</span></span><br><span class="line">    <span class="comment">//return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"https://www.google.cn/s2/favicons?sz=64&domain_url="</span> + url;</span><br><span class="line">  }<span class="keyword">else</span>{</span><br><span class="line">    <span class="comment">//return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"https://www.google.cn/s2/favicons?sz=64&domain_url=http://"</span> + url;</span><br><span class="line">  } </span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/** Render Functions</span></span><br><span class="line"><span class="comment"> *  渲染模块函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">function renderIndex(){</span><br><span class="line">  <span class="keyword">const</span> footer = <span class="built_in">el</span>('footer',[],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"footer"</span>'],'Powered <span class="keyword">by</span>' + <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"ui label"</span>','href=<span class="string">"https://github.com/sleepwood/cf-worker-dir"</span>','target=<span class="string">"_blank"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"github icon"</span>'],<span class="string">""</span>) + '<span class="keyword">Cf</span>-Worker-<span class="keyword">Dir</span>') + ' &<span class="keyword">copy</span>; Base <span class="keyword">on</span> ' + <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"ui label"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"balance scale icon"</span>'],<span class="string">""</span>) + 'MIT License')));</span><br><span class="line">  <span class="keyword">return</span> renderHeader() + renderMain() + footer;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderHeader(){</span><br><span class="line">  <span class="keyword">const</span> item = (template,name) => <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"item"</span>',`data-url=<span class="string">"${template}"</span>`],name);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> nav = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui large secondary inverted menu"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"item"</span>'],<span class="built_in">el</span>('p',['id=<span class="string">"hitokoto"</span>'],'条条大路通罗马')))</span><br><span class="line">  <span class="keyword">var</span> title = <span class="built_in">el</span>('h1',['<span class="keyword">class</span>=<span class="string">"ui inverted header"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${config.logo_icon} icon"</span>`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],config.title + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"sub header"</span>'],config.subtitle)));</span><br><span class="line">  <span class="keyword">var</span> menu = <span class="built_in">el</span>('div',['id=<span class="string">"sengine"</span>','<span class="keyword">class</span>=<span class="string">"ui bottom attached tabular inverted secondary menu"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"header item"</span>'],'&nbsp;') + config.search_engine.map((link,key) =>{</span><br><span class="line">    <span class="keyword">if</span>(key == 0){</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"active item"</span>',`data-url=<span class="string">"${link.template}"</span>`],link.name);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">      <span class="keyword">return</span> item(link.template,link.name);</span><br><span class="line">    }</span><br><span class="line">  }).join(<span class="string">""</span>))</span><br><span class="line">  <span class="keyword">var</span> <span class="keyword">input</span> = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui left corner labeled right icon fluid large input"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui left corner label"</span>'],<span class="built_in">el</span>('img',['id=<span class="string">"search-fav"</span>','<span class="keyword">class</span>=<span class="string">"left floated avatar ui image"</span>','src=<span class="string">"https://www.baidu.com/favicon.ico"</span>'],<span class="string">""</span>)) + <span class="built_in">el</span>('<span class="keyword">input</span>',['id=<span class="string">"searchinput"</span>','<span class="keyword">type</span>=<span class="string">"search"</span>','placeholder=<span class="string">"搜索你想要知道的……"</span>','autocomplete=<span class="string">"off"</span>'],<span class="string">""</span>) + <span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"inverted circular search link icon"</span>'],<span class="string">""</span>));</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('header',[],<span class="built_in">el</span>('div',['id=<span class="string">"head"</span>','<span class="keyword">class</span>=<span class="string">"ui inverted vertical masthead center aligned segment"</span>'],(config.hitokoto ? <span class="built_in">el</span>('div',['id=<span class="string">"nav"</span>','<span class="keyword">class</span>=<span class="string">"ui container"</span>'],nav) : <span class="string">""</span>) + <span class="built_in">el</span>('div',['id=<span class="string">"title"</span>','<span class="keyword">class</span>=<span class="string">"ui text container"</span>'],title + (config.<span class="keyword">search</span> ? <span class="keyword">input</span> + menu :<span class="string">""</span>) + `<span class="variable">${config</span>.selling_ads ? '<div><a id=<span class="string">"menubtn"</span> <span class="keyword">class</span>=<span class="string">"red ui icon inverted button"</span>><i <span class="keyword">class</span>=<span class="string">"heart icon"</span>></i> 喜欢此域名 </a></div>' : ''}`)))</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderMain() {</span><br><span class="line">  <span class="keyword">var</span> main = config.lists.map((item) => {</span><br><span class="line">    <span class="keyword">const</span> card = (url,name,<span class="keyword">desc</span>)=> <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"card"</span>',`href=<span class="variable">${url}</span>`,'target=<span class="string">"_blank"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],<span class="built_in">el</span>('img',['<span class="keyword">class</span>=<span class="string">"left floated avatar ui image"</span>',`src=<span class="variable">${getFavicon</span>(url)}`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"header"</span>'],name) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"meta"</span>'],<span class="keyword">desc</span>)));</span><br><span class="line">    <span class="keyword">const</span> divider = <span class="built_in">el</span>('h4',['<span class="keyword">class</span>=<span class="string">"ui horizontal divider header"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${item.icon} icon"</span>`],<span class="string">""</span>)+item.name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> content = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui four stackable cards"</span>'],item.<span class="keyword">list</span>.map((link) =>{</span><br><span class="line">      <span class="keyword">return</span> card(link.url,link.name,link.<span class="keyword">desc</span>);</span><br><span class="line">    }).join(<span class="string">""</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic segment"</span>'],divider + content);</span><br><span class="line">  }).join(<span class="string">""</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('main',[],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui container"</span>'],main));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderSeller() {</span><br><span class="line">  <span class="keyword">const</span> item = (<span class="keyword">type</span>,content) => <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"item"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${type} icon"</span>`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],content));</span><br><span class="line">  <span class="keyword">var</span> title = <span class="built_in">el</span>('h1',['<span class="keyword">class</span>=<span class="string">"ui yellow dividing header"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"gem outline icon"</span>'],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],config.sell_info.domain + ' 正在出售'));</span><br><span class="line">  <span class="keyword">var</span> action = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"actions"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic cancel inverted button"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"reply icon"</span>'],<span class="string">""</span>) + '返回'));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> contact = config.sell_info.contact.map((<span class="keyword">list</span>) => {</span><br><span class="line">    <span class="keyword">return</span> item(<span class="keyword">list</span>.<span class="keyword">type</span>,<span class="keyword">list</span>.content);</span><br><span class="line">  }).join(<span class="string">""</span>);</span><br><span class="line">  <span class="keyword">var</span> column = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"column"</span>'],<span class="built_in">el</span>('h3',['<span class="keyword">class</span>=<span class="string">"ui center aligned icon inverted header"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"circular envelope open outline grey inverted icon"</span>'],<span class="string">""</span>) + '联系我') + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui relaxed celled large list"</span>'],contact));</span><br><span class="line">  <span class="keyword">var</span> price = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"column"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui large yellow statistic"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"value"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${config.sell_info.mon_unit} icon"</span>`],<span class="string">""</span>) + config.sell_info.price)));</span><br><span class="line">  <span class="keyword">var</span> content = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic segment"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui two column stackable center aligned grid"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui inverted vertical divider"</span>'],'感兴趣？') + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"middle aligned row"</span>'],price + column))));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('div',['id=<span class="string">"seller"</span>','<span class="keyword">class</span>=<span class="string">"ui basic modal"</span>'],title + content + action);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderHTML(index,seller) {</span><br><span class="line">  <span class="keyword">return</span> `<!DOCTYPE html></span><br><span class="line">  <html lang=<span class="string">"en"</span>></span><br><span class="line">  <head></span><br><span class="line">      <<span class="keyword">meta</span> charset=<span class="string">"UTF-8"</span>></span><br><span class="line">      <<span class="keyword">meta</span> name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>></span><br><span class="line">      <<span class="keyword">meta</span> http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>></span><br><span class="line">      <title><span class="variable">${config</span>.title} - <span class="variable">${config</span>.subtitle}</title></span><br><span class="line">      <link href=<span class="string">"https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css"</span> rel=<span class="string">"stylesheet"</span>></span><br><span class="line">      <link href=<span class="string">"https://cdn.jsdelivr.net/gh/sleepwood/cf-worker-dir@0.1.1/style.css"</span> rel=<span class="string">"stylesheet"</span>></span><br><span class="line">      <script src=<span class="string">"https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"</span>></script></span><br><span class="line">      <script src=<span class="string">"https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"</span>></script></span><br><span class="line">  </head></span><br><span class="line">  <body></span><br><span class="line">    <span class="variable">${index}</span></span><br><span class="line">    <span class="variable">${config</span>.selling_ads ? seller : ''}</span><br><span class="line">    <script src=<span class="string">"https://v1.hitokoto.cn/?encode=js&select=%23hitokoto"</span> defer></script></span><br><span class="line">    <script></span><br><span class="line">      $('#sengine a').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">        $('#sengine a.active').toggleClass('active');</span><br><span class="line">        $(<span class="keyword">e</span>.target).toggleClass('active');</span><br><span class="line">        $('#<span class="keyword">search</span>-fav').attr('src',$(<span class="keyword">e</span>.target).data('url').<span class="built_in">match</span>(`+/https{0,1}:\/\/\S+\<span class="comment">//+`)[0] + '/favicon.ico') ;</span></span><br><span class="line">      });</span><br><span class="line">      $('.<span class="keyword">search</span>').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">          <span class="keyword">var</span> url = $('#sengine a.active').data('url');</span><br><span class="line">          url = url.<span class="keyword">replace</span>(`+/\<span class="variable">$s</span>/+`,$('#searchinput').val());</span><br><span class="line">          <span class="keyword">window</span>.<span class="keyword">open</span>(url);</span><br><span class="line">      });</span><br><span class="line">      <span class="comment">/* 鼠标聚焦时，回车事件 */</span></span><br><span class="line">      $(<span class="string">"#searchinput"</span>).bind(<span class="string">"keypress"</span>, function(){</span><br><span class="line">          <span class="keyword">if</span> (event.keyCode == 13){</span><br><span class="line">          <span class="comment">// 触发需要调用的方法</span></span><br><span class="line">          $(<span class="string">".search"</span>).click();</span><br><span class="line">          }</span><br><span class="line">      });</span><br><span class="line">      $('#menubtn').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">          $('#seller').modal('show');</span><br><span class="line">      });</span><br><span class="line">    </script></span><br><span class="line">  </body></span><br><span class="line">  </html>`</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<img src="CF-Worker-Dir-5.png">
+
+<p>保存之后，点击右侧的“Preview”看到到效果，如图：</p>
+<img src="CF-Worker-Dir-6.png">
+
+<h4 id="4-自定义域名"><a href="#4-自定义域名" class="headerlink" title="4. 自定义域名"></a>4. 自定义域名</h4><ul>
+<li>根据上文快速安装完成，回到域名管理面板</li>
+<li>点击 Workers 进入Workers管理页面</li>
+<li>点击 Add route 设置新的路由</li>
+</ul>
+</body></html>]]></content>
+  </entry>
+  <entry>
+    <title>python+Flask+bootstrap+myAQL搭建新闻网站后台</title>
+    <url>/2020/04/27/flask-use/</url>
+    <content><![CDATA[<html><head></head><body><p>基于Python的Flask框架快速构建前端调试后台的方案。最近由于移动互联网开发需要搭建后台接口和后端管理网站，但是奈何不会用JAVA，就接触了flask框架。以下便简要介绍一下开发过程。</p>
+<h3 id="Flask-概述"><a href="#Flask-概述" class="headerlink" title="Flask 概述"></a>Flask 概述</h3><h4 id="什么是Web-Framework？"><a href="#什么是Web-Framework？" class="headerlink" title="什么是Web Framework？"></a>什么是Web Framework？</h4><p>Web Application Framework（Web应用程序框架）或简单的Web Framework（Web框架）表示一个库和模块的集合，使Web应用程序开发人员能够编写应用程序，而不必担心协议，线程管理等低级细节。</p>
+<h4 id="什么是Flask？"><a href="#什么是Flask？" class="headerlink" title="什么是Flask？"></a>什么是Flask？</h4><p>Flask是一个用Python编写的Web应用程序框架。 它由 Armin Ronacher 开发，他领导一个名为Pocco的国际Python爱好者团队。 Flask基于Werkzeug WSGI工具包和Jinja2模板引擎。两者都是Pocco项目。</p>
+<h4 id="WSGI"><a href="#WSGI" class="headerlink" title="WSGI"></a>WSGI</h4><p>Web Server Gateway Interface（Web服务器网关接口，WSGI）已被用作Python Web应用程序开发的标准。 WSGI是Web服务器和Web应用程序之间通用接口的规范。Werkzeug它是一个WSGI工具包，它实现了请求，响应对象和实用函数。 这使得能够在其上构建web框架。 Flask框架使用Werkzeug作为其基础之一。</p>
+<h4 id="jinja2"><a href="#jinja2" class="headerlink" title="jinja2"></a>jinja2</h4><p>jinja2是Python的一个流行的模板引擎。Web模板系统将模板与特定数据源组合以呈现动态网页。Flask通常被称为微框架。 它旨在保持应用程序的核心简单且可扩展。Flask没有用于数据库处理的内置抽象层，也没有形成验证支持。相反，Flask支持扩展以向应用程序添加此类功能。</p>
+<h3 id="flask应用"><a href="#flask应用" class="headerlink" title="flask应用"></a>flask应用</h3><h4 id="初始化app"><a href="#初始化app" class="headerlink" title="初始化app"></a>初始化app</h4><p>在编辑器中新建hello.py文件，输入以下代码以初始化app：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ELIXIR"><figure class="iseeu highlight /elixir"><table><tbody><tr><td class="code"><pre><span class="line">from flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="variable">@app</span>.route(<span class="string">'/'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span></span>()<span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello World’</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">if __name__ == '</span>__main__<span class="string">':</span></span><br><span class="line"><span class="string">   app.run()</span></span><br></pre></td></tr></tbody></table></figure></div>
+
+<p>Flask构造函数使用当前模块（__name __）的名称作为参数。Flask类的route()函数是一个装饰器，它告诉应用程序哪个URL应该调用相关的函数。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line">app.route(<span class="keyword">rule</span>, <span class="keyword">options</span>)</span><br></pre></td></tr></tbody></table></figure></div>
+<ul>
+<li><strong>rule:</strong> 参数表示与该函数的URL绑定。</li>
+<li><strong>options:</strong> 是要转发给基础Rule对象的参数列表。</li>
+</ul>
+<p>在上面的示例中，’/ ‘ URL与hello_world()函数绑定。因此，当在浏览器中打开web服务器的主页时，将呈现该函数的输出。最后，Flask类的run()方法在本地开发服务器上运行应用程序。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DOCKERFILE"><figure class="iseeu highlight /dockerfile"><table><tbody><tr><td class="code"><pre><span class="line">app.<span class="keyword">run</span><span class="bash">(host, port, debug, options)</span></span><br></pre></td></tr></tbody></table></figure></div>
+<ul>
+<li><p><strong>host:</strong> 要监听的主机名。 默认为127.0.0.1（localhost）。设置为“0.0.0.0”以使服务器在外部可用;</p>
+</li>
+<li><p><strong>post:</strong> 默认值为5000；</p>
+</li>
+<li><p><strong>debug:</strong> 默认为false。 如果设置为true，则提供调试信息;</p>
+</li>
+<li><p><strong>options:</strong> 要转发到底层的Werkzeug服务器。</p>
+<h4 id="Flask路由"><a href="#Flask路由" class="headerlink" title="Flask路由"></a>Flask路由</h4></li>
+<li><p>Flask中的route()装饰器用于将URL绑定到函数。例如：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="RUBY"><figure class="iseeu highlight /ruby"><table><tbody><tr><td class="code"><pre><span class="line">@app.route(‘/hello’)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> ‘hello world’</span><br></pre></td></tr></tbody></table></figure></div>
+
+</li>
+</ul>
+<p>在这里，URL ‘/ hello’ 规则绑定到hello_world()函数。 因此，如果用户访问http：// localhost：5000 / hello URL，hello_world()函数的输出将在浏览器中呈现。</p>
+<ul>
+<li>application对象的add_url_rule()函数也可用于将URL与函数绑定：<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="RUBY"><figure class="iseeu highlight /ruby"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> ‘hello world’</span><br><span class="line">app.add_url_rule(‘/’, ‘hello’, hello_world)</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="Flask变量规则"><a href="#Flask变量规则" class="headerlink" title="Flask变量规则"></a>Flask变量规则</h4></li>
+</ul>
+<p>通过向规则参数添加变量部分，可以动态构建URL。此变量部分标记为<variable-name>。它作为关键字参数传递给与规则相关联的函数。</variable-name></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/hello/<name>'</span>)</span><br><span class="line">def hello_name(<span class="type">name</span>):</span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello %s!'</span> % <span class="type">name</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(<span class="keyword">debug</span> = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div>
+<p>在上述代码中，，route()装饰器的规则参数包含附加到URL ‘/hello’的<name>。因此，如果在浏览器中输入<a href="http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。" target="_blank" rel="noopener">http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。</a></name></p>
+<h4 id="Flask-HTTP方法"><a href="#Flask-HTTP方法" class="headerlink" title="Flask HTTP方法"></a>Flask HTTP方法</h4><p>Http协议是万维网中数据通信的基础。在该协议中定义了从指定URL检索数据的不同方法:</p>
+<ul>
+<li><p><strong>GET:</strong> 以未加密的形式将数据发送到服务器。最常见的方法。</p>
+</li>
+<li><p><strong>HEAD:</strong> 和GET方法相同，但没有响应体。</p>
+</li>
+<li><p><strong>POST:</strong> 用于将HTML表单数据发送到服务器。POST方法接收的数据不由服务器缓存。    </p>
+</li>
+<li><p><strong>PUT:</strong> 用上传的内容替换目标资源的所有当前表示。    </p>
+</li>
+<li><p><strong>DELETE:</strong> 删除由URL给出的目标资源的所有当前表示。<br>默认情况下，Flask路由响应GET请求。但是，可以通过为route()装饰器提供方法参数来更改此首选项。接下来演示一下在URL路由中使用POST方法：<br>新建一个login.html文件:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XML"><figure class="iseeu highlight /xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line">   <span class="tag"><<span class="name">body</span>></span></span><br><span class="line">      </span><br><span class="line">      <span class="tag"><<span class="name">form</span> <span class="attr">action</span> = <span class="string">"http://localhost:5000/login"</span> <span class="attr">method</span> = <span class="string">"post"</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span>Enter Name:<span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"text"</span> <span class="attr">name</span> = <span class="string">"nm"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"submit"</span> <span class="attr">value</span> = <span class="string">"submit"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">      <span class="tag"></<span class="name">form</span>></span></span><br><span class="line">      </span><br><span class="line">   <span class="tag"></<span class="name">body</span>></span></span><br><span class="line"><span class="tag"></<span class="name">html</span>></span></span><br></pre></td></tr></tbody></table></figure></div>
+<p>python中使用以下脚本：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="OXYGENE"><figure class="iseeu highlight /oxygene"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask import Flask, redirect, url_for, request</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/success/<name>'</span>)</span><br><span class="line">def success(name):</span><br><span class="line">   return <span class="string">'welcome %s'</span> % name</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/login'</span>,methods = [<span class="string">'POST'</span>, <span class="string">'GET'</span>])</span><br><span class="line">def login():</span><br><span class="line">   <span class="keyword">if</span> request<span class="function">.<span class="keyword">method</span> == '<span class="title">POST</span>':</span></span><br><span class="line">      user = request.form[<span class="string">'nm'</span>]</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      user = request.args.get(<span class="string">'nm'</span>)</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(debug = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div>
+
+</li>
+</ul>
+<p>在浏览器中打开login.html，在文本字段中输入name，然后单击提交；<br>表单数据将POST到表单标签的action子句中的URL。<a href="http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：" target="_blank" rel="noopener">http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">user</span> <span class="title">= request</span>.form['nm']</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p>在login.html中将方法参数更改为’GET’，然后在浏览器中再次打开它。服务器上接收的数据是通过GET方法获得的。通过以下的步骤获得’nm’参数的值：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">User</span> <span class="title">= request</span>.args.get(‘nm’)</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="Flask-Request对象"><a href="#Flask-Request对象" class="headerlink" title="Flask Request对象"></a>Flask Request对象</h4><p>来自客户端网页的数据作为全局请求对象发送到服务器。为了处理请求数据，应该从Flask模块导入。<br>    Request对象的重要属性如下所列：<br><strong>Form</strong> - 它是一个字典对象，包含表单参数及其值的键和值对。<br><strong>args</strong> - 解析查询字符串的内容，它是问号（？）之后的URL的一部分。<br><strong>Cookies</strong>  - 保存Cookie名称和值的字典对象。<br><strong>files</strong> - 与上传文件有关的数据。<br><strong>method</strong> - 当前请求方法。</p>
+<h3 id="bootstrap-flask简介"><a href="#bootstrap-flask简介" class="headerlink" title="bootstrap_flask简介"></a>bootstrap_flask简介</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask import Flask, request, jsonify</span><br><span class="line">import os</span><br><span class="line"><span class="keyword">from</span> api.v1 import config</span><br><span class="line"><span class="keyword">from</span> flask_bootstrap import Bootstrap</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)Bootstrap(app)</span><br><span class="line">app.config.from_object(config)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.<span class="builtin-name">run</span>()</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="定义块内容"><a href="#定义块内容" class="headerlink" title="定义块内容"></a>定义块内容</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name"><span class="name">extends</span></span> 'bootstrap/base.html' %}</span><span class="xml">  #声明继承</span></span><br><span class="line"><span class="template-tag">{% <span class="name">import</span> '_macro.html' <span class="keyword">as</span> ui %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> title %}</span><span class="template-variable">{{ title_name }}</span><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> content %}</span></span><br><span class="line"><span class="xml">    <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-header"</span>></span></span></span><br><span class="line"><span class="xml">        <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span></span><br><span class="line"><span class="xml">            <span class="tag"><<span class="name">h1</span>></span></span><span class="template-variable">{{ self.title() }}</span><span class="xml"><span class="tag"></<span class="name">h1</span>></span></span></span><br><span class="line"><span class="xml">        <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="xml">    <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="xml">    <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{  ui.input('username') }}</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{  ui.input('password',type='password') }}</span></span><br><span class="line"><span class="xml">    <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> content %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> head %}</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{ super() }}</span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">{% <span class="name"><span class="name">include</span></span> 'includes/_head.html' %}</span></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> %}</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p>bootstrap_flask中html标签等内容可以参考文档：<a href="https://v4.bootcss.com/docs/getting-started/introduction/" target="_blank" rel="noopener">《Bootstrap中文文档》</a></p>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
+<li><a href="https://v4.bootcss.com/docs/getting-started/introduction/" target="_blank" rel="noopener">《Bootstrap中文文档》</a></li>
+<li><a href="https://www.jianshu.com/p/b24fe5c08c73" target="_blank" rel="noopener">flask base.html解析</a></li>
+<li><a href="https://dormousehole.readthedocs.io/en/latest/templating.html#id3" target="_blank" rel="noopener">jinja2文档</a></li>
+<li><a href="https://blog.csdn.net/stone0823/article/details/85326624" target="_blank" rel="noopener">Flask 如何使用 Bootstrap 来美化页面</a></li>
+<li><a href="https://www.cnblogs.com/wongbingming/p/6813221.html" target="_blank" rel="noopener">Flask入门之Bootstrap介绍使用和Flask-Nav快速导航栏</a></li>
+</ul>
+<hr>
+<ul>
+<li><h5 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h5>最后附上本人移动互联网开发新闻管理后台源码（转载请备注来源）<br><a href="myflask.zip">链接</a></li>
+</ul>
+</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="https://thelighter.github.io/2020/05/17/flask-emoji/">flask如何在mysql中储存emoji表情</a></li></ul></div>]]></content>
+      <categories>
+        <category>后端开发</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+        <tag>python</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用 onemanager + onedrive + freela虚拟主机搭建私有云</title>
+    <url>/2020/05/25/onemanager/</url>
+    <content><![CDATA[<html><head></head><body><p>OneManager-php是一款强大的OneDrive列表程序，支持的功能比oneindex多，并且支持无服务器一键搭建，支持腾讯SCF服务搭建，基本上能用的搭建方式都支持，而且支持OneDrive商业版、OneDrive个人版和世纪互联版、支持多盘绑定。支持访客上传文件，图床模式，可以让访客上传文件做为图床使用，非常的方便。</p>
+<p>演示地址：<a href="http://cloud.xiheye.club/" target="_blank" rel="noopener">http://cloud.xiheye.club/</a></p>
+<h4 id="注册虚拟主机"><a href="#注册虚拟主机" class="headerlink" title="注册虚拟主机"></a>注册虚拟主机</h4><p><a href="https://www.freela.ml/" target="_blank" rel="noopener">注册链接</a><br>注册后<a href="http://cpanel.freela.ml/index.php" target="_blank" rel="noopener">登录</a>虚拟主机</p>
+<img src="1.png">
+
+<h4 id="下载onemannager"><a href="#下载onemannager" class="headerlink" title="下载onemannager"></a>下载onemannager</h4><p>github  : <a href="https://github.com/qkqpttgf/OneManager-php" target="_blank" rel="noopener">https://github.com/qkqpttgf/OneManager-php</a></p>
+<p>下载地址：<a href="http://cloud.xiheye.club/onemanager/OneManager-php-master.zip" target="_blank" rel="noopener">http://cloud.xiheye.club/onemanager/OneManager-php-master.zip</a></p>
+<h4 id="设置子域名-插件域"><a href="#设置子域名-插件域" class="headerlink" title="设置子域名/插件域"></a>设置子域名/插件域</h4><p>子域名：虚拟主机的根目录域名；<br>插件域：在虚拟主机内产生一个新的文件夹；</p>
+<img src="2.png">
+
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>将刚刚下载的文件上传到虚拟主机域名下的htdocs文件夹并解压<br><img src="3.png"></p>
+<h4 id="安装程序-傻瓜式安装，以下内容可以忽略"><a href="#安装程序-傻瓜式安装，以下内容可以忽略" class="headerlink" title="安装程序(傻瓜式安装，以下内容可以忽略)"></a>安装程序(傻瓜式安装，以下内容可以忽略)</h4><p>打开你的应用程序网站后开始程序安装</p>
+<img src="4.png">
+
+<p>选择中文后点击新建ApiKey进入新打开页面后复制API密钥返回安装页面填入。Set admin password为设置你网盘程序后台的密码。</p>
+<img src="5.png">
+
+
+
+
+
+
+<img src="6.png">
+
+<p>完成安装后进入网盘界面，点击登录并输入上一步自己设置的密码。登录后点击管理—设置进入设置页面。<br>设置页面可以设置各项设置，点击最下方进入添加Onedrive盘</p>
+<img src="7.png">
+
+<p>之后安装教程就结束了，有疑问请在下方评论。</p>
+</body></html>]]></content>
+  </entry>
+  <entry>
+    <title>操作系统笔记（一）</title>
+    <url>/2020/05/26/os1/</url>
+    <content><![CDATA[<html><head></head><body><h2 id="1-1-操作系统的功能"><a href="#1-1-操作系统的功能" class="headerlink" title="1.1 操作系统的功能"></a>1.1 操作系统的功能</h2><h4 id="1-1-1-计算机系统的组成部分"><a href="#1-1-1-计算机系统的组成部分" class="headerlink" title="1.1.1 计算机系统的组成部分"></a>1.1.1 计算机系统的组成部分</h4><ul>
+<li>硬件、操作系统、系统程序和应用程序、用户</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/2.png" alt></p>
+<h4 id="1-1-2-两个视角"><a href="#1-1-2-两个视角" class="headerlink" title="1.1.2 两个视角"></a>1.1.2 两个视角</h4><ul>
+<li><p>用户视角：OS设计目的是为了用户使用方便，性能是相对其次的</p>
+</li>
+<li><p>系统视角：OS是资源分配器&&OS是控制程序</p>
+</li>
+</ul>
+<h4 id="1-1-3-定义操作系统"><a href="#1-1-3-定义操作系统" class="headerlink" title="1.1.3 定义操作系统"></a>1.1.3 定义操作系统</h4><ul>
+<li>操作系统是一组控制和管理计算机硬件和软件资源、合理地对各类作业进行调<br>度，以及方便用户的程序集合。操作系统是用户和计算机的接口，同时也是计算机软件和其他软件的接口。</li>
+</ul>
+<h2 id="1-2-计算机系统的组织"><a href="#1-2-计算机系统的组织" class="headerlink" title="1.2 计算机系统的组织"></a>1.2 计算机系统的组织</h2><h4 id="1-2-1-中断"><a href="#1-2-1-中断" class="headerlink" title="1.2.1 中断"></a>1.2.1 中断</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ANGELSCRIPT"><figure class="iseeu highlight /angelscript"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="number">1</span>)保护断点：即保存下一将要执行的指令的地址，就是把这个地址送入堆栈。</span><br><span class="line">(<span class="number">2</span>)寻找中断入口：根据不同的中断源所产生的中断向量，查找不同的入口地址，入口地址处存放着中断处理程序。</span><br><span class="line">(<span class="number">3</span>)执行中断处理程序。</span><br><span class="line">(<span class="number">4</span>)中断返回：执行完中断指令后，就从中断处返回到主程序，继续执行。</span><br></pre></td></tr></tbody></table></figure></div>
+
+<h4 id="1-2-2-陷阱"><a href="#1-2-2-陷阱" class="headerlink" title="1.2.2 陷阱"></a>1.2.2 陷阱</h4><ul>
+<li>陷阱是一种软件产生的中断，源于程序出错或者源于用户程序的特别请求，完成中断处理后将CPU控制权再交给提出陷阱请求的程序。</li>
+</ul>
+<h4 id="1-2-3-中断和陷阱的区别"><a href="#1-2-3-中断和陷阱的区别" class="headerlink" title="1.2.3 中断和陷阱的区别"></a>1.2.3 中断和陷阱的区别</h4><ul>
+<li>陷阱又被称作软中断，与（硬）中断相比，软中断是软件实现的中断，也就是程序运行时其它程序对它的中断；而硬中断是硬件实现的中断，是程序运行时设备对它的中断。（硬中断是由外部事件引起的，因此具有随机性和突发性；而软中断的发生不是随机的，而是由程序安排好的）</li>
+</ul>
+<h4 id="1-2-4-计算机启动和固件"><a href="#1-2-4-计算机启动和固件" class="headerlink" title="1.2.4 计算机启动和固件"></a>1.2.4 计算机启动和固件</h4><ul>
+<li>计算机启动过程一般是指计算机从加电到加载操作系统的过程。</li>
+<li>计算机打开电源或重启时，要运行一个引导程序（bootstrap program),其常位于ROM或EEPROM中，称为计算机硬件中的固件。</li>
+</ul>
+<h2 id="1-3-计算机系统体系结构"><a href="#1-3-计算机系统体系结构" class="headerlink" title="1.3 计算机系统体系结构"></a>1.3 计算机系统体系结构</h2><h4 id="1-3-1-多处理器系统中对称多处理和非对称多处理的区别"><a href="#1-3-1-多处理器系统中对称多处理和非对称多处理的区别" class="headerlink" title="1.3.1 多处理器系统中对称多处理和非对称多处理的区别"></a>1.3.1 多处理器系统中对称多处理和非对称多处理的区别</h4><ul>
+<li>非对称多处理（AMP)处理器间是主从关系，一个主处理器控制系统并向其他从处理器分配任务，主处理器单独做IO任务</li>
+<li>对称多处理（SMP)处理器间是平等的关系，I0可以被任一处理器处理。</li>
+</ul>
+<h4 id="对称多处理器系统的优点"><a href="#对称多处理器系统的优点" class="headerlink" title="对称多处理器系统的优点"></a>对称多处理器系统的优点</h4><ol>
+<li>增加吞吐量</li>
+<li>规模经济</li>
+<li>增加可靠性</li>
+</ol>
+<h2 id="1-4-操作系统结构"><a href="#1-4-操作系统结构" class="headerlink" title="1.4 操作系统结构"></a>1.4 操作系统结构</h2><h4 id="1-4-1-多道程序设计"><a href="#1-4-1-多道程序设计" class="headerlink" title="1.4.1 多道程序设计"></a>1.4.1 多道程序设计</h4><p>操作系统同时把多个任务保存在内存中，如果一个执行中的任务需要等待一个事件的完成，则CPU切换到另一个任务执行而不是空等待原任务完成。</p>
+<h4 id="1-4-2-三种主要类别的操作系统"><a href="#1-4-2-三种主要类别的操作系统" class="headerlink" title="1.4.2 三种主要类别的操作系统"></a>1.4.2 三种主要类别的操作系统</h4><p>(1)<strong>批处理系统</strong>：用户将作业交给系统操作员，系统操作员将许多用户的作业组<br>成一批作业（jobs)之后输入到计算机中，在系统中形成一个自动转接的连续的作业<br>流，系统自动、依次执行每个作业。最后由操作员将作业结果交给用户。<br><strong>优点</strong>：作业流程自动化；效率高；吞吐量高<br><strong>缺点</strong>：无交互手段；调试程序困难<br>(2)<strong>分时系统</strong>：操作系统将CPU的时间划分成若干个片段，称为时间片。操作系<br>统以时间片为单位，在用户间快速切换，轮流为每个终端用户服务，每次服务一时间片。系统的快速切换使用户感到整个系统只为自己所用。是多道程序设计的延伸，由于切换频率很高，用户可以在程序运行期间与之进行交互；<br>(3)<strong>实时系统</strong>：指当外界事件或数据产生时，能够接受并以足够快的速度予以处理，其处理的结果又能在规定的时间之内来控制生产过程或对处理系统作出快速响应，并控制所有实时任务协调一致运行的操作系统。</p>
+<h2 id="1-5-操作系统的操作"><a href="#1-5-操作系统的操作" class="headerlink" title="1.5 操作系统的操作"></a>1.5 操作系统的操作</h2><h4 id="1-5-1-双重操作模式"><a href="#1-5-1-双重操作模式" class="headerlink" title="1.5.1 双重操作模式"></a>1.5.1 双重操作模式</h4><ul>
+<li>组成：用户模式和核心模式，即用户模式下应用程序需要操作系统的服务时必须要切换到核心模式由操作系统完成相应的请求。</li>
+<li>动机：将能引起机器损害的机器指令作为特权指令，如：转换到用户模式、IO控制、定时器管理和中断管理等，通过识别模式位保证特权指令只能由操作系统完成，保护操作系统和用户程序不受到错误用户程序的影响。</li>
+</ul>
+<h4 id="1-5-2-定时器"><a href="#1-5-2-定时器" class="headerlink" title="1.5.2 定时器"></a>1.5.2 定时器</h4><ul>
+<li>确保OS对CPU 的控制，同时防止用户程序陷入死循环等情况不能将控制权返回OS，使用定时器在给定时间后中断。</li>
+</ul>
+</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/26/os2/">操作系统笔记（二）</a></li><li><a href="http://www.hui-wang.info/2018/03/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%B9CPU%E7%9A%84%E6%8E%A7%E5%88%B6%E6%9D%83/">操作系统对CPU的控制权</a></li></ul></div>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TensorFlow训练神经网络</title>
+    <url>/2020/06/02/tensorflowlearn/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="TensorFlow训练神经网络"><a href="#TensorFlow训练神经网络" class="headerlink" title="TensorFlow训练神经网络"></a>TensorFlow训练神经网络</h1><p><strong>三个步骤</strong> </p>
+<p>（1）定义神经网络的结构和前向传播的输出结果；</p>
+<p>（2）定义损失函数以及选择反向传播优化的算法；</p>
+<p>（3）生成会话并且在训练数据上反复运行反向传播优化算法。</p>
+<h4 id="神经网络·基本结构"><a href="#神经网络·基本结构" class="headerlink" title="神经网络·基本结构"></a>神经网络·基本结构</h4><p>神经网络由大量神经元组成。每个神经元获得线性组合的输入，经过非线性的激活函数，然后得到非线性的输出。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%871.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%872.png" alt></p>
+<h4 id="神经网络·激活函数"><a href="#神经网络·激活函数" class="headerlink" title="神经网络·激活函数"></a>神经网络·激活函数</h4><p>线性模型的最大特点是任意线性模型的组合仍然是线性模型，只通过线性变换，任意层的全连接神经网络 和单层神经网络没有任何区别，因此非线性是深度学习的重要特性。</p>
+<p>目前TensorFlow提供了 7 种不同的非线性激活函数，常见的有：tf.nn.relu 、tf. sigmoid 和 tf.tanh</p>
+<h4 id="神经网络·softmax"><a href="#神经网络·softmax" class="headerlink" title="神经网络·softmax"></a>神经网络·softmax</h4><p>用于多分类神经网络输出，公式如下：</p>
+<img src="图片3.png">
+
+<p>就是如果某一个 zj 大过其他 z, 那这个映射的分量就逼近于 1,其他就逼近于 0，主要应用就是多分类。</p>
+<h4 id="神经网络·优化算法"><a href="#神经网络·优化算法" class="headerlink" title="神经网络·优化算法"></a>神经网络·优化算法</h4><p>神经网络模型的效果和优化的目标是通过代价函数（lost function），也称损失函数来定义的。</p>
+<p>神经网络的优化算法可以分为两个阶段，第一阶段先通过前向传播算法计算得到预测值，计算损失函数。然后在第二阶段通过反向传播算法计算损失函数对每一个参数的梯度，再根据梯度和学习率使用 <strong>梯度下降算法</strong> 更新每一个参数。</p>
+<h4 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h4><p>卷积神经网络（Convolutional Neural Network,  CNN）由三部分构成。第一部分是<strong>输入层</strong>。第二部分由n个 <strong>卷积层</strong>和<strong>池化层</strong>的组合组成。第三部分由一个<strong>全连结的多层感知机分类器</strong>构成。这一结构使得<strong>卷积神经网络天然适合处理二维特征数据</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602120623.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602120650.png" alt></p>
+<h5 id="卷积神经网络·卷积层"><a href="#卷积神经网络·卷积层" class="headerlink" title="卷积神经网络·卷积层"></a>卷积神经网络·卷积层</h5><p>对图像和滤波矩阵做内积（逐个元素相乘再求和）的操作就是所谓的『<strong>卷积</strong>』操作，也是卷积神经网络的名字来源。卷积的主要目的是为了从输入图像中提取特征。卷积可以 通过从输入的一小块数据中学到图像的特征，并可以保留像素间的空间关系。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602120824.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%874.png" alt></p>
+<h5 id="卷积神经网络·池化层"><a href="#卷积神经网络·池化层" class="headerlink" title="卷积神经网络·池化层"></a>卷积神经网络·池化层</h5><p>池化，简言之，即取区域平均或最大，如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602121053.png" alt></p>
+<p>池化有两种： </p>
+<ul>
+<li><p>一种是最大池化，在选中区域中找最大的值作为抽样后的值； </p>
+</li>
+<li><p>一种是平均值池化，把选中的区域中的平均值作为抽样后的值。</p>
+</li>
+</ul>
+<h5 id="卷积神经网络·Dropout"><a href="#卷积神经网络·Dropout" class="headerlink" title="卷积神经网络·Dropout"></a>卷积神经网络·Dropout</h5><p>Dropout 在模型训练时按照一定的概率 暂时让网络某些隐含层节点的权重不工作（也称丢弃），作用是防止过拟合。</p>
+<p><strong>例如 MNIST 数字识别实例 ：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602121337.png" alt></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="NIX"><figure class="iseeu highlight /nix"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">import</span> tensorflow as tf</span><br><span class="line"><span class="built_in">import</span> tensorflow.examples.tutorials.mnist.input_data as input_data</span><br><span class="line">from tensorflow.python.framework <span class="built_in">import</span> graph_util</span><br><span class="line"></span><br><span class="line"><span class="attr">mnist</span> = input_data.read_data_sets(<span class="string">"MNIST_data"</span>, <span class="attr">one_hot=True)</span>  <span class="comment"># 下载并加载mnist数据</span></span><br><span class="line"><span class="attr">x</span> = tf.placeholder(tf.float32, [None, <span class="number">784</span>], <span class="attr">name='input')</span>  <span class="comment"># 输入的数据占位符</span></span><br><span class="line"><span class="attr">y_</span> = tf.placeholder(tf.float32, <span class="attr">shape=[None,</span> <span class="number">10</span>])  <span class="comment"># 输入的标签占位符</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于初始化所有的权值 W</span></span><br><span class="line">def weight_variable(shape):</span><br><span class="line">    <span class="attr">initial</span> = tf.truncated_normal(shape, <span class="attr">stddev=0.1)</span></span><br><span class="line">    return tf.Variable(initial)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于初始化所有的偏置项 b</span></span><br><span class="line">def bias_variable(shape):</span><br><span class="line">    <span class="attr">initial</span> = tf.constant(<span class="number">0.1</span>, <span class="attr">shape=shape)</span></span><br><span class="line">    return tf.Variable(initial)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于构建卷积层</span></span><br><span class="line">def conv2d(x, W):</span><br><span class="line">    return tf.nn.conv2d(x, W, <span class="attr">strides=[1,</span> <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], <span class="attr">padding='SAME')</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于构建池化层</span></span><br><span class="line">def max_pool(x):</span><br><span class="line">    return tf.nn.max_pool(x, <span class="attr">ksize=[1,</span> <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], <span class="attr">strides=[1,</span> <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], <span class="attr">padding='SAME')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建网络</span></span><br><span class="line"><span class="attr">x_image</span> = tf.reshape(x, [-<span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>])  <span class="comment"># 转换输入数据shape,以便于用于网络中</span></span><br><span class="line"><span class="attr">W_conv1</span> = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">32</span>])</span><br><span class="line"><span class="attr">b_conv1</span> = bias_variable([<span class="number">32</span>])</span><br><span class="line"><span class="attr">h_conv1</span> = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)  <span class="comment"># 第一个卷积层 g(w*x+b)</span></span><br><span class="line"><span class="attr">h_pool1</span> = max_pool(h_conv1)  <span class="comment"># 第一个池化层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_conv2</span> = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">32</span>, <span class="number">64</span>])</span><br><span class="line"><span class="attr">b_conv2</span> = bias_variable([<span class="number">64</span>])</span><br><span class="line"><span class="attr">h_conv2</span> = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)  <span class="comment"># 第二个卷积层</span></span><br><span class="line"><span class="attr">h_pool2</span> = max_pool(h_conv2)  <span class="comment"># 第二个池化层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_fc1</span> = weight_variable([<span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>, <span class="number">1024</span>])</span><br><span class="line"><span class="attr">b_fc1</span> = bias_variable([<span class="number">1024</span>])</span><br><span class="line"><span class="attr">h_pool2_flat</span> = tf.reshape(h_pool2, [-<span class="number">1</span>, <span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>])  <span class="comment"># reshape成向量</span></span><br><span class="line"><span class="attr">h_fc1</span> = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)  <span class="comment"># 第一个全连接层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">keep_prob</span> = tf.placeholder(<span class="string">"float"</span>,<span class="attr">name='keep_prob')</span></span><br><span class="line"><span class="attr">h_fc1_drop</span> = tf.nn.dropout(h_fc1, keep_prob)  <span class="comment"># dropout层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_fc2</span> = weight_variable([<span class="number">1024</span>, <span class="number">10</span>])</span><br><span class="line"><span class="attr">b_fc2</span> = bias_variable([<span class="number">10</span>])</span><br><span class="line"><span class="attr">y</span> = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2, <span class="attr">name='y')</span>  <span class="comment"># softmax层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cross_entropy</span> = -tf.reduce_sum(y_ * tf.log(y))  <span class="comment"># 交叉熵</span></span><br><span class="line"><span class="attr">train_step</span> = tf.train.GradientDescentOptimizer(<span class="number">1</span>e-<span class="number">3</span>).minimize(cross_entropy)  <span class="comment"># 梯度下降法</span></span><br><span class="line"><span class="attr">correct_prediction</span> = tf.equal(tf.argmax(y, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</span><br><span class="line"><span class="attr">accuracy</span> = tf.reduce_mean(tf.cast(correct_prediction, <span class="string">"float"</span>))  <span class="comment"># 精确度计算</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 迭代计算</span></span><br><span class="line"><span class="attr">sess</span> = tf.InteractiveSession()</span><br><span class="line">sess.run(tf.initialize_all_variables())</span><br><span class="line">for i <span class="keyword">in</span> range(<span class="number">40000</span>):</span><br><span class="line">    <span class="attr">batch</span> = mnist.train.next_batch(<span class="number">50</span>)</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">100</span> == <span class="number">0</span>:  <span class="comment"># 训练100次，验证一次</span></span><br><span class="line">        <span class="attr">train_acc</span> = accuracy.eval(<span class="attr">feed_dict={x:</span> batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">1.0</span>})</span><br><span class="line">        print('step %d, training accuracy %g' % (i, train_acc))</span><br><span class="line">        train_step.run(<span class="attr">feed_dict={x:</span> batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">0.5</span>})</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存模型</span></span><br><span class="line"><span class="attr">constant_graph</span> = graph_util.convert_variables_to_constants(sess, sess.graph_def, ['input', 'keep_prob', 'y'])</span><br><span class="line"><span class="keyword">with</span> tf.gfile.FastGFile('pb/mnist.pb', <span class="attr">mode='wb')</span> as f:</span><br><span class="line">    f.write(constant_graph.SerializeToString())</span><br><span class="line">sess.close()</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</body></html>]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序“一个人，一座城”开发文档</title>
+    <url>/2020/06/18/wx-map/</url>
+    <content><![CDATA[<html><head></head><body><h2 id="1-开发环境"><a href="#1-开发环境" class="headerlink" title="1. 开发环境"></a>1. 开发环境</h2><h4 id="1-1-开发工具："><a href="#1-1-开发工具：" class="headerlink" title="1.1. 开发工具："></a>1.1. 开发工具：</h4><ul>
+<li>微信开发者工具；</li>
+<li>pycharm；</li>
+</ul>
+<hr>
+<h4 id="1-2-前端-后端框架："><a href="#1-2-前端-后端框架：" class="headerlink" title="1.2. 前端+后端框架："></a>1.2. 前端+后端框架：</h4><ul>
+<li>前端： html + css + javascript + bootstrap；</li>
+<li>后端： pyrhon + flask；</li>
+<li>地图API： 高德API；</li>
+</ul>
+<h2 id="2-微信小程序前端开发"><a href="#2-微信小程序前端开发" class="headerlink" title="2. 微信小程序前端开发"></a>2. 微信小程序前端开发</h2><h4 id="2-1-功能需求和设计"><a href="#2-1-功能需求和设计" class="headerlink" title="2.1. 功能需求和设计"></a>2.1. 功能需求和设计</h4><h5 id="多用户"><a href="#多用户" class="headerlink" title="多用户"></a>多用户</h5><p><strong>功能说明：</strong></p>
+<ul>
+<li>实现不同用户的区分，方便用户查看自己的记录信息；</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>用户在首次使用此小程序时，小程序会先获取用户的openid，并在数据库中查询此openid，若未查询到则将openid放入数据库中，若查询到则返回已经添加，将openid作为用户的唯一识别码。</li>
+</ul>
+<h5 id="标记当前用户位置"><a href="#标记当前用户位置" class="headerlink" title="标记当前用户位置"></a>标记当前用户位置</h5><p><strong>功能说明：</strong></p>
+<ul>
+<li>用户在当前位置可以记录该位置，方便之后再次查看；</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>调用高德API获得用户标记时的位置信息，然后调用接口进行上传；</li>
+</ul>
+<h5 id="路线规划"><a href="#路线规划" class="headerlink" title="路线规划"></a>路线规划</h5><p><strong>功能说明：</strong></p>
+<ul>
+<li>用户在选定起始点和目的地之后给出导航信息；</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>通过获取设置的出发地和目的地的位置信息，调用高德API返回路径规划信息，同时将出发地和目的地的信息通过调用接口上传到数据库，方便之后查询；</li>
+</ul>
+<h5 id="历史路线规划查询"><a href="#历史路线规划查询" class="headerlink" title="历史路线规划查询"></a>历史路线规划查询</h5><p><strong>功能说明：</strong></p>
+<ul>
+<li>用户可以查看自己之前从某地到某地的路线规划；</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>从后台返回历史路线规划的记录，点击任意一条历史后会从后台返回所查看路径的信息，后调用高德API将其再次显示；</li>
+</ul>
+<h5 id="查看附近热点"><a href="#查看附近热点" class="headerlink" title="查看附近热点"></a>查看附近热点</h5><p><strong>功能说明：</strong></p>
+<ul>
+<li>可以搜索查看想去的位置及周边建筑物的位置</li>
+</ul>
+<p><strong>功能实现：</strong></p>
+<ul>
+<li>调用高德API；</li>
+</ul>
+<h5 id="查看当前天气"><a href="#查看当前天气" class="headerlink" title="查看当前天气"></a>查看当前天气</h5><p><strong>功能实现：</strong></p>
+<ul>
+<li>调用高德API；</li>
+</ul>
+<hr>
+<h4 id="2-2-页面设计"><a href="#2-2-页面设计" class="headerlink" title="2.2. 页面设计"></a>2.2. 页面设计</h4><p>采用UI：colorui、weiui</p>
+<h5 id="起始页"><a href="#起始页" class="headerlink" title="起始页"></a>起始页</h5><ul>
+<li><strong>demo：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/Image1.png" alt></p>
+<ul>
+<li><strong>代码：</strong>“/pages/firstPage/“</li>
+</ul>
+<h5 id="位置标记页"><a href="#位置标记页" class="headerlink" title="位置标记页"></a>位置标记页</h5><ul>
+<li><strong>demo：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618113216.png" alt></p>
+<ul>
+<li><strong>代码：</strong>“/pages/testPage/”</li>
+</ul>
+<h5 id="路线规划-1"><a href="#路线规划-1" class="headerlink" title="路线规划"></a>路线规划</h5><ul>
+<li><strong>demo：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618113447.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618113521.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618113606.png" alt></p>
+<ul>
+<li><strong>代码：</strong></li>
+<li>“/pages/firstOfNavigation”；</li>
+<li>“/pages/endOfNavigation”；</li>
+<li>“/pages/navigation_car”；</li>
+</ul>
+<h5 id="历史路线规划查询-1"><a href="#历史路线规划查询-1" class="headerlink" title="历史路线规划查询"></a>历史路线规划查询</h5><ul>
+<li><strong>demo：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618114153.png" alt></p>
+<ul>
+<li><strong>代码：</strong> “/pages/myTrackPage/“</li>
+</ul>
+<h5 id="附近热点页面"><a href="#附近热点页面" class="headerlink" title="附近热点页面"></a>附近热点页面</h5><ul>
+<li><strong>demo：</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/Image.png" alt></li>
+</ul>
+<ul>
+<li><strong>代码：</strong>“/pages/poi”</li>
+</ul>
+<h5 id="天气页面"><a href="#天气页面" class="headerlink" title="天气页面"></a>天气页面</h5><ul>
+<li><strong>demo：</strong></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/Image3.png" alt></p>
+<ul>
+<li><strong>代码：</strong>“/pages/weather”</li>
+</ul>
+<hr>
+<h2 id="3-管理网站前端开发"><a href="#3-管理网站前端开发" class="headerlink" title="3. 管理网站前端开发"></a>3. 管理网站前端开发</h2><h4 id="3-1-功能需求与设计"><a href="#3-1-功能需求与设计" class="headerlink" title="3.1. 功能需求与设计"></a>3.1. 功能需求与设计</h4><h5 id="功能需求"><a href="#功能需求" class="headerlink" title="功能需求"></a>功能需求</h5><ul>
+<li>管理员登录、注册；</li>
+<li>位置管理；</li>
+<li>路径规划记录管理；</li>
+<li>管理员管理；</li>
+<li>微信用户管理；</li>
+</ul>
+<h5 id="页面设计"><a href="#页面设计" class="headerlink" title="页面设计"></a>页面设计</h5><p><strong>UI：</strong>BootStrap</p>
+<ul>
+<li><p>登录页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120137.png" alt></p>
+</li>
+<li><p>注册页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120319.png" alt></p>
+</li>
+<li><p>首页：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120501.png" alt></p>
+</li>
+<li><p>位置记录页面：</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120536.png" alt></p>
+<ul>
+<li>轨迹管理页面：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120846.png" alt></p>
+<ul>
+<li>用户管理页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618121121.png" alt></li>
+<li>管理员管理页面：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618121152.png" alt></p>
+<hr>
+<h2 id="4-数据库设计"><a href="#4-数据库设计" class="headerlink" title="4. 数据库设计"></a>4. 数据库设计</h2><p><strong>环境：</strong> mysql + navicat;</p>
+<p><strong>结构：</strong><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618123756.png" alt></p>
+<hr>
+<h2 id="5-后端开发"><a href="#5-后端开发" class="headerlink" title="5. 后端开发"></a>5. 后端开发</h2><p><strong>后端采用 python + Flask 框架开发</strong></p>
+<ul>
+<li><p>结构如下：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618121523.png" alt></p>
+</li>
+<li><p>项目结构说明：</p>
+<ol>
+<li>static: 存放css样式、js文件、图片等文件；</li>
+<li>templates: 存放html文件；</li>
+<li>venv: pythonk虚拟环境；</li>
+<li>app.py: 与数据库链接、接口和Flask开发；</li>
+<li>config.py: 数据库配置；</li>
+<li>decorators.py: 对页面login函数封装，实现未登录跳转；</li>
+</ol>
+</li>
+</ul>
+<p><strong>具体代码详情见附件</strong></p>
+<h2 id="6-附件"><a href="#6-附件" class="headerlink" title="6 附件"></a>6 附件</h2><p><a href="http://cloud.xiheye.club/map.zip" target="_blank" rel="noopener">源码下载地址（非移动用户）</a><br><a href="https://pan.baidu.com/s/1K5ik11JzOPubN1_9tU2DIw" target="_blank" rel="noopener">百度网盘下载地址（提取码：gla8） </a></p>
+</body></html>]]></content>
+      <categories>
+        <category>课堂笔记</category>
+      </categories>
+      <tags>
+        <tag>移动互联网开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>读书笔记 Start</title>
+    <url>/2020/06/15/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/</url>
+    <content><![CDATA[<html><head></head><body><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E8%AF%BB%E4%B9%A6.png" alt></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">想添加读书笔记这个栏目已经很久了，终于找到一段时间可以开始着手这个栏目了。从上大学以来读书的时间越来越少，就想着做一个这样的内容，来督促自己读书，同时分享一些自己的看法，欢迎大家积极评论！</span><br></pre></td></tr></tbody></table></figure></div>
+</body></html>]]></content>
+      <categories>
+        <category>books</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>历史唯物主义</title>
+    <url>/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="历史唯物主义"><a href="#历史唯物主义" class="headerlink" title="历史唯物主义"></a>历史唯物主义</h1><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89.png" alt></p>
+<h2 id="社会规律"><a href="#社会规律" class="headerlink" title="社会规律"></a>社会规律</h2><h3 id="物质基础"><a href="#物质基础" class="headerlink" title="物质基础"></a>物质基础</h3><ul>
+<li><p>社会存在</p>
+<ul>
+<li><p>也称为社会物质生活条件，是社会生活的物质方面</p>
+<ul>
+<li><p>自然地理环境</p>
+<ul>
+<li>是人类社会生存和发展永恒的必要的条件，是人们生活和生产的自然基础</li>
+<li>提供了生活生活和生产资料的来源</li>
+<li>自然地理环境的优劣对劳动生产率的提高产生积极或者消极的影响，并对社会发展起促进或者延缓作用</li>
+<li>自然地理环境的作用要受到社会发展状况的制约，特别是受到物质资料生产方式的制约</li>
+</ul>
+</li>
+<li><p>人口因素</p>
+<ul>
+<li>是重要的社会物质生活条件，对社会的发展起着制约和影响的作用</li>
+<li>人是从事物质生产活动和其他一切社会活动的主体，是一切社会关系的承担者，没有人就没有社会</li>
+<li>适度的人口对社会发展起加速作用</li>
+<li>过密的人口对社会发展起延缓作用</li>
+</ul>
+</li>
+<li><p>物质生产方式</p>
+<ul>
+<li>是指人们为获取为获取物质生活资料而进行的生产活动的方式，是生产力和生产关系的统一体</li>
+<li>是社会存在和发展的基础及决定力量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>社会意识</p>
+<ul>
+<li><p>是社会生活的精神方面，是社会存在的反映</p>
+</li>
+<li><p>复杂结构</p>
+<ul>
+<li><p>根据不同主体划分</p>
+<ul>
+<li>个体意识：个人的生活经历和社会地位等在自己头脑中的反映，是个体社会实践的产物</li>
+<li>群体意识：是群体成员共同的意识，是群体实践的产物</li>
+</ul>
+</li>
+<li><p>根据不同的层次划分</p>
+<ul>
+<li><p>社会心理</p>
+<ul>
+<li>是低层次的意识，是自发的、不系统的、不定型的社会意识，以感知认识为主</li>
+</ul>
+</li>
+<li><p>社会意识</p>
+<ul>
+<li>是高层次的意识，包括政治法律思想、道德、艺术、宗教、哲学、科学等，以理性认识为主</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>意识形态和非意识形态之分</p>
+<ul>
+<li>意识形态：指反映社会的经济关系、阶级关系的社会意识</li>
+<li>非意识形态：不反映特定社会集团的利益和要求，不服务于特定经济政治和特定阶级</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="基本规律"><a href="#基本规律" class="headerlink" title="基本规律"></a>基本规律</h3><ul>
+<li><p>第一规律：生产力和生产关系的矛盾运动及其规律</p>
+<ul>
+<li><p>生产力和生产关系不可分割地联系</p>
+</li>
+<li><p>生产关系一定要适应生产力状况的规律</p>
+<ul>
+<li>生产力决定生产关系</li>
+<li>生产关系对生产力具有能动的反作用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>第二规律：经济基础与上层建筑的矛盾运动及其规律</p>
+<ul>
+<li><p>经济基础是指社会一定发展阶段的生产力所决定的生产关系的总和</p>
+</li>
+<li><p>上层建筑是建立在一定经济基础上的意识形态以及与之相应的制度、组织和设施</p>
+</li>
+<li><p>经济基础和上层建筑是辩证统一的</p>
+<ul>
+<li>经理基础决定上层建筑，上层建筑反作用于经济基础，二者相互作用，相互影响</li>
+<li>经济基础和上层建筑的相互作用构成两者的矛盾运动</li>
+<li>经济基础和上层建筑之间的内在联系构成了上层建筑一定要适应经济基础状况的规律</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="更替规律"><a href="#更替规律" class="headerlink" title="更替规律"></a>更替规律</h3><ul>
+<li><p>社会形态</p>
+<ul>
+<li>是关于社会运动的具体形式、发展阶段、不同质态的范畴，是同生产力发展一定阶段相适应的经济基础和上层建筑的统一体</li>
+</ul>
+</li>
+<li><p>更替特点</p>
+<ul>
+<li>统一性</li>
+<li>多样性</li>
+<li>前进性</li>
+<li>曲折性</li>
+</ul>
+</li>
+</ul>
+<h2 id="发展动力"><a href="#发展动力" class="headerlink" title="发展动力"></a>发展动力</h2><h3 id="根本动力"><a href="#根本动力" class="headerlink" title="根本动力"></a>根本动力</h3><ul>
+<li>生产力和生产关系的矛盾</li>
+<li>经济基础和上层建筑的矛盾</li>
+</ul>
+<h3 id="其他动力"><a href="#其他动力" class="headerlink" title="其他动力"></a>其他动力</h3><ul>
+<li><p>阶级斗争</p>
+<ul>
+<li>是阶级利益根本冲突的对抗阶级之间的对立和斗争</li>
+</ul>
+</li>
+<li><p>社会革命</p>
+<ul>
+<li>源于社会基本矛盾的尖锐化</li>
+</ul>
+</li>
+<li><p>社会改革</p>
+</li>
+<li><p>科学技术：是先进生产力的重要标志</p>
+<ul>
+<li>对生产方式的影响</li>
+<li>对生活方式的影响</li>
+<li>促进思维方式的变革</li>
+</ul>
+</li>
+</ul>
+<h2 id="历史主体"><a href="#历史主体" class="headerlink" title="历史主体"></a>历史主体</h2><h3 id="人民群众"><a href="#人民群众" class="headerlink" title="人民群众"></a>人民群众</h3><ul>
+<li>人民群众是社会历史的主体，是历史的创造者</li>
+<li>在社会历史的发展过程中，人民群众起着决定性作用</li>
+<li>人民群众是社会物质财富的创造者</li>
+<li>人民群众是社会精神财富的创造者</li>
+<li>人民群众是历史变革的决定力量</li>
+<li>人民群众创造历史的活动受到一定社会历史条件的制约</li>
+</ul>
+<h3 id="历史人物"><a href="#历史人物" class="headerlink" title="历史人物"></a>历史人物</h3><ul>
+<li><p>作用</p>
+<ul>
+<li>是一定历史事件的主要倡导者、组织领导者或者思想理论、科学文化的代表人物</li>
+<li>对推动历史发展做出重要贡献或者起到重要作用</li>
+</ul>
+</li>
+</ul>
+</body></html>]]></content>
+      <categories>
+        <category>课堂笔记</category>
+      </categories>
+      <tags>
+        <tag>马克思主义原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统笔记（二）</title>
+    <url>/2020/05/26/os2/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="2-1-操作系统服务"><a href="#2-1-操作系统服务" class="headerlink" title="2.1 操作系统服务"></a>2.1 操作系统服务</h1><h4 id="2-1-1-对用户"><a href="#2-1-1-对用户" class="headerlink" title="2.1.1 对用户"></a>2.1.1 对用户</h4><ul>
+<li>用户界面、程序执行、I/O操作、文件系统操作、通信、错误检测<h4 id="2-1-2-对系统"><a href="#2-1-2-对系统" class="headerlink" title="2.1.2 对系统"></a>2.1.2 对系统</h4></li>
+<li>资源分配、统计、保护和安全<h1 id="2-2-操作系统的用户界面"><a href="#2-2-操作系统的用户界面" class="headerlink" title="2.2 操作系统的用户界面"></a>2.2 操作系统的用户界面</h1><h4 id="2-2-1-命令解释程序"><a href="#2-2-1-命令解释程序" class="headerlink" title="2.2.1 命令解释程序"></a>2.2.1 命令解释程序</h4></li>
+<li>命令解释程序本身包含代码以执行这些命令；</li>
+<li>由系统程序实现绝大多数命令；<h4 id="2-2-2-图形用户界面"><a href="#2-2-2-图形用户界面" class="headerlink" title="2.2.2 图形用户界面"></a>2.2.2 图形用户界面</h4><h1 id="2-3-系统调用"><a href="#2-3-系统调用" class="headerlink" title="2.3 系统调用"></a>2.3 系统调用</h1><h4 id="2-3-1-系统调用"><a href="#2-3-1-系统调用" class="headerlink" title="2.3.1 系统调用"></a>2.3.1 系统调用</h4></li>
+<li>操作系统内核提供一系列预定功能，通过一组称为<strong>系统调用的接口</strong>呈现给编程人员，系统调用把应用程序的请求传给内核，系统调用相应的内核函数完成所需的处理，将处理结果返回给应用程序。C或C++编写。<strong>系统调用是内核的一部分</strong>。<h4 id="2-3-2-如何找到相应的内核函数"><a href="#2-3-2-如何找到相应的内核函数" class="headerlink" title="2.3.2 如何找到相应的内核函数"></a>2.3.2 如何找到相应的内核函数</h4></li>
+<li>实际上每一个系统调用都和一个数相关联，通过索引表找到相应的内核函数，类似于中断向量表，系统调用本质上也是一种软中断（trap)。<h4 id="2-3-3-三种常用的API"><a href="#2-3-3-三种常用的API" class="headerlink" title="2.3.3 三种常用的API"></a>2.3.3 三种常用的API</h4></li>
+</ul>
+<ol>
+<li>适用于windows系统的win32API；</li>
+<li>适用于POSIX系统的POSIXAPI;</li>
+<li>适用于Java虚拟机程序的JavaAPI；<h4 id="2-3-4-使用API不适用系统调用的原因"><a href="#2-3-4-使用API不适用系统调用的原因" class="headerlink" title="2.3.4 使用API不适用系统调用的原因"></a>2.3.4 使用API不适用系统调用的原因</h4></li>
+</ol>
+<ul>
+<li>API编程程序可移植性好；</li>
+<li>系统调用难度高；</li>
+<li>如果说系统调用是内核和应用程序信息交流的通道，那么API就是程序和开发人员之间交流的通道，它为开发人员掩盖系统调用的细节，提供访问并操作硬件的权利。<h4 id="2-3-5-向操作系统传递参数的三种方法"><a href="#2-3-5-向操作系统传递参数的三种方法" class="headerlink" title="2.3.5 向操作系统传递参数的三种方法"></a>2.3.5 向操作系统传递参数的三种方法</h4></li>
+</ul>
+<ol>
+<li>通过寄存器来传递参数；</li>
+<li>将参数存在内存的块和表中，将块的地址通过寄存器来传递；</li>
+<li>参数通过程序压入堆栈，通过操作系统弹出。<h1 id="2-4-系统调用类型"><a href="#2-4-系统调用类型" class="headerlink" title="2.4 系统调用类型"></a>2.4 系统调用类型</h1>系统调用大致分为五大类：进程管理、文件管理、设备管理、信息维护和通信</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/1.png" alt></p>
+<h1 id="2-5-系统程序"><a href="#2-5-系统程序" class="headerlink" title="2.5 系统程序"></a>2.5 系统程序</h1><ol>
+<li>系统程序提供了一个方便的环境，以开发程序和执行程序；</li>
+<li>一小部分系统程序只是系统调用的简单接口，其他的可能是相当复杂的。分为如下几类：<strong>文件管理、状态信息、文件修改、程序语言支持、程序执行和装入、通信。</strong><h1 id="2-6-操作系统设计和实现"><a href="#2-6-操作系统设计和实现" class="headerlink" title="2.6 操作系统设计和实现"></a>2.6 操作系统设计和实现</h1><h4 id="2-6-1-机制和策略"><a href="#2-6-1-机制和策略" class="headerlink" title="2.6.1 机制和策略"></a>2.6.1 机制和策略</h4></li>
+</ol>
+<ul>
+<li>机制决定如何做；</li>
+<li>策略决定做什么；<h1 id="2-7-操作系统的结构"><a href="#2-7-操作系统的结构" class="headerlink" title="2.7 操作系统的结构"></a>2.7 操作系统的结构</h1></li>
+</ul>
+<h4 id="四种结构："><a href="#四种结构：" class="headerlink" title="四种结构："></a>四种结构：</h4><ul>
+<li><strong>简单结构：</strong> 早期的操作系统并没有很好的架构，有些甚至没有区分核心态和用户态。导致系统的不稳定性。</li>
+<li><strong>分层方法：</strong>将操作系统分为多个层次，最底层的是硬件(层0),最高层为用户接口（层N),每一层都只是依靠于更底层的功能来实现的，这样形成一个层次化的结构。层次结构的好处是简化了构造和调试，弊端是层次之间藕合性高，层次之间很难界定。另一个问题就是层次结构的效率较低，一个系统调用可能要陷入多个层再返回，增加了很多花销。</li>
+<li><strong>微内核：</strong></li>
+<li><strong>模块：</strong>采用面向对象的特点，将各个功能模块化，每一个模块之间使用接口进行通讯，必要的时候可以将一部分的内容加载到内核中进行操作。它类似于层次结构，但是模块之间没有上下层的依赖关系，模块之间可以相互调用，更加灵活；它类似于微核，但是必要时候会将内容加载到内核中，比微核更有效率。</li>
+<li><em>许多操作系统采用混合结构。*</em><h4 id="2-1-1-微内核"><a href="#2-1-1-微内核" class="headerlink" title="2.1.1 微内核"></a>2.1.1 微内核</h4></li>
+<li>实现：将所有非基本部分都从内核中移走，并将它们实现为系统程序或者用户程序。微内核通常包括最小的进程和内存管理以及通信功能。</li>
+<li>主要功能：使客户程序和运行在用户空间的各种服务之间进行通信，通信以消息传递形式进行。</li>
+<li>好处：便于扩充操作系统、容易移植、提供更好的安全性和可靠性。</li>
+<li>缺点：由于系统功能总开销增加导致系统性能下降。<h1 id="2-8-虚拟机"><a href="#2-8-虚拟机" class="headerlink" title="2.8 虚拟机"></a>2.8 虚拟机</h1><h4 id="2-8-1-核心思想"><a href="#2-8-1-核心思想" class="headerlink" title="2.8.1 核心思想"></a>2.8.1 核心思想</h4>虚拟机的核心思想就是将一套硬件设备抽象成多套，采用CPU调度和虚拟内存的技术，制造每一个进程都有自己单独处理器和内存的假象。</li>
+</ul>
+</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/26/os1/">操作系统笔记（一）</a></li><li><a href="http://www.hui-wang.info/2018/03/25/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%B9CPU%E7%9A%84%E6%8E%A7%E5%88%B6%E6%9D%83/">操作系统对CPU的控制权</a></li></ul></div>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>辩证唯物主义认识论</title>
+    <url>/2020/06/03/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%A4%E8%AF%86%E8%AE%BA/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="辩证唯物主义认识论（实践与认识及其发展规律）"><a href="#辩证唯物主义认识论（实践与认识及其发展规律）" class="headerlink" title="辩证唯物主义认识论（实践与认识及其发展规律）"></a>辩证唯物主义认识论（实践与认识及其发展规律）</h1><h2 id="实践观"><a href="#实践观" class="headerlink" title="实践观"></a>实践观</h2><h3 id="实践的本质"><a href="#实践的本质" class="headerlink" title="实践的本质"></a>实践的本质</h3><ul>
+<li>人类能动地改造世界的社会性的物质活动</li>
+<li>马克思阐明了实践是感性的、对象性的物质活动，提出全部社会生活在本质上是实践的，并鲜明指出哲学家们只是用不同的方式解释世界，而问题在于改变世界。</li>
+</ul>
+<h3 id="实践的基本特征"><a href="#实践的基本特征" class="headerlink" title="实践的基本特征"></a>实践的基本特征</h3><ul>
+<li><p>直接实现性</p>
+<ul>
+<li>构成实践活动的诸要素，即实践的主体、客观和手段，都是可感知的客观实在；</li>
+<li>实践的水平、广度、深度和发展过程，都受着客观条件的约束和客观规律的支配；</li>
+<li>实践能够引起客观世界的某种变化，可以把人脑中观念的存在变成现实的存在，给人们提供现实的成果。</li>
+</ul>
+</li>
+<li><p>自觉能动性</p>
+<ul>
+<li>实践活动是人的有意识的、有目的的活动</li>
+</ul>
+</li>
+<li><p>社会历史性</p>
+<ul>
+<li>会随着一定社会历史条件的变化而变化</li>
+</ul>
+</li>
+</ul>
+<h3 id="实践的基本结构"><a href="#实践的基本结构" class="headerlink" title="实践的基本结构"></a>实践的基本结构</h3><ul>
+<li><p>实践主体</p>
+<ul>
+<li><p>是指具有一定的主体能力、从事现实社会实践活动的人，是实践活动中自主性和能动性的因素，担负着设定实践目的、操作实践中介、改造实践客体的任务。</p>
+<ul>
+<li>个体主体</li>
+<li>群体主体</li>
+<li>人类主体</li>
+</ul>
+</li>
+<li><p>实践主体的能力</p>
+<ul>
+<li><p>自然能力</p>
+</li>
+<li><p>精神能力</p>
+<ul>
+<li><p>知识因素</p>
+<ul>
+<li>是首要的能力，既包括对理论知识的掌握，也包括对经验知识的掌握；</li>
+</ul>
+</li>
+<li><p>非知识因素</p>
+<ul>
+<li>主要指情感和意志因素；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>实践客体</p>
+<ul>
+<li><p>是指实践活动所指向的对象。</p>
+<ul>
+<li>实践客体不等于客观存在。客观事物只有在被纳入主体实践活动的范围之内，为主体实践活动所指向并与主体相互作用时才成为现实的实践客体。</li>
+</ul>
+</li>
+<li><p>实践容体的不同类型：</p>
+<ul>
+<li><p>从是否为实践所创造的角度</p>
+<ul>
+<li>天然客体</li>
+<li>人工容体</li>
+</ul>
+</li>
+<li><p>从自然界与人类社会两个领域相区分的角度</p>
+<ul>
+<li>自然容体</li>
+<li>社会客体</li>
+</ul>
+</li>
+<li><p>从物质性和精神性相区分的角度</p>
+<ul>
+<li>物质性客体</li>
+<li>精神性容体</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>实践中介</p>
+<ul>
+<li><p>指各种形式的工具、手段以及运用、操作这些工具、手段的程序和方法。实践的中介系统可分为两个子系统:</p>
+<ul>
+<li>·一是作为人的肢体延长、感官延伸、体能放大的物质性工具系统，如火车、电脑、雷达分别是对人的膜、脑、眼功能的延伸和放大。</li>
+<li>·二是语言符号工具系统。语言符号是主体思维活动进行的现实形式，也是人们社会交往得以进行的中介</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="实践的形式"><a href="#实践的形式" class="headerlink" title="实践的形式"></a>实践的形式</h3><ul>
+<li>虚拟实践是实践活动的派生形式，具有相对独立性。是现代信息技术的发展使得当代社会开始产生的一种新的实践形式。</li>
+<li>物质生产实践</li>
+<li>社会政治实践</li>
+<li>科学文化实践</li>
+</ul>
+<h3 id="实践在认识活动中的决定作用"><a href="#实践在认识活动中的决定作用" class="headerlink" title="实践在认识活动中的决定作用"></a>实践在认识活动中的决定作用</h3><ul>
+<li><p>实践是认识的来源。</p>
+<ul>
+<li>首先，实践产生了认识的需求。</li>
+<li>其次，实践还为认识的形成提供了可能。</li>
+<li>认识的内容是在实践活动的基础上产生和发展的</li>
+</ul>
+</li>
+<li><p>实践是认识发展的动力</p>
+</li>
+<li><p>实践是认识的目的</p>
+</li>
+<li><p>实践是检验真理的唯一标准</p>
+</li>
+</ul>
+<h2 id="认识论"><a href="#认识论" class="headerlink" title="认识论"></a>认识论</h2><h3 id="认识的本质及特征"><a href="#认识的本质及特征" class="headerlink" title="认识的本质及特征"></a>认识的本质及特征</h3><ul>
+<li><p>认识的本质：主体在实践基础上对客观的能动反映</p>
+</li>
+<li><p>不同派别对认识的本质的回答</p>
+</li>
+<li><p>唯心主义先验论；</p>
+<ul>
+<li>概念：坚持认识的过程是”从思想和感觉到物”</li>
+<li>主观唯心主义：认为人的认识是主观自生的，是生而知之的。</li>
+<li>·客观唯心主义：认为人的认识是上帝的启示或菜种客观精神的产物：</li>
+<li>先验论的缺险：否认认识是人脑对客观世界的反映，认为认识先于物质，先于人的实践经验</li>
+</ul>
+</li>
+<li><p>唯物主义反映论:</p>
+<ul>
+<li><p>概念：坚持认识的过程是”从物到思想和感觉”。都认为认识是主体对客体的反映，人的一切知识都是从后天换触实际中得到的</p>
+</li>
+<li><p>直观反映论（旧唯纳主义认识论）</p>
+<ul>
+<li><p>以感性直观为基础，把人的认识看成消板地、被动地反映和接受外界对象，类似照镜子那样的反射活动。</p>
+<ul>
+<li>离开实践考票认识问题，因而不了解实政对认识的决定作周：是消板直观的反映</li>
+<li>离开辩证法考察认识问题，看不到主观和客观之间的矛盾及其相互作用，没有把认识看作一个不断发展的过程，认为认识是一次性完成的。是消极被动的反映</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>能动反映论(辩证唯物主义认识论)</p>
+<ul>
+<li><p>认识的实质是：主体在实或基胜上对字体的能动反映。</p>
+<ul>
+<li>能动反映不但具有反映客体内容的反映性特征，而且具有实践所要求的主体能动的、创造性的特征</li>
+<li>一方面，认识的反映特性是人类认识的基本视定性。认识的反映特性是指人的认识必然要以客观事物为原型和摹本，在思然中再现或摹写客观事物的状态、属性和本质。另一方面，认识的能动反映具有创造性。认识是一种在思维中的能动的、创造性的活动，而不是主观对客观对象简单、直接的描摹或照镜子式的原物映现。</li>
+</ul>
+</li>
+<li><p>认识的反映特性和创造特性之间的关系：不可分割。</p>
+<ul>
+<li><p>关系:反映和创造不是人类认识的两种不同的本质，而是同一本质的两种不同的功能，是一个硬币的两面。创造离不开反映，存在于反映之中；反映也离不开创造，在创造过程中实现</p>
+</li>
+<li><p>只坚持认识的反映性，看不到认识能动的创造性，就重复走上了旧唯物主义直观反映论的错误之路；</p>
+</li>
+<li><p>只坚持认识能动的创造性,使创造性脱离反映论的前提,就会把创造变成主观随意,从而滑向唯心主义和不可知论。</p>
+</li>
+<li><p>“能动反映论”两个优点：</p>
+<ul>
+<li>一是把实或的观点引入认识论：</li>
+<li>二是把辣证法应用于反映论考察认识的发展过程。把认识看成一个由不知到知、由浅入深的充满矛盾的能动的认识过程，全面地揭示了认识过程的辩证性质。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="认识的过程"><a href="#认识的过程" class="headerlink" title="认识的过程"></a>认识的过程</h3><ul>
+<li><p>从实践到认识</p>
+<ul>
+<li><p>感性认识：（认识的初级阶段）</p>
+<ul>
+<li>感觉、知觉、表象</li>
+</ul>
+</li>
+<li><p>理性认识：（认识的高级阶段）</p>
+<ul>
+<li><p>概念、判断、推理</p>
+</li>
+<li><p>辩证关系</p>
+<ul>
+<li>感性认识有待于发展和深化为理性认识</li>
+<li>理性认识依赖于感性认识</li>
+<li>感性认识和理性认识相互渗透、相互包含</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方法论意义（实现飞跃的基本条件)</p>
+<ul>
+<li>投身实践，深入调查，获取十分丰富和合乎实际的感性材料</li>
+<li>必须经过理性思考的作用，将丰富的感性材料加工制作，去粗存精、去伪存真、由此及彼、由表及里，形成概念和理论的系统，才能将感性认识上升到理性的认识。</li>
+</ul>
+</li>
+<li><p>认识过程中的影响因素</p>
+<ul>
+<li><p>理性因素</p>
+<ul>
+<li>概念：理性因素是指认的理性直观、理性思维等能力。</li>
+<li>作用：它在认识活动中的作用主要有指导作用、解释作用和预见作用等</li>
+</ul>
+</li>
+<li><p>非理性因素</p>
+<ul>
+<li>概念：非理性因素主要是指认识主体的情感和意志。从广义上看，人们还常把认识能力中具有不自觉、非逻辑性等特点的认识形式，如联想、想象、猜测、顿悟、灵感等，也包括在人的非理性因素中：</li>
+<li>作用：非理性因素对于人的认识能力和认识活动具有激活、驱动和控制作用。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>认识到实践</p>
+<ul>
+<li><p>由精神到物质的阶段，由思想到存在的阶段</p>
+<ul>
+<li><p>第二次飞跃的必要性和重要性</p>
+<ul>
+<li>认识世界的目的是为了改造世界</li>
+<li>认识的真理性只有在实践中才能得到检验和发展</li>
+</ul>
+</li>
+<li><p>实现第二次飞跃的条件</p>
+<ul>
+<li>中介环节：确定实践目的、形成实践理念、制定实践方案、进行中间实验、运用科学实践方法。因此必须从实际出发，坚持理论和实际相结合：</li>
+<li>最后环节：对人民群众进行组织和宣传，让理论为群众所掌握，并转化为改造社会、改造自然的物质力量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="认识运动的基本规律"><a href="#认识运动的基本规律" class="headerlink" title="认识运动的基本规律"></a>认识运动的基本规律</h3><ul>
+<li><p>认识的反复性</p>
+<ul>
+<li>概念:人们对于一个复杂事物的认识往往要经过由感性认识到理性认识、再由理性认识到实践的多次反复才能完成。</li>
+<li>从客观方面看，事物的各个侧面及其本质的暴露有一个过程；</li>
+<li>从主观方面看，人的认识能力有一个提高的过程。人的认识受实践范围、立场、观点、方法、思维能力、工作经验和知识水平等因素的制约</li>
+</ul>
+</li>
+<li><p>认识的无限性</p>
+<ul>
+<li>概念：对于事物发展过程的推移来说，人类的认识是永无止境、无限发展的，它表现为”实践、认识、再实践、再认识”的无限循环，由初级阶段向高级阶段不断推移的永无止境的前进运动。这种认识的无限发展过程，在形式上是循环往复，在实质上是前进上升发展的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="实践与认识的具体的历史的统一"><a href="#实践与认识的具体的历史的统一" class="headerlink" title="实践与认识的具体的历史的统一"></a>实践与认识的具体的历史的统一</h3><ul>
+<li>认识的任务在于不断地克展主观和客观、认识和实践之间的矛盾，求得它们之间具体的历史的统一。</li>
+<li>具体的：即主观认识要同一定时间、地点、条件下的客观实践相符合；</li>
+<li>历史的：即主观认识要同特定历史发展阶段的客观实践相符合；</li>
+<li>由于客观实践是具体的、历史的、所以，主观认识也应当是具体的、历史的；主现和客观、理论和实践、知和行的具体的历史的统一，反对一切离开真体历史的‘左’的或’右‘的错误思想</li>
+</ul>
+<h2 id="真理与价值"><a href="#真理与价值" class="headerlink" title="真理与价值"></a>真理与价值</h2><h3 id="马克思主义真理观"><a href="#马克思主义真理观" class="headerlink" title="马克思主义真理观"></a>马克思主义真理观</h3><ul>
+<li>真理是标志主观与客观相符合的哲学范畴，是对客观事物及其规律的正确反映。所谓正确反映，是指真理是在实践基础上主体认识对客体本质和规律的符合、一致和接近。</li>
+</ul>
+<h3 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h3><ul>
+<li><p>客观性</p>
+<ul>
+<li>即对客观事物及其规律的正确反映，真理的内容包含着不依赖于人和人的意识的客观内容。</li>
+<li>真理的形式又是主观的</li>
+<li>真理的客现性决定了真理的一元性。真理的一元性是指在同一条件下对于特定的认识客体的真理性认识只有一个，而不可能有多个。认识是多元的，但真理是一元的。</li>
+</ul>
+</li>
+<li><p>绝对性</p>
+<ul>
+<li>指真理的内容表明了主客观统一的确定性和发展的无限性:包含两方面含义</li>
+<li>任何真理都必然包含同客观对象相符合的客观内容,都同谬误有原则的界限。否则就不称其为真理,这一点是无条件的、绝对的；</li>
+<li>人类认识按其本性来说,能够正确认识无限发展着的物质世界,认识每前进一步,都是对无限发展着的物质世界的接近,这一点也是无条件的、绝对的</li>
+</ul>
+</li>
+<li><p>相对性</p>
+<ul>
+<li><p>人们在一定条件下对客观事物及其本质和发展规律的正确认识总是有限度的，不完善的。包含两方面含义：</p>
+<ul>
+<li>真理所反映的对象是有条件的、有限的；</li>
+<li>真理反映容观对象的正确程度是有条件的、有限的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="真理问题上的辩证法"><a href="#真理问题上的辩证法" class="headerlink" title="真理问题上的辩证法"></a>真理问题上的辩证法</h3><ul>
+<li><p>内涵：任何真理都是绝对性和相对性的统一，是同一客观真理的两种属性</p>
+</li>
+<li><p>两者辩证关系</p>
+<ul>
+<li><p>相互依存</p>
+</li>
+<li><p>相互包含</p>
+<ul>
+<li><p>总体性寓于相对性之中</p>
+</li>
+<li><p>相对性必然包含并表现着绝对性</p>
+<ul>
+<li>绝对真理和相对真理是不可分的，没有离开绝对真理的相对真理，也没有离开相对真理的绝对真理。</li>
+<li>无数相对的真理之总和，就是绝对的真理。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>真理永远处在由相对向绝对的转化和发展中，是从真理的相对性走向绝对性、接近绝对性的过程。任何真理性的认识都是由真理的相对性向绝对性转化过程中的一个部节，这是真理发展的规律</p>
+</li>
+</ul>
+</li>
+<li><p>批判两种错误的观点</p>
+<ul>
+<li><p>绝对主义</p>
+<ul>
+<li>夸大真理的绝对性，否认真理的相对性，认为人们可以一下于穷尽绝对真理，把已有的理论看成永慢不变的教条：</li>
+<li>实际生活中表现为教条主义和思想像化：</li>
+</ul>
+</li>
+<li><p>相对主义</p>
+<ul>
+<li>片面夸大真理的相对性，否认真理的经对性、客观性，怀疑科学理论的可靠性，把真理看成主观随意的东西。</li>
+<li>在实际生活中表现为怀疑主义和诡辩论：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方法论意义</p>
+<ul>
+<li>马克恩主义作为科学真理，也是绝对性和相对性的统一。马克恩主义经典作家没有穷尽真理；马克思主义需要随着社会实践的发展而发展，以科学的态度对待马克忍主义，就要正确处理好坚持和发展的辩证关系，对马克思主义既要坚持、又要发展，在坚持中发展、在发展中坚持，反对把马克恩主义当作像死的教条或认为马克恩主义已经”过时”这两种错误领向。</li>
+</ul>
+</li>
+</ul>
+<h3 id="真理与谬误"><a href="#真理与谬误" class="headerlink" title="真理与谬误"></a>真理与谬误</h3><ul>
+<li><p>关系</p>
+<ul>
+<li><p>相互对立</p>
+<ul>
+<li>在确定的对象和范围内,真理与谬误的对立是绝对的</li>
+</ul>
+</li>
+<li><p>对立又是相对的,在一定条件下能够相互转化</p>
+<ul>
+<li><p>真理在一定条件下会转化为谬误</p>
+<ul>
+<li>真理是具体的</li>
+<li>真理是全面的</li>
+</ul>
+</li>
+<li><p>谬误在一定条件下能够向真理转化</p>
+</li>
+</ul>
+</li>
+<li><p>真理总是同逻误相比较而存在,相斗争而发展</p>
+</li>
+</ul>
+</li>
+<li><p>真理的检验标准</p>
+<ul>
+<li><p>实践是唯一标准</p>
+<ul>
+<li>从真理的本性看,真理是人们对客观事物及其发展规律的正确反映,它的本性在于主观和客观相符合</li>
+<li>从实践的特点看,实践是人们改造世界的客观的物质性活动,有直接现实性的特点</li>
+<li>逻辑证明会起到重要的补充作用</li>
+</ul>
+</li>
+<li><p>实践标准是确定性和不确定的统一</p>
+<ul>
+<li>实检验理是一个永无止境的发展过程,不可能一次完成</li>
+<li>既要看到实践标准的确定性,防止和反对否认真理标准问题的唯心主义,怀疑主义和相对主义</li>
+<li>又更看到实践标准的不确定性,防止和反对教条主义和独断论错误</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="真理与价值-1"><a href="#真理与价值-1" class="headerlink" title="真理与价值"></a>真理与价值</h3><ul>
+<li><p>价值:在实践基础上形成的主体和客体之间的意义关系,是客体对个人、群体乃至整个社会的生活和活动所有的积极意义</p>
+</li>
+<li><p>价值的基本特征:</p>
+<ul>
+<li><p>价值的客观性</p>
+<ul>
+<li>主体的存在和需具有客观性</li>
+<li>客体的存在、属性及作用是客观的</li>
+</ul>
+</li>
+<li><p>价值的主体性</p>
+<ul>
+<li>事物是否有价值由主体判断;</li>
+<li>价值是由主体创造的。</li>
+</ul>
+</li>
+<li><p>价值的多维性</p>
+<ul>
+<li>同一客体相对于主体的不同需要会产生不同的价值</li>
+</ul>
+</li>
+<li><p>价值的社会历史性</p>
+<ul>
+<li>不同历史阶段的人类社会对价值的判断是不同的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>价值评价</p>
+<ul>
+<li><p>内涵:</p>
+<ul>
+<li>主体对客体的价值以及价值大小所作的评判或判断,也称为价值判断</li>
+</ul>
+</li>
+<li><p>特点</p>
+<ul>
+<li>评价以主客体的价值关系为认识对象</li>
+<li>评价结与评价主体直接相关</li>
+<li>评价结果的正确与否依赖于对客观状况和主体需要的认识</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>价值观</p>
+<ul>
+<li><p>内涵:</p>
+<ul>
+<li>人们关于价值本质的认识以及对人和事物的评价标准、评价原则和评价方法的观点的体系</li>
+</ul>
+</li>
+<li><p>核心价值观:最持久、最深层的力量,是全社会共同认可的</p>
+</li>
+<li><p>社会主义核心价值观:回答在我国应该建设什么样的国家,建设什么样的社会,培育什么样的公民的重大问题</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="认识世界和改造世界"><a href="#认识世界和改造世界" class="headerlink" title="认识世界和改造世界"></a>认识世界和改造世界</h2><h3 id="相互依赖、相互制约"><a href="#相互依赖、相互制约" class="headerlink" title="相互依赖、相互制约"></a>相互依赖、相互制约</h3><ul>
+<li><p>认识世界有助于改造世界，正确认识世界是有效改造世界的必要前提</p>
+</li>
+<li><p>人们只有在改造世界的实践中才能不断深化：拓展对世界的正确认识</p>
+<ul>
+<li>改造主观世界：核心是改造世界观</li>
+<li>改造客现世界</li>
+</ul>
+</li>
+<li><p>统一的基础：实践</p>
+</li>
+</ul>
+<h3 id="根本动力：主观和客观的矛盾"><a href="#根本动力：主观和客观的矛盾" class="headerlink" title="根本动力：主观和客观的矛盾"></a>根本动力：主观和客观的矛盾</h3><h3 id="认识世界和改造世界的过程是从必然走向自由的过程"><a href="#认识世界和改造世界的过程是从必然走向自由的过程" class="headerlink" title="认识世界和改造世界的过程是从必然走向自由的过程"></a>认识世界和改造世界的过程是从必然走向自由的过程</h3><ul>
+<li><p>认识世界和改造世界是一个充满矛盾的过程</p>
+<ul>
+<li>必然和自由是人类存在和发展的永恒动力</li>
+<li>人类世界是由主观世界和客观世界构成的。主观和客观的矛盾是人类认识和实践活动中的基本矛盾，也是人类认识世界和改造世界的根本动力，正是这一矛盾的驱动，使认识世界和改造世界呈现出不断深入和扩展的过程。认识世界和改造世界、改造客观世界和改造主观世界的过程，也就是从必然走向自由的过程。</li>
+</ul>
+</li>
+<li><p>自由是对必然的认识和对客观世界的改造</p>
+<ul>
+<li>认识必然和争取自由是一个历史性的过程，是人类认识世界和改造世界的根本目标</li>
+<li>自由是标示人的活动状态的范畴，是指人在活动中通过认识和利用必然所表现出的一种自觉自主的状态。必然性即规律性，指的是不依赖于人的意识而存在的自然和社会发展所图有的客观规律。认识必然、争取自由，是人类认识世界和改造世界的根本目标，是一个历史性的过程。</li>
+</ul>
+</li>
+<li><p>自由是有条件的</p>
+<ul>
+<li>认识条件，就认识条件而言，要有对客观事物的正确认识，最主要的是对享现事物运动发展规律信、必然性的正确认识；</li>
+<li>实践条件。就实践条件而言，就是能够将获得的规律性认识运用于指导实践，实现改造世界的目的，才是真正的自由。意志自由只是借助于对事物的认识作出决定的能力，而犹豫不决是以不知为基础的，它看来好像是在诗许多不同的和相互矛盾的可能的决定中任意进行选择，但恰好由此证明它的不自由，证明它正好被应该由它支配的对象所支配。</li>
+</ul>
+</li>
+<li><p>必然王图和自由王国是人类在客观世界面前所处的两种不同的社会活动状态。从必然王图到自由王国是永无止境的无限发展过程。</p>
+</li>
+</ul>
+<h3 id="一切从实际出发，实事求是"><a href="#一切从实际出发，实事求是" class="headerlink" title="一切从实际出发，实事求是"></a>一切从实际出发，实事求是</h3><ul>
+<li><p>一切从实际出发是马克思主义认识论的根本要求</p>
+</li>
+<li><p>实事求是是中国共产党思想路线的核心、根本思想方法，工作方法、领导方法和胜利的重要法宝</p>
+</li>
+<li><p>理论创新和实践创新的良性互动</p>
+<ul>
+<li>实践创新为理论创新提供不竭的动力源泉</li>
+<li>理论创新为实践创新提供科学的行动指南</li>
+<li>努力实现两者的良性互动</li>
+</ul>
+</li>
+</ul>
+<h2 id="是最基本的实践活动，它构成全部社会生活的基础"><a href="#是最基本的实践活动，它构成全部社会生活的基础" class="headerlink" title="是最基本的实践活动，它构成全部社会生活的基础"></a>是最基本的实践活动，它构成全部社会生活的基础</h2><p><strong>思维导图：</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/_201800302008.png" alt></p>
+</body></html>]]></content>
+      <categories>
+        <category>课堂笔记</category>
+      </categories>
+      <tags>
+        <tag>马克思主义原理</tag>
+      </tags>
+  </entry>
+</search>
