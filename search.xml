@@ -86,7 +86,7 @@
 </ul>
 </body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="https://thelighter.github.io/2020/05/17/flask-emoji/">flask如何在mysql中储存emoji表情</a></li></ul></div>]]></content>
       <categories>
-        <category>后端开发</category>
+        <category>程序语言</category>
       </categories>
       <tags>
         <tag>flask</tag>
@@ -118,25 +118,13 @@
 <hr>
 </body></html>]]></content>
       <categories>
-        <category>Python</category>
+        <category>人工智能</category>
+        <category>程序语言</category>
       </categories>
       <tags>
         <tag>爬虫</tag>
+        <tag>Python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>PyTorch基本教程</title>
-    <url>/2020/06/27/PyTorch/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h1><h4 id="为什么使用PyTorch"><a href="#为什么使用PyTorch" class="headerlink" title="为什么使用PyTorch"></a>为什么使用PyTorch</h4><p>PyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上. </p>
-<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200627104139.png" alt="使用PyTorch的使用者"></p>
-<ul>
-<li>与Tensorflow不同的是：<ul>
-<li>Tensorflow先搭建静态流程图然后代入数据进行计算；</li>
-<li>PyTorch边代入数据边构建图；</li>
-</ul>
-</li>
-</ul>
-<h4 id="PyTorch-安装"><a href="#PyTorch-安装" class="headerlink" title="PyTorch 安装"></a>PyTorch 安装</h4></body></html>]]></content>
   </entry>
   <entry>
     <title>微信小程序“一个人，一座城”开发文档</title>
@@ -295,7 +283,7 @@
 <h2 id="6-附件"><a href="#6-附件" class="headerlink" title="6 附件"></a>6 附件</h2><p><a href="http://cloud.xiheye.club/map.zip" target="_blank" rel="noopener">源码下载地址（非移动用户）</a><br><a href="https://pan.baidu.com/s/1K5ik11JzOPubN1_9tU2DIw" target="_blank" rel="noopener">百度网盘下载地址（提取码：gla8） </a></p>
 </body></html>]]></content>
       <categories>
-        <category>课堂笔记</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>移动互联网开发</tag>
@@ -460,7 +448,7 @@
 </ul>
 </body></html>]]></content>
       <categories>
-        <category>课堂笔记</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>马克思主义原理</tag>
@@ -966,7 +954,7 @@
 <h2 id="是最基本的实践活动，它构成全部社会生活的基础"><a href="#是最基本的实践活动，它构成全部社会生活的基础" class="headerlink" title="是最基本的实践活动，它构成全部社会生活的基础"></a>是最基本的实践活动，它构成全部社会生活的基础</h2><p><strong>思维导图：</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/_201800302008.png" alt></p>
 </body></html>]]></content>
       <categories>
-        <category>课堂笔记</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>马克思主义原理</tag>
@@ -1014,6 +1002,7 @@
 </body></html>]]></content>
       <categories>
         <category>人工智能</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>TensorFlow</tag>
@@ -1095,7 +1084,7 @@
 <p>（1） 结构性：便于表达结构性知识，能够将知识的内部结构关系及知识间的联系表示出来。<br>（2）继承性：框架网络中，下层框架可以继承上层框架的槽值，也可以进行补充和修改。<br>（3）自然性： 框架表示法与人在观察事物时的思维活动是一致的。</p>
 </body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/31/AInotes1/">人工智能导读课堂笔记（一）</a></li></ul></div>]]></content>
       <categories>
-        <category>课堂笔记</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>AI,人工智能导论</tag>
@@ -1135,7 +1124,7 @@
 </ol>
 </body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="http://yexihe-jpg.github.io/2020/05/31/AInotes2/">人工智能课堂笔记（二）</a></li></ul></div>]]></content>
       <categories>
-        <category>课堂笔记</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
         <tag>AI,人工智能导论</tag>
@@ -1374,9 +1363,6 @@
 <h5 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h5><h2 id="OneDrive另类用法-搭建OneIndex"><a href="#OneDrive另类用法-搭建OneIndex" class="headerlink" title="OneDrive另类用法-搭建OneIndex"></a><a href="https://zhuanlan.zhihu.com/p/79678905" target="_blank" rel="noopener">OneDrive另类用法-搭建OneIndex</a></h2><hr>
 <h4 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h4><p>由于挖站否空间的域名莫名其妙挂掉，本人改用 <a href="http://freela.ml/" target="_blank" rel="noopener">http://freela.ml/</a> 的空间</p>
 </body></html>]]></content>
-      <categories>
-        <category>-私有云</category>
-      </categories>
       <tags>
         <tag>onedrive</tag>
         <tag>私有云</tag>

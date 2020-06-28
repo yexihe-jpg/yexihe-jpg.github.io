@@ -2,16 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/</loc>
+    <loc>http://yexihe-jpg.github.io/2020/06/02/tensorflowlearn/</loc>
     
-    <lastmod>2020-06-28T03:37:12.516Z</lastmod>
+    <lastmod>2020-06-28T03:49:30.444Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/27/PyTorch/</loc>
+    <loc>http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/</loc>
     
-    <lastmod>2020-06-28T03:21:24.582Z</lastmod>
+    <lastmod>2020-06-28T03:47:58.132Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/06/03/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%A4%E8%AF%86%E8%AE%BA/</loc>
+    
+    <lastmod>2020-06-28T03:45:44.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/</loc>
+    
+    <lastmod>2020-06-28T03:45:37.177Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/06/18/wx-map/</loc>
+    
+    <lastmod>2020-06-28T03:45:18.811Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/04/27/flask-use/</loc>
+    
+    <lastmod>2020-06-28T03:44:10.361Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/05/07/clouds/</loc>
+    
+    <lastmod>2020-06-28T03:43:33.615Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/05/31/AInotes2/</loc>
+    
+    <lastmod>2020-06-28T03:42:58.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/2020/05/31/AInotes1/</loc>
+    
+    <lastmod>2020-06-28T03:42:45.321Z</lastmod>
     
   </url>
   
@@ -19,20 +68,6 @@
     <loc>http://yexihe-jpg.github.io/2020/06/15/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/</loc>
     
     <lastmod>2020-06-23T08:51:15.367Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/18/wx-map/</loc>
-    
-    <lastmod>2020-06-18T05:17:28.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/</loc>
-    
-    <lastmod>2020-06-16T13:58:56.503Z</lastmod>
     
   </url>
   
@@ -72,34 +107,6 @@
   </url>
   
   <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/03/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%A4%E8%AF%86%E8%AE%BA/</loc>
-    
-    <lastmod>2020-06-03T04:02:54.215Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/06/02/tensorflowlearn/</loc>
-    
-    <lastmod>2020-06-02T04:17:06.234Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/05/31/AInotes2/</loc>
-    
-    <lastmod>2020-05-31T07:47:06.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/05/31/AInotes1/</loc>
-    
-    <lastmod>2020-05-31T07:45:49.096Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yexihe-jpg.github.io/2020/05/26/CNN/</loc>
     
     <lastmod>2020-05-27T11:19:05.020Z</lastmod>
@@ -131,20 +138,6 @@
     <loc>http://yexihe-jpg.github.io/2020/05/18/navigation/</loc>
     
     <lastmod>2020-05-25T09:19:38.175Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/05/07/clouds/</loc>
-    
-    <lastmod>2020-05-14T04:37:36.208Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/2020/04/27/flask-use/</loc>
-    
-    <lastmod>2020-05-08T03:09:48.879Z</lastmod>
     
   </url>
   

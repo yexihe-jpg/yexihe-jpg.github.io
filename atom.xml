@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yexihe-jpg.github.io/"/>
-  <updated>2020-06-28T03:37:12.516Z</updated>
+  <updated>2020-06-28T03:47:58.132Z</updated>
   <id>http://yexihe-jpg.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/"/>
     <id>http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/</id>
     <published>2020-06-28T03:22:28.000Z</published>
-    <updated>2020-06-28T03:37:12.516Z</updated>
+    <updated>2020-06-28T03:47:58.132Z</updated>
     
     <summary type="html">
     
@@ -36,33 +36,14 @@
     </summary>
     
     
-      <category term="Python" scheme="http://yexihe-jpg.github.io/categories/Python/"/>
+      <category term="人工智能" scheme="http://yexihe-jpg.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="程序语言" scheme="http://yexihe-jpg.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
     
     
       <category term="爬虫" scheme="http://yexihe-jpg.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
-  </entry>
-  
-  <entry>
-    <title>PyTorch基本教程</title>
-    <link href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/"/>
-    <id>http://yexihe-jpg.github.io/2020/06/27/PyTorch/</id>
-    <published>2020-06-27T02:23:55.000Z</published>
-    <updated>2020-06-28T03:21:24.582Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;PyTorch&quot;&gt;&lt;a href=&quot;#PyTorch&quot; class=&quot;headerlink&quot; title=&quot;PyTorch&quot;&gt;&lt;/a&gt;PyTorch&lt;/h1&gt;&lt;h4 id=&quot;为什么使用PyTorch&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
+      <category term="Python" scheme="http://yexihe-jpg.github.io/tags/Python/"/>
     
   </entry>
   
@@ -71,7 +52,7 @@
     <link href="http://yexihe-jpg.github.io/2020/06/18/wx-map/"/>
     <id>http://yexihe-jpg.github.io/2020/06/18/wx-map/</id>
     <published>2020-06-18T05:16:15.000Z</published>
-    <updated>2020-06-18T05:17:28.075Z</updated>
+    <updated>2020-06-28T03:45:18.811Z</updated>
     
     <summary type="html">
     
@@ -86,7 +67,7 @@
     </summary>
     
     
-      <category term="课堂笔记" scheme="http://yexihe-jpg.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="移动互联网开发" scheme="http://yexihe-jpg.github.io/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E5%BC%80%E5%8F%91/"/>
@@ -98,7 +79,7 @@
     <link href="http://yexihe-jpg.github.io/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/"/>
     <id>http://yexihe-jpg.github.io/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/</id>
     <published>2020-06-16T13:57:53.000Z</published>
-    <updated>2020-06-16T13:58:56.503Z</updated>
+    <updated>2020-06-28T03:45:37.177Z</updated>
     
     <summary type="html">
     
@@ -113,7 +94,7 @@
     </summary>
     
     
-      <category term="课堂笔记" scheme="http://yexihe-jpg.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="马克思主义原理" scheme="http://yexihe-jpg.github.io/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/"/>
@@ -151,7 +132,7 @@
     <link href="http://yexihe-jpg.github.io/2020/06/03/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%A4%E8%AF%86%E8%AE%BA/"/>
     <id>http://yexihe-jpg.github.io/2020/06/03/%E8%BE%A9%E8%AF%81%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89%E8%AE%A4%E8%AF%86%E8%AE%BA/</id>
     <published>2020-06-03T03:49:13.000Z</published>
-    <updated>2020-06-03T04:02:54.215Z</updated>
+    <updated>2020-06-28T03:45:44.194Z</updated>
     
     <summary type="html">
     
@@ -166,7 +147,7 @@
     </summary>
     
     
-      <category term="课堂笔记" scheme="http://yexihe-jpg.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="马克思主义原理" scheme="http://yexihe-jpg.github.io/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/"/>
@@ -178,7 +159,7 @@
     <link href="http://yexihe-jpg.github.io/2020/06/02/tensorflowlearn/"/>
     <id>http://yexihe-jpg.github.io/2020/06/02/tensorflowlearn/</id>
     <published>2020-06-02T03:55:14.000Z</published>
-    <updated>2020-06-02T04:17:06.234Z</updated>
+    <updated>2020-06-28T03:49:30.444Z</updated>
     
     <summary type="html">
     
@@ -195,6 +176,8 @@
     
       <category term="人工智能" scheme="http://yexihe-jpg.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
     
       <category term="TensorFlow" scheme="http://yexihe-jpg.github.io/tags/TensorFlow/"/>
     
@@ -205,7 +188,7 @@
     <link href="http://yexihe-jpg.github.io/2020/05/31/AInotes2/"/>
     <id>http://yexihe-jpg.github.io/2020/05/31/AInotes2/</id>
     <published>2020-05-31T07:43:34.000Z</published>
-    <updated>2020-05-31T07:47:06.075Z</updated>
+    <updated>2020-06-28T03:42:58.258Z</updated>
     
     <summary type="html">
     
@@ -220,7 +203,7 @@
     </summary>
     
     
-      <category term="课堂笔记" scheme="http://yexihe-jpg.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="AI,人工智能导论" scheme="http://yexihe-jpg.github.io/tags/AI-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
@@ -232,7 +215,7 @@
     <link href="http://yexihe-jpg.github.io/2020/05/31/AInotes1/"/>
     <id>http://yexihe-jpg.github.io/2020/05/31/AInotes1/</id>
     <published>2020-05-31T07:43:14.000Z</published>
-    <updated>2020-05-31T07:45:49.096Z</updated>
+    <updated>2020-06-28T03:42:45.321Z</updated>
     
     <summary type="html">
     
@@ -247,7 +230,7 @@
     </summary>
     
     
-      <category term="课堂笔记" scheme="http://yexihe-jpg.github.io/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://yexihe-jpg.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="AI,人工智能导论" scheme="http://yexihe-jpg.github.io/tags/AI-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/"/>
@@ -386,7 +369,7 @@
     <link href="http://yexihe-jpg.github.io/2020/05/07/clouds/"/>
     <id>http://yexihe-jpg.github.io/2020/05/07/clouds/</id>
     <published>2020-05-07T10:54:40.000Z</published>
-    <updated>2020-05-14T04:37:36.208Z</updated>
+    <updated>2020-06-28T03:43:33.615Z</updated>
     
     <summary type="html">
     
@@ -402,8 +385,6 @@
     </summary>
     
     
-      <category term="-私有云" scheme="http://yexihe-jpg.github.io/categories/%E7%A7%81%E6%9C%89%E4%BA%91/"/>
-    
     
       <category term="onedrive" scheme="http://yexihe-jpg.github.io/tags/onedrive/"/>
     
@@ -418,7 +399,7 @@
     <link href="http://yexihe-jpg.github.io/2020/04/27/flask-use/"/>
     <id>http://yexihe-jpg.github.io/2020/04/27/flask-use/</id>
     <published>2020-04-27T13:20:26.524Z</published>
-    <updated>2020-05-08T03:09:48.879Z</updated>
+    <updated>2020-06-28T03:44:10.361Z</updated>
     
     <summary type="html">
     
@@ -434,7 +415,7 @@
     </summary>
     
     
-      <category term="后端开发" scheme="http://yexihe-jpg.github.io/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="程序语言" scheme="http://yexihe-jpg.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
     
     
       <category term="flask" scheme="http://yexihe-jpg.github.io/tags/flask/"/>
