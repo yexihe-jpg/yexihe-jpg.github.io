@@ -92,18 +92,22 @@
 
 
 
-<meta name="description" content="愿爱与被爱皆被温柔以待">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yexihe's blog">
-<meta property="og:url" content="http://yexihe-jpg.github.io/page/2/index.html">
+<meta name="description" content="PyTorch为什么使用PyTorchPyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上.    与Tensorflow不同的是： Tensorflow先搭建静态流程图然后代入数据进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch基本教程">
+<meta property="og:url" content="http://yexihe-jpg.github.io/2020/06/27/PyTorch/index.html">
 <meta property="og:site_name" content="yexihe's blog">
-<meta property="og:description" content="愿爱与被爱皆被温柔以待">
+<meta property="og:description" content="PyTorch为什么使用PyTorchPyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上.    与Tensorflow不同的是： Tensorflow先搭建静态流程图然后代入数据进">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200627104139.png">
+<meta property="article:published_time" content="2020-06-27T02:23:55.000Z">
+<meta property="article:modified_time" content="2020-06-28T03:21:24.582Z">
 <meta property="article:author" content="梦屿">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="程序员">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200627104139.png">
 
 
 
@@ -133,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="http://yexihe-jpg.github.io/page/2/">
+  <link rel="canonical" href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/">
 
 
 
@@ -151,7 +155,7 @@
     })();
 </script>
 
-  <title>yexihe's blog - Welcome to yexihe's blog!</title>
+  <title>PyTorch基本教程 | yexihe's blog</title>
   
 
 
@@ -183,8 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <!--fork me from github-->
@@ -363,1780 +366,281 @@
           <div id="content" class="content">
             
 
-  <!--轮播图-->
+  <div id="posts" class="posts-expand">
+    
+
   
 
-<!--
-<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
+  
+  
+  
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap.min.js@3.3.5/bootstrap.min.js"></script>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/">
 
-<style type="text/css">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦屿">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
 
-.glyphicon-chevron-left:before{
-	/* content: "《" */
-}
-.glyphicon-chevron-right:before{
-	/* content: "》" */
-}
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yexihe's blog">
+    </span>
 
-.right-siders{
-   border-radius: 5px;
-   /*margin-top: 5px;
-   margin-bottom: 10px;*/
-}
+    
+      <header class="post-header">
 
-.my-carousel{
-    /*height: 10%;*/
-    margin-bottom: 12px;
-}
-
-.my-carousel:hover{
-  margin-left: 5px;
-  //padding: 5px 1px;
-  border-radius: 5px;
-  transform: scale(1.1);
-  box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);
-}
-
-@media (max-width: 767px){
-	.rights{
-		display: none;
-	}
-	.carousel{
-		width: 100% !important;
-		height: 100% !important;
-	}
-	.slide{
-		width: 100% !important;
-		height: 100% !important;
-	}
-
-	.carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-
-}
-
-.carousel{
-	width: 65%;
-	height: 100%;
-	position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  line-height: 1;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -moz-transition: -moz-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-  }
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    left: 0;
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .active {
-  left: 0;
-}
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.carousel-inner > .next {
-  left: 100%;
-}
-.carousel-inner > .prev {
-  left: -100%;
-}
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-.carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /*width: 5%;*/
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
-}
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#00000000, GradientType=1);
-}
-.carousel-control.right {
-  left: auto;
-  right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#80000000, GradientType=1);
-}
-.carousel-control:hover,
-.carousel-control:focus {
-  outline: 0;
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-/*
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-  margin-left: -10px;
-}
-*/
-
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  background: url('/images/icon-slides.png');
-  background-position-y: -20px;
-  left: 9px;
-}
-
-/*
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
-}
-*/
-
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  background: url('/images/icon-slides.png');
-  background-position-x: -50px;
-  background-position-y: -20px;
-  right: 0px;
-}
-
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  font-family: serif;
-}
-
-.carousel-control .icon-prev:before {
-  content: 2039;
-}
-.carousel-control .icon-next:before {
-  content: 203a;
-}
-
-.carousel-indicators {
-  opacity: 0.5;
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  text-indent: -999px;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, .24);
-}
-.carousel-indicators .active {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-   /* margin-right: -10px; */
-  }
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: -20px;
-  }
-}
-</style>
-
-<div width="100%" height="24%" style="border: 0px; overflow: hidden; border-radius: 10px; margin-bottom: 25px;" scrolling="no">
-
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="float:left">
-
-      <!-- 轮播（Carousel）指标 -->
-      <ol class="carousel-indicators">
-      
-      
-        <li data-target="#myCarousel" data-slide-to="0"></li>
         
-      
-        <li data-target="#myCarousel" data-slide-to="1"></li>
         
-      
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+          <h2 class="post-title" itemprop="name headline">PyTorch基本教程</h2>
         
-      
-      </ol>
 
-      <!-- 轮播（Carousel）项目 -->
-      <div class="carousel-inner" style="height: 24%; border-radius: 10px; width: 100%;">
-       
-       
-          
-          <a class="item active" href="https://xiheye.club" target="_blank" style="height: 100%;">
+        <div class="post-meta">
+          <span class="post-time">
+
+             
+
+             
+
             
-            <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/knowledge.png" class="nofancybox" style="width: 100%; height: 100%">
-          </a>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-27T10:23:55+08:00">
+                2020-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
+
           
+            
+          
+
+          
+           
+             <span id="/2020/06/27/PyTorch/" class="leancloud_visitors" data-flag-title="PyTorch基本教程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+
+          
+            <span class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="字数">
+                  105
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          <!-- 隐藏文章内标题下，内容描述
+          
+          -->
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-          
-            <a class="item" href="https://xiheye.club/atom.xml" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/subscribe.png" class="nofancybox" style="width: 100%; height: 100%;">
-            </a>
+      
+
+      
+        <h1 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h1><h4 id="为什么使用PyTorch"><a href="#为什么使用PyTorch" class="headerlink" title="为什么使用PyTorch"></a>为什么使用PyTorch</h4><p>PyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上. </p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200627104139.png" alt="使用PyTorch的使用者"></p>
+<ul>
+<li>与Tensorflow不同的是：<ul>
+<li>Tensorflow先搭建静态流程图然后代入数据进行计算；</li>
+<li>PyTorch边代入数据边构建图；</li>
+</ul>
+</li>
+</ul>
+<h4 id="PyTorch-安装"><a href="#PyTorch-安装" class="headerlink" title="PyTorch 安装"></a>PyTorch 安装</h4>
+
         
+
       
+    </div>
+
+      <!-- 相关文章推荐 -->
+     
           
-            <a class="item" href="https://xiheye.club/archives/" target="_blank" style="height: 100%;">
-              <img src="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/carousel/photos.png" class="nofancybox" style="width: 100%; height: 100%;">
-            </a>
-        
+
+
+     
+
+    
+    
+    
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2020/06/27/PyTorch/">PyTorch基本教程</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 梦屿 的个人博客">梦屿</a></p>
+  <p><span>发布时间:</span>2020年06月27日 - 10:23:55</p>
+  <p><span>最后更新:</span>2020年06月28日 - 11:21:24</p>
+  <p><span>原始链接:</span><a href="/2020/06/27/PyTorch/" title="PyTorch基本教程">http://yexihe-jpg.github.io/2020/06/27/PyTorch/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yexihe-jpg.github.io/2020/06/27/PyTorch/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+    });
+    });
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
       
+        <div>
+    
+        <div class="read-over">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+      <div>
+        <div class="share_reward">
+  <div>坚持原创技术分享，感谢您的支持和鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梦屿 微信支付">
+        <p>微信支付</p>
       </div>
+    
 
-      <!-- 轮播（Carousel）导航 -->
-      <a class="left carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      </a>
-      <a class="right carousel-control" data-target="#myCarousel" href="javascript:void(0);" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      </a>
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦屿 支付宝">
+        <p>支付宝</p>
+      </div>
+    
 
-	  </div>
+    
 
-	<div class="rights" style="width: 30%; height: 24%; margin-right: 15px;margin-left: 0px;float: right;">
+  </div>
+</div>
 
-  	   <!-- 天气插件 -->
-  	   <!-- 会有http的链接
-       <iframe width="300px" scrolling="no" height="50px" frameborder="0" allowtransparency="true" src="https://i.tianqi.com/index.php?c=code&id=12&color=%23&bdc=%23&icon=1&py=beijing&num=2&site=12"></iframe>
-       -->
+      </div>
+    
 
-       <!-- https://tianqi.2345.com/plugin/setting.htm -->
-       <!-- <iframe allowtransparency="true" frameborder="0" width="290" height="75" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=2&t=0&v=0&d=2&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=290&h=75&align=left"></iframe> -->
-       <iframe allowtransparency="true" frameborder="0" width="300" height="55" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=1&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=300&h=55&align=left"></iframe>
+    
 
-  	   <!-- 热门排行 -->
-  	   <div class="my-carousel">
-         <a href="http://cloud.xiheye.club/" target="_blank">
-            <img class="right-siders nofancybox" src="/images/hot.png" width="100%">
-         </a>
-  	   </div>
+    <footer class="post-footer">
+      
 
-  	   <!-- 时光留影 -->
-  	   <div class="my-carousel">
-         <a href="https://xiheye.club/archives/" target="_blank">
-           <img class="right-siders nofancybox" src="/images/time.png">
-         </a>
-  	   </div>
+      
+      
+      
 
-  	  <!-- 推荐阅读 -->
-  	  <div class="my-carousel">
-        <a href="https://xiheye.club/categories/books/" target="_blank">
-          <img class="right-siders nofancybox" src="/images/read.png">
-        </a>
-  	  </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/" rel="prev" title="Python爬虫（1）">
+                <i class="fa fa-chevron-left"></i> Python爬虫（1）
+              </a>
+            
+          </div>
 
-      <!-- 订阅本站 -->
-      <div class="my-carousel">
-        <a href="https://xiheye.club/links/" target="_blank">
-          <img class="right-siders nofancybox" src="/images/subscribe.png">
-        </a>
-     </div>
+          <span class="post-nav-divider"></span>
 
-   </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/18/wx-map/" rel="next" title="微信小程序“一个人，一座城”开发文档">
+                微信小程序“一个人，一座城”开发文档 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+         <div data-weibo-title="分享到微博" data-qq-title="分享到QQ" data-douban-title="分享到豆瓣" class="social-share" data-disabled="qzone,google+,linkedin" data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+   分享到：
 </div>
 
 
-
-
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/31/AInotes1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/31/AInotes1/" itemprop="url">人工智能导读课堂笔记（一）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-31T15:43:14+08:00">
-                2020-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">课堂笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/31/AInotes1/" class="leancloud_visitors" data-flag-title="人工智能导读课堂笔记（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  284
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          人工智能导读课堂笔记（一）一，绪论1956年正式提出人工智能（artificial intelligence,AI）这个术语并把它作为一门新兴科学的名称。
-智能的特征
-感知能力：通过视觉、听觉、嗅觉等感知器官感知外部世界的能力；
-记忆与思维能力：存储由感觉器官感知到的外部信息以及由思维所产生的知识，
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/31/AInotes1/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/26/CNN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/26/CNN/" itemprop="url">基于CNN的垃圾分类模型</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T17:57:48+08:00">
-                2020-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index">
-                    <span itemprop="name">人工智能</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/26/CNN/" class="leancloud_visitors" data-flag-title="基于CNN的垃圾分类模型">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  254
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          基于CNN的垃圾分类模型分类模型实现基本思路如下：
-数据预处理
-将输入的图像转化为向量；
-对数据进行归一化处理，归一化的目的在于计算距离时保证各个维度的量纲一致；
-对标签进行one-hot编码；
-构造训练集，验证集和测试集；
-
-利用TensorFlow构建CNN模型用TensorFlow打造一张计算
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/26/CNN/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/26/os2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/26/os2/" itemprop="url">操作系统笔记（二）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T09:14:24+08:00">
-                2020-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/26/os2/" class="leancloud_visitors" data-flag-title="操作系统笔记（二）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  1.2k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          2.1 操作系统服务2.1.1 对用户
-用户界面、程序执行、I/O操作、文件系统操作、通信、错误检测2.1.2 对系统
-资源分配、统计、保护和安全2.2 操作系统的用户界面2.2.1 命令解释程序
-命令解释程序本身包含代码以执行这些命令；
-由系统程序实现绝大多数命令；2.2.2 图形用户界面2.3 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/26/os2/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/26/os1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/26/os1/" itemprop="url">操作系统笔记（一）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T09:08:54+08:00">
-                2020-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/26/os1/" class="leancloud_visitors" data-flag-title="操作系统笔记（一）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  1.4k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          1.1 操作系统的功能1.1.1 计算机系统的组成部分
-硬件、操作系统、系统程序和应用程序、用户
-
-
-1.1.2 两个视角
-用户视角：OS设计目的是为了用户使用方便，性能是相对其次的
-
-系统视角：OS是资源分配器&&OS是控制程序
-
-
-1.1.3 定义操作系统
-操作系统是一组控制和管理计算机硬件和软
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/26/os1/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/25/onemanager/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/25/onemanager/" itemprop="url">用 onemanager + onedrive + freela虚拟主机搭建私有云</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-25T17:20:53+08:00">
-                2020-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/25/onemanager/" class="leancloud_visitors" data-flag-title="用 onemanager + onedrive + freela虚拟主机搭建私有云">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  393
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          OneManager-php是一款强大的OneDrive列表程序，支持的功能比oneindex多，并且支持无服务器一键搭建，支持腾讯SCF服务搭建，基本上能用的搭建方式都支持，而且支持OneDrive商业版、OneDrive个人版和世纪互联版、支持多盘绑定。支持访客上传文件，图床模式，可以让访客上传
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/25/onemanager/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/18/navigation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/18/navigation/" itemprop="url">navigation</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-18T10:05:27+08:00">
-                2020-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/18/navigation/" class="leancloud_visitors" data-flag-title="navigation">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  1.4k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，可以使用它在一分钟内搭建属于自己的导航页面。
-CF-Worker-Dir提供丰富的自定义配置，同时它还可以预留了接口帮助你售出自己域名。
-1. 简介项目：https://github.com/sleepwoo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/18/navigation/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/05/07/clouds/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦屿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yexihe's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/07/clouds/" itemprop="url">用onedrive和虚拟空间搭建私有云</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-07T18:54:40+08:00">
-                2020-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A7%81%E6%9C%89%E4%BA%91/" itemprop="url" rel="index">
-                    <span itemprop="name">-私有云</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-           
-             <span id="/2020/05/07/clouds/" class="leancloud_visitors" data-flag-title="用onedrive和虚拟空间搭建私有云">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  282
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          用onedrive+oneindex+挖站否的免费虚机搭建私有云，走OneDrive流量，不走服务器流量。
-原材料
-OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留言附上前缀获取）
-一个VPS或者Linux虚拟主机（本人使用挖站否的虚机,注册后收藏几篇文章即可拿到30积分换取免费虚
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/07/clouds/" rel="contents">
-              阅读全文 »
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
@@ -2144,6 +648,15 @@ OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留�
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80OTQzMS8yNTkyMw=="></div>
+    </div>
+
+  
+
+
 
 
 
@@ -2168,8 +681,17 @@ OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2612,6 +1134,22 @@ OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留�
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PyTorch"><span class="nav-number">1.</span> <span class="nav-text">PyTorch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么使用PyTorch"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">为什么使用PyTorch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PyTorch-安装"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">PyTorch 安装</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -2807,6 +1345,10 @@ OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -2835,6 +1377,17 @@ OneDrive账号一个（本人为E5开发者账号，有需要可以在评论留�
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

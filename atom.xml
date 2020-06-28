@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yexihe-jpg.github.io/"/>
-  <updated>2020-06-18T05:17:28.075Z</updated>
+  <updated>2020-06-28T03:37:12.516Z</updated>
   <id>http://yexihe-jpg.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python爬虫（1）</title>
+    <link href="http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/"/>
+    <id>http://yexihe-jpg.github.io/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/</id>
+    <published>2020-06-28T03:22:28.000Z</published>
+    <updated>2020-06-28T03:37:12.516Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;Python爬虫介绍&quot;&gt;&lt;a href=&quot;#Python爬虫介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yexihe-jpg.github.io/categories/Python/"/>
+    
+    
+      <category term="爬虫" scheme="http://yexihe-jpg.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyTorch基本教程</title>
+    <link href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/"/>
+    <id>http://yexihe-jpg.github.io/2020/06/27/PyTorch/</id>
+    <published>2020-06-27T02:23:55.000Z</published>
+    <updated>2020-06-28T03:21:24.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;PyTorch&quot;&gt;&lt;a href=&quot;#PyTorch&quot; class=&quot;headerlink&quot; title=&quot;PyTorch&quot;&gt;&lt;/a&gt;PyTorch&lt;/h1&gt;&lt;h4 id=&quot;为什么使用PyTorch&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>微信小程序“一个人，一座城”开发文档</title>
