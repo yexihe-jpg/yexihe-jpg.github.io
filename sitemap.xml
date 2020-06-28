@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yexihe-jpg.github.io/about/index.html</loc>
+    
+    <lastmod>2020-06-28T14:23:40.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yexihe-jpg.github.io/top/index.html</loc>
+    
+    <lastmod>2020-06-28T13:10:35.085Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yexihe-jpg.github.io/2020/06/02/tensorflowlearn/</loc>
     
     <lastmod>2020-06-28T03:49:30.444Z</lastmod>
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://yexihe-jpg.github.io/top/index.html</loc>
-    
-    <lastmod>2020-06-14T15:49:23.624Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yexihe-jpg.github.io/books/index.html</loc>
     
     <lastmod>2020-06-14T12:01:24.337Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>http://yexihe-jpg.github.io/archives/archives.html</loc>
     
     <lastmod>2020-04-17T09:46:24.055Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yexihe-jpg.github.io/about/index.html</loc>
-    
-    <lastmod>2020-04-03T05:33:20.691Z</lastmod>
     
   </url>
   
