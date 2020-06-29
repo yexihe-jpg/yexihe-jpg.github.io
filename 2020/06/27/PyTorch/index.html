@@ -92,18 +92,26 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yexihe-jpg.github.io/categories/index.html">
+<meta name="description" content="PyTorch入门为什么使用PyTorchPyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上.    与Tensorflow不同的是： Tensorflow先搭建静态流程图然后代入数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch基本教程">
+<meta property="og:url" content="http://yexihe-jpg.github.io/2020/06/27/PyTorch/index.html">
 <meta property="og:site_name" content="yexihe's blog">
-<meta property="article:published_time" content="2020-04-02T14:41:12.000Z">
-<meta property="article:modified_time" content="2020-04-02T14:57:17.640Z">
+<meta property="og:description" content="PyTorch入门为什么使用PyTorchPyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上.    与Tensorflow不同的是： Tensorflow先搭建静态流程图然后代入数">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628120613.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628161229.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628165814.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629192811.png">
+<meta property="article:published_time" content="2020-06-27T02:23:55.000Z">
+<meta property="article:modified_time" content="2020-06-29T11:34:01.705Z">
 <meta property="article:author" content="梦屿">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="AI">
 <meta property="article:tag" content="程序员">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628120613.png">
 
 
 
@@ -133,7 +141,7 @@
 
 
 
-  <link rel="canonical" href="http://yexihe-jpg.github.io/categories/">
+  <link rel="canonical" href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/">
 
 
 
@@ -151,7 +159,7 @@
     })();
 </script>
 
-  <title>分类 | yexihe's blog</title>
+  <title>PyTorch基本教程 | yexihe's blog</title>
   
 
 
@@ -354,178 +362,332 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yexihe-jpg.github.io/2020/06/27/PyTorch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦屿">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yexihe's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">分类</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 6 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/books/">books</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/">程序语言</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/">程序语言</a><span class="category-list-count">1</span></li></ul>
-            </div>
+          <h2 class="post-title" itemprop="name headline">PyTorch基本教程</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+             
+
+             
 
             
-                 
-                 <style>
-
-  .categorylove {
-      width: 500px;
-      height: 650px;
-      position: relative;
-      margin: 60px auto;
-  }
-
-  .categorylove a {
-      position: absolute;
-      left: 0;
-      //color: goldenrod;
-      //color: #e804048f;
-      font-size: 20px;
-      font-family: sans-serif;
-      text-shadow: 0 0 1em white;
-      animation:
-          x-move 10s ease-in-out infinite alternate,
-          y-move 20s linear infinite;
-      animation-delay: calc(30s / var(--particles) * var(--n) * -1);
-      user-select: auto; // none
-  }
-
-  .categorylove a:first-child {
-      color: orangered;
-      font-size: 3em;
-      text-shadow:
-          0 0 0.1em black,
-          0 0 1em white;
-      z-index: 1;
-  }
-
-  @keyframes x-move {
-      to {
-          left: 450px;
-      }
-  }
-
-  @keyframes y-move {
-      0% { transform: translateY(180px); }
-      10% { transform: translateY(45px); }
-      15% { transform: translateY(5px); }
-      18% { transform: translateY(0); }
-      20% { transform: translateY(5px); }
-      22% { transform: translateY(35px); }
-      24% { transform: translateY(65px); }
-      25% { transform: translateY(110px); }
-      26% { transform: translateY(65px); }
-      28% { transform: translateY(35px); }
-      30% { transform: translateY(5px); }
-      32% { transform: translateY(0); }
-      35% { transform: translateY(5px); }
-      40% { transform: translateY(45px); }
-      50% { transform: translateY(180px); }
-      71% { transform: translateY(430px); }
-      72.5% { transform: translateY(440px); }
-      75% { transform: translateY(450px); }
-      77.5% { transform: translateY(440px); }
-      79% { transform: translateY(430px); }
-      100% { transform: translateY(180px); }
-  }
-
-  /* 移动端样式 */
-  @media (max-width: 767px) {
-    .categorylove{
-        width: 360px;
-        height: 450px;
-        margin: 30px auto;
-    }
-    @keyframes x-move {
-        to {
-            left: 285px;
-        }
-    }
-  }
-
-</style>
-
-<div class="categorylove"></div>
-
-<script type="text/javascript">
-
-      var categories = document.getElementsByClassName('category-all');
-     //var categories = document.querySelector('.category-all');
-
-     //隐藏category-all这个div
-     categories[0].setAttribute("hidden", "hidden");
-
-     var category = categories[0].getElementsByTagName('a');
-
-     var words = ['❤️'];
-     for(var i = 0 ; i < category.length ; i ++){
-       // words.push(category[i].innerHTML)
-         words.push(category[i]);
-         words.push('♠');
-     }
-     // words.push('💕');
-
-     var dom = {
-         love: document.querySelector('.categorylove')
-     }
-
-     dom.love.style.setProperty('--particles', words.length)
-
-     words.forEach((word, i) => {
-
-         let atag = document.createElement('a');
-         atag.style.setProperty('--n', i + 1);
-
-         atag.style.setProperty('text-decoration', 'none');
-         atag.style.setProperty('border-bottom', 'none');
-
-         var r=Math.floor(Math.random()*75+130);
-         var g=Math.floor(Math.random()*75+100);
-         var b=Math.floor(Math.random()*75+80);
-         atag.style.setProperty("color", "rgb("+r+","+g+","+b+")");
-
-         atag.setAttribute("href", word.href);
-         atag.innerText = word.innerText;
-
-         if(word.href == undefined){
-            atag.setAttribute("href", "#");
-            atag.innerText = word;
-         }
-
-         dom.love.appendChild(atag);
-     })
-
-</script>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-27T10:23:55+08:00">
+                2020-06-27
+              </time>
+            
 
             
 
-          </div>
+            
+          </span>
 
-        <!-- 友情链接-->
+          
+
+          
+            
+          
+
+          
+           
+             <span id="/2020/06/27/PyTorch/" class="leancloud_visitors" data-flag-title="PyTorch基本教程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          <!--
+          
+          -->
+
+          
+            <span class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="字数">
+                  408
+                </span>
+              
+
+              
+
+              
+            </span>
+          
+
+          <!-- 隐藏文章内标题下，内容描述
+          
+          -->
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="PyTorch入门"><a href="#PyTorch入门" class="headerlink" title="PyTorch入门"></a>PyTorch入门</h1><h4 id="为什么使用PyTorch"><a href="#为什么使用PyTorch" class="headerlink" title="为什么使用PyTorch"></a>为什么使用PyTorch</h4><p>PyTorch 是 PyTorch 在 Python 上的衍生. 因为 PyTorch 是一个使用 PyTorch 语言的神经网络库, Torch 很好用, 但是 Lua 又不是特别流行, 所有开发团队将 Lua 的 Torch 移植到了更流行的语言 Python 上. </p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628120613.png" alt="使用PyTorch的使用者"></p>
+<ul>
+<li>与Tensorflow不同的是：<ul>
+<li>Tensorflow先搭建静态流程图然后代入数据进行计算；</li>
+<li>PyTorch边代入数据边构建图；</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="二分分类"><a href="#二分分类" class="headerlink" title="二分分类"></a>二分分类</h4><p>In a binary classification problem,the result is a discrete value output.</p>
+<h5 id="Example：Cat-vs-Non-Cat"><a href="#Example：Cat-vs-Non-Cat" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p>训练目标是训练一个分类器，其输入是由特征向量x表示的图像，并预测相应的标签y是1(这是猫的图像)还是0(这不是猫的图像)。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628161229.png" alt="图像被表示为红绿蓝三个矩阵"></p>
+<p>图像存储在计算机中的三个单独的矩阵中，对应于图像三个矩阵的大小与图像的大小相同，例如，猫的图像的分辨率为 64px * 64px，三个矩阵（RGB）分别为64px * 64px。</p>
+<p>单元格中的值表示像素强度，机器学习中，特征向量表示一个对象，在这种情况下，是猫还是没有猫。若要创建特征向量x，像素强度值将分别表示为“unrol”或“reforme”，输入特征向量的维数 x :</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nx = 64 * 64 * 3 = 12288</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<hr>
+<h4 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h4><p>Logistic回归是一种用于有监督学习二分分类问题的学习算法。logistic回归的目标是使预测值与训练数据之间的误差最小化。</p>
+<h5 id="Example：Cat-vs-Non-Cat-1"><a href="#Example：Cat-vs-Non-Cat-1" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p> 给定一个由特征向量x表示的图像，该算法将评估猫在该图像中的概率。</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="GML"><figure class="iseeu highlight /gml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给定 <span class="symbol">x</span>, 当 <span class="number">0</span>=<<span class="symbol">y</span><=<span class="number">1</span>时，有 <span class="symbol">y</span> = P(<span class="symbol">y</span>=<span class="number">1</span>|<span class="symbol">x</span>)</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p><strong>Logistic回归中使用的参数有：</strong></p>
+<ul>
+<li><p>输入特征向量：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+</li>
+<li><p>训练特征标签：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = 1|0</span><br></pre></td></tr></tbody></table></figure></div>
+</li>
+<li><p>权重：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+</li>
+<li><p>阈值：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b \in R</span><br></pre></td></tr></tbody></table></figure></div>
+</li>
+<li><p>输出: </p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = \sigma(W^Tx+b)</span><br></pre></td></tr></tbody></table></figure></div>
+</li>
+<li><p>Sigmoid函数：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
+
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628165814.png" alt="Sigmoid函数图像"></p>
+<hr>
+<h4 id="logistic-回归函数"><a href="#logistic-回归函数" class="headerlink" title="logistic 回归函数"></a>logistic 回归函数</h4><p>为了训练出 w 和 b ，我们需要定义函数的成本。<br>由上面内容可知：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y' = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
+<p>对于 y’ ，我们想要</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y' \approx y</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>损失函数</strong><br>损失函数测量预测值 y’ 与期望值 y 之间的差异，即损失函数计算单个训练实例的误差：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= (y'^{(i)}-y^{(i)})^2/2</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= -y^{(i)}log(y'^{(i)})+(1-y^{(i)})log(1-y'^{(i)})</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>成本函数</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png" alt></p>
+<p>成本函数是整个训练集的损失函数的平均值，我们要找到使得总成本函数最小化的参数w和b。</p>
+<hr>
+<h4 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><h5 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h5><p>在微积分里面，对多元函数的参数求∂偏导数，把求得的各个参数的偏导数以向量的形式写出来，就是梯度。比如函数f(x,y), 分别对x,y求偏导数，求得的梯度向量就是(∂f/∂x, ∂f/∂y)^T,简称grad f(x,y)或者▽f(x,y)。对于在点(x0,y0)的具体梯度向量就是(∂f/∂x0, ∂f/∂y0)^T.或者▽f(x0,y0)，如果是3个参数的向量梯度，就是(∂f/∂x, ∂f/∂y，∂f/∂z)^T,以此类推。　　　　<br>那么这个梯度向量求出来有什么意义呢？他的意义从几何意义上讲，就是函数变化增加最快的地方。具体来说，对于函数f(x,y),在点(x0,y0)，沿着梯度向量的方向就是(∂f/∂x0, ∂f/∂y0)T的方向是f(x,y)增加最快的地方。或者说，沿着梯度向量的方向，更加容易找到函数的最大值。反过来说，沿着梯度向量相反的方向，也就是 -(∂f/∂x0, ∂f/∂y0)^T的方向，梯度减少最快，也就是更加容易找到函数的最小值。</p>
+<h5 id="梯度下降与梯度上升"><a href="#梯度下降与梯度上升" class="headerlink" title="梯度下降与梯度上升"></a>梯度下降与梯度上升</h5><p>在机器学习算法中，在最小化损失函数时，可以通过梯度下降法来一步步的迭代求解，得到最小化的损失函数，和模型参数值。反过来，如果我们需要求解损失函数的最大值，这时就需要用梯度上升法来迭代了。　　　　<br>梯度下降法和梯度上升法是可以互相转化的。比如我们需要求解损失函数f(θ)的最小值，这时我们需要用梯度下降法来迭代求解。但是实际上，我们可以反过来求解损失函数 -f(θ)的最大值，这时梯度上升法就派上用场了。　　　　</p>
+<h6 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h6><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629192811.png" alt></p>
+<hr>
+<p>未完待续……</p>
+<h4 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h4><p><a href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm" target="_blank" rel="noopener">网易云课堂–吴恩达给你的人工智能第一课</a></p>
+
+
         
-      </div>
-      
-      
+
       
     </div>
+
+      <!-- 相关文章推荐 -->
+     
+          
+
+
+     
+
     
     
     
+
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2020/06/27/PyTorch/">PyTorch基本教程</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 梦屿 的个人博客">梦屿</a></p>
+  <p><span>发布时间:</span>2020年06月27日 - 10:23:55</p>
+  <p><span>最后更新:</span>2020年06月29日 - 19:34:01</p>
+  <p><span>原始链接:</span><a href="/2020/06/27/PyTorch/" title="PyTorch基本教程">http://yexihe-jpg.github.io/2020/06/27/PyTorch/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yexihe-jpg.github.io/2020/06/27/PyTorch/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+    });
+    });
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div class="read-over">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+      <div>
+        <div class="share_reward">
+  <div>坚持原创技术分享，感谢您的支持和鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="梦屿 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="梦屿 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/28/Python%E7%88%AC%E8%99%AB%EF%BC%881%EF%BC%89/" rel="prev" title="Python爬虫（1）">
+                <i class="fa fa-chevron-left"></i> Python爬虫（1）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/18/wx-map/" rel="next" title="微信小程序“一个人，一座城”开发文档">
+                微信小程序“一个人，一座城”开发文档 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+         <div data-weibo-title="分享到微博" data-qq-title="分享到QQ" data-douban-title="分享到豆瓣" class="social-share" data-disabled="qzone,google+,linkedin" data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+   分享到：
+</div>
+
+
+      
+    </div>
   </div>
 
 
@@ -534,6 +696,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80OTQzMS8yNTkyMw=="></div>
+    </div>
+
+  
+
+
 
 
 
@@ -558,8 +729,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1002,6 +1182,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PyTorch入门"><span class="nav-number">1.</span> <span class="nav-text">PyTorch入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么使用PyTorch"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">为什么使用PyTorch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二分分类"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">二分分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Example：Cat-vs-Non-Cat"><span class="nav-number">1.0.0.2.1.</span> <span class="nav-text">Example：Cat vs Non-Cat</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Logistic回归"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">Logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Example：Cat-vs-Non-Cat-1"><span class="nav-number">1.0.0.3.1.</span> <span class="nav-text">Example：Cat vs Non-Cat</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logistic-回归函数"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">logistic 回归函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度下降法"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#梯度"><span class="nav-number">1.0.0.5.1.</span> <span class="nav-text">梯度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#梯度下降与梯度上升"><span class="nav-number">1.0.0.5.2.</span> <span class="nav-text">梯度下降与梯度上升</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#梯度下降法-1"><span class="nav-number">1.0.0.5.2.1.</span> <span class="nav-text">梯度下降法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考教程"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">参考教程</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1229,6 +1425,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

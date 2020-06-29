@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yexihe-jpg.github.io/2020/06/27/PyTorch/</loc>
+    
+    <lastmod>2020-06-29T11:34:01.705Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yexihe-jpg.github.io/about/index.html</loc>
     
     <lastmod>2020-06-28T14:23:40.975Z</lastmod>
