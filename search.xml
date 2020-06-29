@@ -14,11 +14,8 @@
 <h4 id="什么是Flask？"><a href="#什么是Flask？" class="headerlink" title="什么是Flask？"></a>什么是Flask？</h4><p>Flask是一个用Python编写的Web应用程序框架。 它由 Armin Ronacher 开发，他领导一个名为Pocco的国际Python爱好者团队。 Flask基于Werkzeug WSGI工具包和Jinja2模板引擎。两者都是Pocco项目。</p>
 <h4 id="WSGI"><a href="#WSGI" class="headerlink" title="WSGI"></a>WSGI</h4><p>Web Server Gateway Interface（Web服务器网关接口，WSGI）已被用作Python Web应用程序开发的标准。 WSGI是Web服务器和Web应用程序之间通用接口的规范。Werkzeug它是一个WSGI工具包，它实现了请求，响应对象和实用函数。 这使得能够在其上构建web框架。 Flask框架使用Werkzeug作为其基础之一。</p>
 <h4 id="jinja2"><a href="#jinja2" class="headerlink" title="jinja2"></a>jinja2</h4><p>jinja2是Python的一个流行的模板引擎。Web模板系统将模板与特定数据源组合以呈现动态网页。Flask通常被称为微框架。 它旨在保持应用程序的核心简单且可扩展。Flask没有用于数据库处理的内置抽象层，也没有形成验证支持。相反，Flask支持扩展以向应用程序添加此类功能。</p>
-<h3 id="flask应用"><a href="#flask应用" class="headerlink" title="flask应用"></a>flask应用</h3><h4 id="初始化app"><a href="#初始化app" class="headerlink" title="初始化app"></a>初始化app</h4><p>在编辑器中新建hello.py文件，输入以下代码以初始化app：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ELIXIR"><figure class="iseeu highlight /elixir"><table><tbody><tr><td class="code"><pre><span class="line">from flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="variable">@app</span>.route(<span class="string">'/'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span></span>()<span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello World’</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">if __name__ == '</span>__main__<span class="string">':</span></span><br><span class="line"><span class="string">   app.run()</span></span><br></pre></td></tr></tbody></table></figure></div>
-
-<p>Flask构造函数使用当前模块（__name __）的名称作为参数。Flask类的route()函数是一个装饰器，它告诉应用程序哪个URL应该调用相关的函数。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line">app.route(<span class="keyword">rule</span>, <span class="keyword">options</span>)</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="flask应用"><a href="#flask应用" class="headerlink" title="flask应用"></a>flask应用</h3><h4 id="初始化app"><a href="#初始化app" class="headerlink" title="初始化app"></a>初始化app</h4><p>在编辑器中新建hello.py文件，输入以下代码以初始化app：<br></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ELIXIR"><figure class="iseeu highlight /elixir"><table><tbody><tr><td class="code"><pre><span class="line">from flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="variable">@app</span>.route(<span class="string">'/'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span></span>()<span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello World’</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">if __name__ == '</span>__main__<span class="string">':</span></span><br><span class="line"><span class="string">   app.run()</span></span><br></pre></td></tr></tbody></table></figure></div><p></p>
+<p>Flask构造函数使用当前模块（<strong>name </strong>）的名称作为参数。Flask类的route()函数是一个装饰器，它告诉应用程序哪个URL应该调用相关的函数。<br></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line">app.route(<span class="keyword">rule</span>, <span class="keyword">options</span>)</span><br></pre></td></tr></tbody></table></figure></div><p></p>
 <ul>
 <li><strong>rule:</strong> 参数表示与该函数的URL绑定。</li>
 <li><strong>options:</strong> 是要转发给基础Rule对象的参数列表。</li>
@@ -26,17 +23,13 @@
 <p>在上面的示例中，’/ ‘ URL与hello_world()函数绑定。因此，当在浏览器中打开web服务器的主页时，将呈现该函数的输出。最后，Flask类的run()方法在本地开发服务器上运行应用程序。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DOCKERFILE"><figure class="iseeu highlight /dockerfile"><table><tbody><tr><td class="code"><pre><span class="line">app.<span class="keyword">run</span><span class="bash">(host, port, debug, options)</span></span><br></pre></td></tr></tbody></table></figure></div>
 <ul>
-<li><p><strong>host:</strong> 要监听的主机名。 默认为127.0.0.1（localhost）。设置为“0.0.0.0”以使服务器在外部可用;</p>
-</li>
-<li><p><strong>post:</strong> 默认值为5000；</p>
-</li>
-<li><p><strong>debug:</strong> 默认为false。 如果设置为true，则提供调试信息;</p>
-</li>
+<li><strong>host:</strong> 要监听的主机名。 默认为127.0.0.1（localhost）。设置为“0.0.0.0”以使服务器在外部可用;</li>
+<li><strong>post:</strong> 默认值为5000；</li>
+<li><strong>debug:</strong> 默认为false。 如果设置为true，则提供调试信息;</li>
 <li><p><strong>options:</strong> 要转发到底层的Werkzeug服务器。</p>
 <h4 id="Flask路由"><a href="#Flask路由" class="headerlink" title="Flask路由"></a>Flask路由</h4></li>
 <li><p>Flask中的route()装饰器用于将URL绑定到函数。例如：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="RUBY"><figure class="iseeu highlight /ruby"><table><tbody><tr><td class="code"><pre><span class="line">@app.route(‘/hello’)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> ‘hello world’</span><br></pre></td></tr></tbody></table></figure></div>
-
 </li>
 </ul>
 <p>在这里，URL ‘/ hello’ 规则绑定到hello_world()函数。 因此，如果用户访问http：// localhost：5000 / hello URL，hello_world()函数的输出将在浏览器中呈现。</p>
@@ -44,9 +37,7 @@
 <li>application对象的add_url_rule()函数也可用于将URL与函数绑定：<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="RUBY"><figure class="iseeu highlight /ruby"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">   <span class="keyword">return</span> ‘hello world’</span><br><span class="line">app.add_url_rule(‘/’, ‘hello’, hello_world)</span><br></pre></td></tr></tbody></table></figure></div>
 <h4 id="Flask变量规则"><a href="#Flask变量规则" class="headerlink" title="Flask变量规则"></a>Flask变量规则</h4></li>
 </ul>
-<p>通过向规则参数添加变量部分，可以动态构建URL。此变量部分标记为<variable-name>。它作为关键字参数传递给与规则相关联的函数。</variable-name></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/hello/<name>'</span>)</span><br><span class="line">def hello_name(<span class="type">name</span>):</span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello %s!'</span> % <span class="type">name</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(<span class="keyword">debug</span> = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div>
-<p>在上述代码中，，route()装饰器的规则参数包含附加到URL ‘/hello’的<name>。因此，如果在浏览器中输入<a href="http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。" target="_blank" rel="noopener">http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。</a></name></p>
+<p>通过向规则参数添加变量部分，可以动态构建URL。此变量部分标记为<variable-name>。它作为关键字参数传递给与规则相关联的函数。<br></variable-name></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/hello/<name>'</span>)</span><br><span class="line">def hello_name(<span class="type">name</span>):</span><br><span class="line">   <span class="keyword">return</span> <span class="string">'Hello %s!'</span> % <span class="type">name</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(<span class="keyword">debug</span> = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div><br>在上述代码中，，route()装饰器的规则参数包含附加到URL ‘/hello’的<name>。因此，如果在浏览器中输入<a href="http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。" target="_blank" rel="noopener">http://localhost:5000/hello/myblog作为URL，则'myblog'将作为参数提供给hello()函数。</a><p></p>
 <h4 id="Flask-HTTP方法"><a href="#Flask-HTTP方法" class="headerlink" title="Flask HTTP方法"></a>Flask HTTP方法</h4><p>Http协议是万维网中数据通信的基础。在该协议中定义了从指定URL检索数据的不同方法:</p>
 <ul>
 <li><p><strong>GET:</strong> 以未加密的形式将数据发送到服务器。最常见的方法。</p>
@@ -55,20 +46,13 @@
 </li>
 <li><p><strong>POST:</strong> 用于将HTML表单数据发送到服务器。POST方法接收的数据不由服务器缓存。    </p>
 </li>
-<li><p><strong>PUT:</strong> 用上传的内容替换目标资源的所有当前表示。    </p>
-</li>
-<li><p><strong>DELETE:</strong> 删除由URL给出的目标资源的所有当前表示。<br>默认情况下，Flask路由响应GET请求。但是，可以通过为route()装饰器提供方法参数来更改此首选项。接下来演示一下在URL路由中使用POST方法：<br>新建一个login.html文件:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XML"><figure class="iseeu highlight /xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line">   <span class="tag"><<span class="name">body</span>></span></span><br><span class="line">      </span><br><span class="line">      <span class="tag"><<span class="name">form</span> <span class="attr">action</span> = <span class="string">"http://localhost:5000/login"</span> <span class="attr">method</span> = <span class="string">"post"</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span>Enter Name:<span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"text"</span> <span class="attr">name</span> = <span class="string">"nm"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"submit"</span> <span class="attr">value</span> = <span class="string">"submit"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">      <span class="tag"></<span class="name">form</span>></span></span><br><span class="line">      </span><br><span class="line">   <span class="tag"></<span class="name">body</span>></span></span><br><span class="line"><span class="tag"></<span class="name">html</span>></span></span><br></pre></td></tr></tbody></table></figure></div>
-<p>python中使用以下脚本：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="OXYGENE"><figure class="iseeu highlight /oxygene"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask import Flask, redirect, url_for, request</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/success/<name>'</span>)</span><br><span class="line">def success(name):</span><br><span class="line">   return <span class="string">'welcome %s'</span> % name</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/login'</span>,methods = [<span class="string">'POST'</span>, <span class="string">'GET'</span>])</span><br><span class="line">def login():</span><br><span class="line">   <span class="keyword">if</span> request<span class="function">.<span class="keyword">method</span> == '<span class="title">POST</span>':</span></span><br><span class="line">      user = request.form[<span class="string">'nm'</span>]</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      user = request.args.get(<span class="string">'nm'</span>)</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(debug = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div>
-
+<li><strong>PUT:</strong> 用上传的内容替换目标资源的所有当前表示。    </li>
+<li><strong>DELETE:</strong> 删除由URL给出的目标资源的所有当前表示。<br>默认情况下，Flask路由响应GET请求。但是，可以通过为route()装饰器提供方法参数来更改此首选项。接下来演示一下在URL路由中使用POST方法：<br>新建一个login.html文件:<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XML"><figure class="iseeu highlight /xml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line">   <span class="tag"><<span class="name">body</span>></span></span><br><span class="line">      </span><br><span class="line">      <span class="tag"><<span class="name">form</span> <span class="attr">action</span> = <span class="string">"http://localhost:5000/login"</span> <span class="attr">method</span> = <span class="string">"post"</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span>Enter Name:<span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"text"</span> <span class="attr">name</span> = <span class="string">"nm"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">         <span class="tag"><<span class="name">p</span>></span><span class="tag"><<span class="name">input</span> <span class="attr">type</span> = <span class="string">"submit"</span> <span class="attr">value</span> = <span class="string">"submit"</span> /></span><span class="tag"></<span class="name">p</span>></span></span><br><span class="line">      <span class="tag"></<span class="name">form</span>></span></span><br><span class="line">      </span><br><span class="line">   <span class="tag"></<span class="name">body</span>></span></span><br><span class="line"><span class="tag"></<span class="name">html</span>></span></span><br></pre></td></tr></tbody></table></figure></div>
+python中使用以下脚本：<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="OXYGENE"><figure class="iseeu highlight /oxygene"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask import Flask, redirect, url_for, request</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/success/<name>'</span>)</span><br><span class="line">def success(name):</span><br><span class="line">   return <span class="string">'welcome %s'</span> % name</span><br><span class="line"></span><br><span class="line">@app.route(<span class="string">'/login'</span>,methods = [<span class="string">'POST'</span>, <span class="string">'GET'</span>])</span><br><span class="line">def login():</span><br><span class="line">   <span class="keyword">if</span> request<span class="function">.<span class="keyword">method</span> == '<span class="title">POST</span>':</span></span><br><span class="line">      user = request.form[<span class="string">'nm'</span>]</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">      user = request.args.get(<span class="string">'nm'</span>)</span><br><span class="line">      return redirect(url_for(<span class="string">'success'</span>,name = user))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   app.run(debug = <span class="keyword">True</span>)</span><br></pre></td></tr></tbody></table></figure></div>
 </li>
 </ul>
-<p>在浏览器中打开login.html，在文本字段中输入name，然后单击提交；<br>表单数据将POST到表单标签的action子句中的URL。<a href="http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：" target="_blank" rel="noopener">http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：</a></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">user</span> <span class="title">= request</span>.form['nm']</span><br></pre></td></tr></tbody></table></figure></div>
-
-<p>在login.html中将方法参数更改为’GET’，然后在浏览器中再次打开它。服务器上接收的数据是通过GET方法获得的。通过以下的步骤获得’nm’参数的值：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">User</span> <span class="title">= request</span>.args.get(‘nm’)</span><br></pre></td></tr></tbody></table></figure></div>
+<p>在浏览器中打开login.html，在文本字段中输入name，然后单击提交；<br>表单数据将POST到表单标签的action子句中的URL。<a href="http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：" target="_blank" rel="noopener">http://localhost/login映射到login()函数。由于服务器通过POST方法接收数据，因此通过以下步骤获得从表单数据获得的“nm”参数的值：</a><br></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">user</span> <span class="title">= request</span>.form['nm']</span><br></pre></td></tr></tbody></table></figure></div><p></p>
+<p>在login.html中将方法参数更改为’GET’，然后在浏览器中再次打开它。服务器上接收的数据是通过GET方法获得的。通过以下的步骤获得’nm’参数的值：<br></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">User</span> <span class="title">= request</span>.args.get(‘nm’)</span><br></pre></td></tr></tbody></table></figure></div><p></p>
 <h4 id="Flask-Request对象"><a href="#Flask-Request对象" class="headerlink" title="Flask Request对象"></a>Flask Request对象</h4><p>来自客户端网页的数据作为全局请求对象发送到服务器。为了处理请求数据，应该从Flask模块导入。<br>    Request对象的重要属性如下所列：<br><strong>Form</strong> - 它是一个字典对象，包含表单参数及其值的键和值对。<br><strong>args</strong> - 解析查询字符串的内容，它是问号（？）之后的URL的一部分。<br><strong>Cookies</strong>  - 保存Cookie名称和值的字典对象。<br><strong>files</strong> - 与上传文件有关的数据。<br><strong>method</strong> - 当前请求方法。</p>
 <h3 id="bootstrap-flask简介"><a href="#bootstrap-flask简介" class="headerlink" title="bootstrap_flask简介"></a>bootstrap_flask简介</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask import Flask, request, jsonify</span><br><span class="line">import os</span><br><span class="line"><span class="keyword">from</span> api.v1 import config</span><br><span class="line"><span class="keyword">from</span> flask_bootstrap import Bootstrap</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)Bootstrap(app)</span><br><span class="line">app.config.from_object(config)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    app.<span class="builtin-name">run</span>()</span><br></pre></td></tr></tbody></table></figure></div>
 <h4 id="定义块内容"><a href="#定义块内容" class="headerlink" title="定义块内容"></a>定义块内容</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tbody><tr><td class="code"><pre><span class="line"><span class="template-tag">{% <span class="name"><span class="name">extends</span></span> 'bootstrap/base.html' %}</span><span class="xml">  #声明继承</span></span><br><span class="line"><span class="template-tag">{% <span class="name">import</span> '_macro.html' <span class="keyword">as</span> ui %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> title %}</span><span class="template-variable">{{ title_name }}</span><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> content %}</span></span><br><span class="line"><span class="xml">    <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-header"</span>></span></span></span><br><span class="line"><span class="xml">        <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span></span><br><span class="line"><span class="xml">            <span class="tag"><<span class="name">h1</span>></span></span><span class="template-variable">{{ self.title() }}</span><span class="xml"><span class="tag"></<span class="name">h1</span>></span></span></span><br><span class="line"><span class="xml">        <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="xml">    <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="xml">    <span class="tag"><<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>></span></span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{  ui.input('username') }}</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{  ui.input('password',type='password') }}</span></span><br><span class="line"><span class="xml">    <span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> content %}</span></span><br><span class="line"></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">block</span></span> head %}</span></span><br><span class="line"><span class="xml">    </span><span class="template-variable">{{ super() }}</span></span><br><span class="line"><span class="xml">    </span><span class="template-tag">{% <span class="name"><span class="name">include</span></span> 'includes/_head.html' %}</span></span><br><span class="line"><span class="template-tag">{% <span class="name"><span class="name">endblock</span></span> %}</span></span><br></pre></td></tr></tbody></table></figure></div>
@@ -84,13 +68,13 @@
 <ul>
 <li><h5 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h5>最后附上本人移动互联网开发新闻管理后台源码（转载请备注来源）<br><a href="myflask.zip">链接</a></li>
 </ul>
-</body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="https://thelighter.github.io/2020/05/17/flask-emoji/">flask如何在mysql中储存emoji表情</a></li></ul></div>]]></content>
+</name></body></html><div><h1>推荐文章<span style="font-size:0.45em; color:gray">（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</span></h1><ul><li><a href="https://thelighter.github.io/2020/05/17/flask-emoji/">flask如何在mysql中储存emoji表情</a></li></ul></div>]]></content>
       <categories>
         <category>程序语言</category>
       </categories>
       <tags>
-        <tag>flask</tag>
         <tag>python</tag>
+        <tag>flask</tag>
         <tag>web</tag>
       </tags>
   </entry>
@@ -142,48 +126,38 @@
 <h4 id="二分分类"><a href="#二分分类" class="headerlink" title="二分分类"></a>二分分类</h4><p>In a binary classification problem,the result is a discrete value output.</p>
 <h5 id="Example：Cat-vs-Non-Cat"><a href="#Example：Cat-vs-Non-Cat" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p>训练目标是训练一个分类器，其输入是由特征向量x表示的图像，并预测相应的标签y是1(这是猫的图像)还是0(这不是猫的图像)。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628161229.png" alt="图像被表示为红绿蓝三个矩阵"></p>
-<p>图像存储在计算机中的三个单独的矩阵中，对应于图像三个矩阵的大小与图像的大小相同，例如，猫的图像的分辨率为 64px * 64px，三个矩阵（RGB）分别为64px * 64px。</p>
+<p>图像存储在计算机中的三个单独的矩阵中，对应于图像三个矩阵的大小与图像的大小相同，例如，猫的图像的分辨率为 64px <em> 64px，三个矩阵（RGB）分别为64px </em> 64px。</p>
 <p>单元格中的值表示像素强度，机器学习中，特征向量表示一个对象，在这种情况下，是猫还是没有猫。若要创建特征向量x，像素强度值将分别表示为“unrol”或“reforme”，输入特征向量的维数 x :</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">nx = 64 * 64 * 3 = 12288</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<hr>
+<script type="math/tex; mode=display">
+nx = 64 * 64 * 3 = 12288</script><hr>
 <h4 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h4><p>Logistic回归是一种用于有监督学习二分分类问题的学习算法。logistic回归的目标是使预测值与训练数据之间的误差最小化。</p>
 <h5 id="Example：Cat-vs-Non-Cat-1"><a href="#Example：Cat-vs-Non-Cat-1" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p> 给定一个由特征向量x表示的图像，该算法将评估猫在该图像中的概率。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GML"><figure class="iseeu highlight /gml"><table><tbody><tr><td class="code"><pre><span class="line">给定 <span class="symbol">x</span>, 当 <span class="number">0</span>=<<span class="symbol">y</span><=<span class="number">1</span>时，有 <span class="symbol">y</span> = P(<span class="symbol">y</span>=<span class="number">1</span>|<span class="symbol">x</span>)</span><br></pre></td></tr></tbody></table></figure></div>
-
 <p><strong>Logistic回归中使用的参数有：</strong></p>
 <ul>
-<li><p>输入特征向量：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">x \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>输入特征向量：$x \in R^nx           $</p>
 </li>
-<li><p>训练特征标签：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">y = 1|0</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>训练特征标签：$y = 1|0 $</p>
 </li>
-<li><p>权重：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">w \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>权重：$w \in R^nx $</p>
 </li>
-<li><p>阈值：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">b \in R</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>阈值：$b \in R$</p>
 </li>
-<li><p>输出: </p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">y = \sigma(W^Tx+b)</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>输出: $y = \sigma(W^Tx+b)$</p>
 </li>
-<li><p>Sigmoid函数：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">s = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
-
+<li><p>Sigmoid函数：$s = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})$</p>
 </li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628165814.png" alt="Sigmoid函数图像"></p>
 <hr>
 <h4 id="logistic-回归函数"><a href="#logistic-回归函数" class="headerlink" title="logistic 回归函数"></a>logistic 回归函数</h4><p>为了训练出 w 和 b ，我们需要定义函数的成本。<br>由上面内容可知：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">y' = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
-<p>对于 y’ ，我们想要</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">y' \approx y</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>损失函数</strong><br>损失函数测量预测值 y’ 与期望值 y 之间的差异，即损失函数计算单个训练实例的误差：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= (y'^{(i)}-y^{(i)})^2/2</span><br></pre></td></tr></tbody></table></figure></div>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= -y^{(i)}log(y'^{(i)})+(1-y^{(i)})log(1-y'^{(i)})</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>成本函数</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png" alt></p>
+<script type="math/tex; mode=display">
+y' = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</script><p>对于 y’ ，我们想要</p>
+<script type="math/tex; mode=display">
+y' \approx y</script><p><strong>损失函数</strong><br>损失函数测量预测值 y’ 与期望值 y 之间的差异，即损失函数计算单个训练实例的误差：</p>
+<script type="math/tex; mode=display">
+L(y'^{(i)},y^{(i)})= (y'^{(i)}-y^{(i)})^2/2</script><script type="math/tex; mode=display">
+L(y'^{(i)},y^{(i)})= -y^{(i)}log(y'^{(i)})+(1-y^{(i)})log(1-y'^{(i)})</script><p><strong>成本函数</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png" alt></p>
 <p>成本函数是整个训练集的损失函数的平均值，我们要找到使得总成本函数最小化的参数w和b。</p>
 <hr>
 <h4 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><h5 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h5><p>在微积分里面，对多元函数的参数求∂偏导数，把求得的各个参数的偏导数以向量的形式写出来，就是梯度。比如函数f(x,y), 分别对x,y求偏导数，求得的梯度向量就是(∂f/∂x, ∂f/∂y)^T,简称grad f(x,y)或者▽f(x,y)。对于在点(x0,y0)的具体梯度向量就是(∂f/∂x0, ∂f/∂y0)^T.或者▽f(x0,y0)，如果是3个参数的向量梯度，就是(∂f/∂x, ∂f/∂y，∂f/∂z)^T,以此类推。　　　　<br>那么这个梯度向量求出来有什么意义呢？他的意义从几何意义上讲，就是函数变化增加最快的地方。具体来说，对于函数f(x,y),在点(x0,y0)，沿着梯度向量的方向就是(∂f/∂x0, ∂f/∂y0)T的方向是f(x,y)增加最快的地方。或者说，沿着梯度向量的方向，更加容易找到函数的最大值。反过来说，沿着梯度向量相反的方向，也就是 -(∂f/∂x0, ∂f/∂y0)^T的方向，梯度减少最快，也就是更加容易找到函数的最小值。</p>
@@ -191,8 +165,16 @@
 <h6 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h6><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629192811.png" alt></p>
 <hr>
 <p>未完待续……</p>
-<h4 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h4><p><a href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm" target="_blank" rel="noopener">网易云课堂–吴恩达给你的人工智能第一课</a></p>
+<h4 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h4><p><a href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm" target="_blank" rel="noopener">网易云课堂—吴恩达给你的人工智能第一课</a></p>
 </body></html>]]></content>
+      <categories>
+        <category>人工智能</category>
+        <category>程序语言</category>
+      </categories>
+      <tags>
+        <tag>PyTorch</tag>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
     <title>微信小程序“一个人，一座城”开发文档</title>
@@ -309,8 +291,7 @@
 </ul>
 <h5 id="页面设计"><a href="#页面设计" class="headerlink" title="页面设计"></a>页面设计</h5><p><strong>UI：</strong>BootStrap</p>
 <ul>
-<li><p>登录页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120137.png" alt></p>
-</li>
+<li>登录页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120137.png" alt></li>
 <li><p>注册页面：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120319.png" alt></p>
 </li>
 <li><p>首页：<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200618120501.png" alt></p>
@@ -360,7 +341,7 @@
   <entry>
     <title>历史唯物主义</title>
     <url>/2020/06/16/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="历史唯物主义"><a href="#历史唯物主义" class="headerlink" title="历史唯物主义"></a>历史唯物主义</h1><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%8E%86%E5%8F%B2%E5%94%AF%E7%89%A9%E4%B8%BB%E4%B9%89.png" alt></p>
+    <content><![CDATA[<html><head></head><body><h1 id="历史唯物主义"><a href="#历史唯物主义" class="headerlink" title="历史唯物主义"></a>历史唯物主义</h1><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/历史唯物主义.png" alt></p>
 <h2 id="社会规律"><a href="#社会规律" class="headerlink" title="社会规律"></a>社会规律</h2><h3 id="物质基础"><a href="#物质基础" class="headerlink" title="物质基础"></a>物质基础</h3><ul>
 <li><p>社会存在</p>
 <ul>
@@ -394,8 +375,7 @@
 </li>
 <li><p>社会意识</p>
 <ul>
-<li><p>是社会生活的精神方面，是社会存在的反映</p>
-</li>
+<li>是社会生活的精神方面，是社会存在的反映</li>
 <li><p>复杂结构</p>
 <ul>
 <li><p>根据不同主体划分</p>
@@ -432,8 +412,7 @@
 <h3 id="基本规律"><a href="#基本规律" class="headerlink" title="基本规律"></a>基本规律</h3><ul>
 <li><p>第一规律：生产力和生产关系的矛盾运动及其规律</p>
 <ul>
-<li><p>生产力和生产关系不可分割地联系</p>
-</li>
+<li>生产力和生产关系不可分割地联系</li>
 <li><p>生产关系一定要适应生产力状况的规律</p>
 <ul>
 <li>生产力决定生产关系</li>
@@ -444,10 +423,8 @@
 </li>
 <li><p>第二规律：经济基础与上层建筑的矛盾运动及其规律</p>
 <ul>
-<li><p>经济基础是指社会一定发展阶段的生产力所决定的生产关系的总和</p>
-</li>
-<li><p>上层建筑是建立在一定经济基础上的意识形态以及与之相应的制度、组织和设施</p>
-</li>
+<li>经济基础是指社会一定发展阶段的生产力所决定的生产关系的总和</li>
+<li>上层建筑是建立在一定经济基础上的意识形态以及与之相应的制度、组织和设施</li>
 <li><p>经济基础和上层建筑是辩证统一的</p>
 <ul>
 <li>经理基础决定上层建筑，上层建筑反作用于经济基础，二者相互作用，相互影响</li>
@@ -571,8 +548,7 @@
 </li>
 <li><p>实践主体的能力</p>
 <ul>
-<li><p>自然能力</p>
-</li>
+<li>自然能力</li>
 <li><p>精神能力</p>
 <ul>
 <li><p>知识因素</p>
@@ -649,16 +625,12 @@
 </li>
 <li><p>实践是认识发展的动力</p>
 </li>
-<li><p>实践是认识的目的</p>
-</li>
-<li><p>实践是检验真理的唯一标准</p>
-</li>
+<li>实践是认识的目的</li>
+<li>实践是检验真理的唯一标准</li>
 </ul>
 <h2 id="认识论"><a href="#认识论" class="headerlink" title="认识论"></a>认识论</h2><h3 id="认识的本质及特征"><a href="#认识的本质及特征" class="headerlink" title="认识的本质及特征"></a>认识的本质及特征</h3><ul>
-<li><p>认识的本质：主体在实践基础上对客观的能动反映</p>
-</li>
-<li><p>不同派别对认识的本质的回答</p>
-</li>
+<li>认识的本质：主体在实践基础上对客观的能动反映</li>
+<li>不同派别对认识的本质的回答</li>
 <li><p>唯心主义先验论；</p>
 <ul>
 <li>概念：坚持认识的过程是”从思想和感觉到物”</li>
@@ -669,8 +641,7 @@
 </li>
 <li><p>唯物主义反映论:</p>
 <ul>
-<li><p>概念：坚持认识的过程是”从物到思想和感觉”。都认为认识是主体对客体的反映，人的一切知识都是从后天换触实际中得到的</p>
-</li>
+<li>概念：坚持认识的过程是”从物到思想和感觉”。都认为认识是主体对客体的反映，人的一切知识都是从后天换触实际中得到的</li>
 <li><p>直观反映论（旧唯纳主义认识论）</p>
 <ul>
 <li><p>以感性直观为基础，把人的认识看成消板地、被动地反映和接受外界对象，类似照镜子那样的反射活动。</p>
@@ -691,12 +662,9 @@
 </li>
 <li><p>认识的反映特性和创造特性之间的关系：不可分割。</p>
 <ul>
-<li><p>关系:反映和创造不是人类认识的两种不同的本质，而是同一本质的两种不同的功能，是一个硬币的两面。创造离不开反映，存在于反映之中；反映也离不开创造，在创造过程中实现</p>
-</li>
-<li><p>只坚持认识的反映性，看不到认识能动的创造性，就重复走上了旧唯物主义直观反映论的错误之路；</p>
-</li>
-<li><p>只坚持认识能动的创造性,使创造性脱离反映论的前提,就会把创造变成主观随意,从而滑向唯心主义和不可知论。</p>
-</li>
+<li>关系:反映和创造不是人类认识的两种不同的本质，而是同一本质的两种不同的功能，是一个硬币的两面。创造离不开反映，存在于反映之中；反映也离不开创造，在创造过程中实现</li>
+<li>只坚持认识的反映性，看不到认识能动的创造性，就重复走上了旧唯物主义直观反映论的错误之路；</li>
+<li>只坚持认识能动的创造性,使创造性脱离反映论的前提,就会把创造变成主观随意,从而滑向唯心主义和不可知论。</li>
 <li><p>“能动反映论”两个优点：</p>
 <ul>
 <li>一是把实或的观点引入认识论：</li>
@@ -720,8 +688,7 @@
 </li>
 <li><p>理性认识：（认识的高级阶段）</p>
 <ul>
-<li><p>概念、判断、推理</p>
-</li>
+<li>概念、判断、推理</li>
 <li><p>辩证关系</p>
 <ul>
 <li>感性认识有待于发展和深化为理性认识</li>
@@ -826,16 +793,13 @@
 </li>
 </ul>
 <h3 id="真理问题上的辩证法"><a href="#真理问题上的辩证法" class="headerlink" title="真理问题上的辩证法"></a>真理问题上的辩证法</h3><ul>
-<li><p>内涵：任何真理都是绝对性和相对性的统一，是同一客观真理的两种属性</p>
-</li>
+<li>内涵：任何真理都是绝对性和相对性的统一，是同一客观真理的两种属性</li>
 <li><p>两者辩证关系</p>
 <ul>
-<li><p>相互依存</p>
-</li>
+<li>相互依存</li>
 <li><p>相互包含</p>
 <ul>
-<li><p>总体性寓于相对性之中</p>
-</li>
+<li>总体性寓于相对性之中</li>
 <li><p>相对性必然包含并表现着绝对性</p>
 <ul>
 <li>绝对真理和相对真理是不可分的，没有离开绝对真理的相对真理，也没有离开相对真理的绝对真理。</li>
@@ -914,8 +878,7 @@
 </li>
 </ul>
 <h3 id="真理与价值-1"><a href="#真理与价值-1" class="headerlink" title="真理与价值"></a>真理与价值</h3><ul>
-<li><p>价值:在实践基础上形成的主体和客体之间的意义关系,是客体对个人、群体乃至整个社会的生活和活动所有的积极意义</p>
-</li>
+<li>价值:在实践基础上形成的主体和客体之间的意义关系,是客体对个人、群体乃至整个社会的生活和活动所有的积极意义</li>
 <li><p>价值的基本特征:</p>
 <ul>
 <li><p>价值的客观性</p>
@@ -967,14 +930,12 @@
 </li>
 <li><p>核心价值观:最持久、最深层的力量,是全社会共同认可的</p>
 </li>
-<li><p>社会主义核心价值观:回答在我国应该建设什么样的国家,建设什么样的社会,培育什么样的公民的重大问题</p>
-</li>
+<li>社会主义核心价值观:回答在我国应该建设什么样的国家,建设什么样的社会,培育什么样的公民的重大问题</li>
 </ul>
 </li>
 </ul>
 <h2 id="认识世界和改造世界"><a href="#认识世界和改造世界" class="headerlink" title="认识世界和改造世界"></a>认识世界和改造世界</h2><h3 id="相互依赖、相互制约"><a href="#相互依赖、相互制约" class="headerlink" title="相互依赖、相互制约"></a>相互依赖、相互制约</h3><ul>
-<li><p>认识世界有助于改造世界，正确认识世界是有效改造世界的必要前提</p>
-</li>
+<li>认识世界有助于改造世界，正确认识世界是有效改造世界的必要前提</li>
 <li><p>人们只有在改造世界的实践中才能不断深化：拓展对世界的正确认识</p>
 <ul>
 <li>改造主观世界：核心是改造世界观</li>
@@ -1007,10 +968,8 @@
 </li>
 </ul>
 <h3 id="一切从实际出发，实事求是"><a href="#一切从实际出发，实事求是" class="headerlink" title="一切从实际出发，实事求是"></a>一切从实际出发，实事求是</h3><ul>
-<li><p>一切从实际出发是马克思主义认识论的根本要求</p>
-</li>
-<li><p>实事求是是中国共产党思想路线的核心、根本思想方法，工作方法、领导方法和胜利的重要法宝</p>
-</li>
+<li>一切从实际出发是马克思主义认识论的根本要求</li>
+<li>实事求是是中国共产党思想路线的核心、根本思想方法，工作方法、领导方法和胜利的重要法宝</li>
 <li><p>理论创新和实践创新的良性互动</p>
 <ul>
 <li>实践创新为理论创新提供不竭的动力源泉</li>
@@ -1036,13 +995,12 @@
 <p>（2）定义损失函数以及选择反向传播优化的算法；</p>
 <p>（3）生成会话并且在训练数据上反复运行反向传播优化算法。</p>
 <h4 id="神经网络·基本结构"><a href="#神经网络·基本结构" class="headerlink" title="神经网络·基本结构"></a>神经网络·基本结构</h4><p>神经网络由大量神经元组成。每个神经元获得线性组合的输入，经过非线性的激活函数，然后得到非线性的输出。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%871.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%872.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/图片1.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/图片2.png" alt></p>
 <h4 id="神经网络·激活函数"><a href="#神经网络·激活函数" class="headerlink" title="神经网络·激活函数"></a>神经网络·激活函数</h4><p>线性模型的最大特点是任意线性模型的组合仍然是线性模型，只通过线性变换，任意层的全连接神经网络 和单层神经网络没有任何区别，因此非线性是深度学习的重要特性。</p>
 <p>目前TensorFlow提供了 7 种不同的非线性激活函数，常见的有：tf.nn.relu 、tf. sigmoid 和 tf.tanh</p>
 <h4 id="神经网络·softmax"><a href="#神经网络·softmax" class="headerlink" title="神经网络·softmax"></a>神经网络·softmax</h4><p>用于多分类神经网络输出，公式如下：</p>
-<img src="图片3.png">
-
+<p><img src="图片3.png"></p>
 <p>就是如果某一个 zj 大过其他 z, 那这个映射的分量就逼近于 1,其他就逼近于 0，主要应用就是多分类。</p>
 <h4 id="神经网络·优化算法"><a href="#神经网络·优化算法" class="headerlink" title="神经网络·优化算法"></a>神经网络·优化算法</h4><p>神经网络模型的效果和优化的目标是通过代价函数（lost function），也称损失函数来定义的。</p>
 <p>神经网络的优化算法可以分为两个阶段，第一阶段先通过前向传播算法计算得到预测值，计算损失函数。然后在第二阶段通过反向传播算法计算损失函数对每一个参数的梯度，再根据梯度和学习率使用 <strong>梯度下降算法</strong> 更新每一个参数。</p>
@@ -1051,7 +1009,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602120650.png" alt></p>
 <h5 id="卷积神经网络·卷积层"><a href="#卷积神经网络·卷积层" class="headerlink" title="卷积神经网络·卷积层"></a>卷积神经网络·卷积层</h5><p>对图像和滤波矩阵做内积（逐个元素相乘再求和）的操作就是所谓的『<strong>卷积</strong>』操作，也是卷积神经网络的名字来源。卷积的主要目的是为了从输入图像中提取特征。卷积可以 通过从输入的一小块数据中学到图像的特征，并可以保留像素间的空间关系。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602120824.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/%E5%9B%BE%E7%89%874.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/图片4.png" alt></p>
 <h5 id="卷积神经网络·池化层"><a href="#卷积神经网络·池化层" class="headerlink" title="卷积神经网络·池化层"></a>卷积神经网络·池化层</h5><p>池化，简言之，即取区域平均或最大，如下图所示：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602121053.png" alt></p>
 <p>池化有两种： </p>
@@ -1065,8 +1023,6 @@
 <p><strong>例如 MNIST 数字识别实例 ：</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200602121337.png" alt></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="NIX"><figure class="iseeu highlight /nix"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">import</span> tensorflow as tf</span><br><span class="line"><span class="built_in">import</span> tensorflow.examples.tutorials.mnist.input_data as input_data</span><br><span class="line">from tensorflow.python.framework <span class="built_in">import</span> graph_util</span><br><span class="line"></span><br><span class="line"><span class="attr">mnist</span> = input_data.read_data_sets(<span class="string">"MNIST_data"</span>, <span class="attr">one_hot=True)</span>  <span class="comment"># 下载并加载mnist数据</span></span><br><span class="line"><span class="attr">x</span> = tf.placeholder(tf.float32, [None, <span class="number">784</span>], <span class="attr">name='input')</span>  <span class="comment"># 输入的数据占位符</span></span><br><span class="line"><span class="attr">y_</span> = tf.placeholder(tf.float32, <span class="attr">shape=[None,</span> <span class="number">10</span>])  <span class="comment"># 输入的标签占位符</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于初始化所有的权值 W</span></span><br><span class="line">def weight_variable(shape):</span><br><span class="line">    <span class="attr">initial</span> = tf.truncated_normal(shape, <span class="attr">stddev=0.1)</span></span><br><span class="line">    return tf.Variable(initial)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于初始化所有的偏置项 b</span></span><br><span class="line">def bias_variable(shape):</span><br><span class="line">    <span class="attr">initial</span> = tf.constant(<span class="number">0.1</span>, <span class="attr">shape=shape)</span></span><br><span class="line">    return tf.Variable(initial)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于构建卷积层</span></span><br><span class="line">def conv2d(x, W):</span><br><span class="line">    return tf.nn.conv2d(x, W, <span class="attr">strides=[1,</span> <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], <span class="attr">padding='SAME')</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数，用于构建池化层</span></span><br><span class="line">def max_pool(x):</span><br><span class="line">    return tf.nn.max_pool(x, <span class="attr">ksize=[1,</span> <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], <span class="attr">strides=[1,</span> <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], <span class="attr">padding='SAME')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建网络</span></span><br><span class="line"><span class="attr">x_image</span> = tf.reshape(x, [-<span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>])  <span class="comment"># 转换输入数据shape,以便于用于网络中</span></span><br><span class="line"><span class="attr">W_conv1</span> = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">32</span>])</span><br><span class="line"><span class="attr">b_conv1</span> = bias_variable([<span class="number">32</span>])</span><br><span class="line"><span class="attr">h_conv1</span> = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)  <span class="comment"># 第一个卷积层 g(w*x+b)</span></span><br><span class="line"><span class="attr">h_pool1</span> = max_pool(h_conv1)  <span class="comment"># 第一个池化层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_conv2</span> = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">32</span>, <span class="number">64</span>])</span><br><span class="line"><span class="attr">b_conv2</span> = bias_variable([<span class="number">64</span>])</span><br><span class="line"><span class="attr">h_conv2</span> = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)  <span class="comment"># 第二个卷积层</span></span><br><span class="line"><span class="attr">h_pool2</span> = max_pool(h_conv2)  <span class="comment"># 第二个池化层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_fc1</span> = weight_variable([<span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>, <span class="number">1024</span>])</span><br><span class="line"><span class="attr">b_fc1</span> = bias_variable([<span class="number">1024</span>])</span><br><span class="line"><span class="attr">h_pool2_flat</span> = tf.reshape(h_pool2, [-<span class="number">1</span>, <span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>])  <span class="comment"># reshape成向量</span></span><br><span class="line"><span class="attr">h_fc1</span> = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)  <span class="comment"># 第一个全连接层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">keep_prob</span> = tf.placeholder(<span class="string">"float"</span>,<span class="attr">name='keep_prob')</span></span><br><span class="line"><span class="attr">h_fc1_drop</span> = tf.nn.dropout(h_fc1, keep_prob)  <span class="comment"># dropout层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">W_fc2</span> = weight_variable([<span class="number">1024</span>, <span class="number">10</span>])</span><br><span class="line"><span class="attr">b_fc2</span> = bias_variable([<span class="number">10</span>])</span><br><span class="line"><span class="attr">y</span> = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2, <span class="attr">name='y')</span>  <span class="comment"># softmax层</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cross_entropy</span> = -tf.reduce_sum(y_ * tf.log(y))  <span class="comment"># 交叉熵</span></span><br><span class="line"><span class="attr">train_step</span> = tf.train.GradientDescentOptimizer(<span class="number">1</span>e-<span class="number">3</span>).minimize(cross_entropy)  <span class="comment"># 梯度下降法</span></span><br><span class="line"><span class="attr">correct_prediction</span> = tf.equal(tf.argmax(y, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</span><br><span class="line"><span class="attr">accuracy</span> = tf.reduce_mean(tf.cast(correct_prediction, <span class="string">"float"</span>))  <span class="comment"># 精确度计算</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 迭代计算</span></span><br><span class="line"><span class="attr">sess</span> = tf.InteractiveSession()</span><br><span class="line">sess.run(tf.initialize_all_variables())</span><br><span class="line">for i <span class="keyword">in</span> range(<span class="number">40000</span>):</span><br><span class="line">    <span class="attr">batch</span> = mnist.train.next_batch(<span class="number">50</span>)</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">100</span> == <span class="number">0</span>:  <span class="comment"># 训练100次，验证一次</span></span><br><span class="line">        <span class="attr">train_acc</span> = accuracy.eval(<span class="attr">feed_dict={x:</span> batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">1.0</span>})</span><br><span class="line">        print('step %d, training accuracy %g' % (i, train_acc))</span><br><span class="line">        train_step.run(<span class="attr">feed_dict={x:</span> batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">0.5</span>})</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存模型</span></span><br><span class="line"><span class="attr">constant_graph</span> = graph_util.convert_variables_to_constants(sess, sess.graph_def, ['input', 'keep_prob', 'y'])</span><br><span class="line"><span class="keyword">with</span> tf.gfile.FastGFile('pb/mnist.pb', <span class="attr">mode='wb')</span> as f:</span><br><span class="line">    f.write(constant_graph.SerializeToString())</span><br><span class="line">sess.close()</span><br></pre></td></tr></tbody></table></figure></div>
-
-
 </body></html>]]></content>
       <categories>
         <category>人工智能</category>
@@ -1099,8 +1055,7 @@
 <li>不完全性引起的不确定性；</li>
 </ol>
 </li>
-<li><p>可表达性与可利用性</p>
-</li>
+<li>可表达性与可利用性</li>
 </ol>
 <h4 id="知识的表示"><a href="#知识的表示" class="headerlink" title="知识的表示"></a>知识的表示</h4><ul>
 <li>知识表示（knowledge representation）：将人类知识形式化或者模型化；</li>
@@ -1121,18 +1076,19 @@
 <li>确定性规则知识的产生式表达</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151227.png" alt></p>
-<ol start="2">
+<ol>
 <li>不确定性规则知识的产生式表达</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151303.png" alt></p>
-<ol start="3">
+<ol>
 <li>确定性事实性知识的产生式表示</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151504.png" alt></p>
 <p>4.不确定性事实性知识的产生式表示</p>
 <p>  <img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151522.png" alt></p>
 <p><strong>产生式与谓词逻辑中的蕴涵式的区别：</strong><br>（1）除逻辑蕴涵外，产生式还包括各种操作、规则、变换、算子、函数等。例如，“如果炉温超过上限，则立即关闭风门”是一个产生式，但不是蕴含式。<br>（2）蕴涵式只能表示精确知识，而产生式不仅可以表示精确的知识，还可以表示不精确知识。蕴涵式的匹配总要求是精确的。产生式匹配可以是精确的，也可以是不精确的，只要按某种算法求出的相似度落在预先指定的范围内就认为是可匹配的。</p>
-<p>*<em>产生式的形式描述及语义——巴科斯范式BNF（backus normal form）<br>*</em></p>
+<p><strong>产生式的形式描述及语义——巴科斯范式BNF（backus normal form）
+</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531151748.png" alt></p>
 <p>符号“::=”表示“定义为”；符号“|”表示“或者是”；符号“[ ]”表示“可缺省”</p>
 <h4 id="产生式系统"><a href="#产生式系统" class="headerlink" title="产生式系统"></a>产生式系统</h4><p>把一组产生式放在一起，让它们互相配合，协同作用，一个产生式生成的结论可以供另一个产生式作为已知事实使用，以求得问题的解，这样的系统称为产生式系统。<br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200531152247.png" alt></p>
@@ -1268,8 +1224,7 @@
 <li><strong>简单结构：</strong> 早期的操作系统并没有很好的架构，有些甚至没有区分核心态和用户态。导致系统的不稳定性。</li>
 <li><strong>分层方法：</strong>将操作系统分为多个层次，最底层的是硬件(层0),最高层为用户接口（层N),每一层都只是依靠于更底层的功能来实现的，这样形成一个层次化的结构。层次结构的好处是简化了构造和调试，弊端是层次之间藕合性高，层次之间很难界定。另一个问题就是层次结构的效率较低，一个系统调用可能要陷入多个层再返回，增加了很多花销。</li>
 <li><strong>微内核：</strong></li>
-<li><strong>模块：</strong>采用面向对象的特点，将各个功能模块化，每一个模块之间使用接口进行通讯，必要的时候可以将一部分的内容加载到内核中进行操作。它类似于层次结构，但是模块之间没有上下层的依赖关系，模块之间可以相互调用，更加灵活；它类似于微核，但是必要时候会将内容加载到内核中，比微核更有效率。</li>
-<li><em>许多操作系统采用混合结构。*</em><h4 id="2-1-1-微内核"><a href="#2-1-1-微内核" class="headerlink" title="2.1.1 微内核"></a>2.1.1 微内核</h4></li>
+<li><strong>模块：</strong>采用面向对象的特点，将各个功能模块化，每一个模块之间使用接口进行通讯，必要的时候可以将一部分的内容加载到内核中进行操作。它类似于层次结构，但是模块之间没有上下层的依赖关系，模块之间可以相互调用，更加灵活；它类似于微核，但是必要时候会将内容加载到内核中，比微核更有效率。<br><strong>许多操作系统采用混合结构。</strong><h4 id="2-1-1-微内核"><a href="#2-1-1-微内核" class="headerlink" title="2.1.1 微内核"></a>2.1.1 微内核</h4></li>
 <li>实现：将所有非基本部分都从内核中移走，并将它们实现为系统程序或者用户程序。微内核通常包括最小的进程和内存管理以及通信功能。</li>
 <li>主要功能：使客户程序和运行在用户空间的各种服务之间进行通信，通信以消息传递形式进行。</li>
 <li>好处：便于扩充操作系统、容易移植、提供更好的安全性和可靠性。</li>
@@ -1300,7 +1255,6 @@
 <li>操作系统是一组控制和管理计算机硬件和软件资源、合理地对各类作业进行调<br>度，以及方便用户的程序集合。操作系统是用户和计算机的接口，同时也是计算机软件和其他软件的接口。</li>
 </ul>
 <h2 id="1-2-计算机系统的组织"><a href="#1-2-计算机系统的组织" class="headerlink" title="1.2 计算机系统的组织"></a>1.2 计算机系统的组织</h2><h4 id="1-2-1-中断"><a href="#1-2-1-中断" class="headerlink" title="1.2.1 中断"></a>1.2.1 中断</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ANGELSCRIPT"><figure class="iseeu highlight /angelscript"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="number">1</span>)保护断点：即保存下一将要执行的指令的地址，就是把这个地址送入堆栈。</span><br><span class="line">(<span class="number">2</span>)寻找中断入口：根据不同的中断源所产生的中断向量，查找不同的入口地址，入口地址处存放着中断处理程序。</span><br><span class="line">(<span class="number">3</span>)执行中断处理程序。</span><br><span class="line">(<span class="number">4</span>)中断返回：执行完中断指令后，就从中断处返回到主程序，继续执行。</span><br></pre></td></tr></tbody></table></figure></div>
-
 <h4 id="1-2-2-陷阱"><a href="#1-2-2-陷阱" class="headerlink" title="1.2.2 陷阱"></a>1.2.2 陷阱</h4><ul>
 <li>陷阱是一种软件产生的中断，源于程序出错或者源于用户程序的特别请求，完成中断处理后将CPU控制权再交给提出陷阱请求的程序。</li>
 </ul>
@@ -1343,30 +1297,19 @@
     <content><![CDATA[<html><head></head><body><p>OneManager-php是一款强大的OneDrive列表程序，支持的功能比oneindex多，并且支持无服务器一键搭建，支持腾讯SCF服务搭建，基本上能用的搭建方式都支持，而且支持OneDrive商业版、OneDrive个人版和世纪互联版、支持多盘绑定。支持访客上传文件，图床模式，可以让访客上传文件做为图床使用，非常的方便。</p>
 <p>演示地址：<a href="http://cloud.xiheye.club/" target="_blank" rel="noopener">http://cloud.xiheye.club/</a></p>
 <h4 id="注册虚拟主机"><a href="#注册虚拟主机" class="headerlink" title="注册虚拟主机"></a>注册虚拟主机</h4><p><a href="https://www.freela.ml/" target="_blank" rel="noopener">注册链接</a><br>注册后<a href="http://cpanel.freela.ml/index.php" target="_blank" rel="noopener">登录</a>虚拟主机</p>
-<img src="1.png">
-
+<p><img src="1.png"></p>
 <h4 id="下载onemannager"><a href="#下载onemannager" class="headerlink" title="下载onemannager"></a>下载onemannager</h4><p>github  : <a href="https://github.com/qkqpttgf/OneManager-php" target="_blank" rel="noopener">https://github.com/qkqpttgf/OneManager-php</a></p>
 <p>下载地址：<a href="http://cloud.xiheye.club/onemanager/OneManager-php-master.zip" target="_blank" rel="noopener">http://cloud.xiheye.club/onemanager/OneManager-php-master.zip</a></p>
 <h4 id="设置子域名-插件域"><a href="#设置子域名-插件域" class="headerlink" title="设置子域名/插件域"></a>设置子域名/插件域</h4><p>子域名：虚拟主机的根目录域名；<br>插件域：在虚拟主机内产生一个新的文件夹；</p>
-<img src="2.png">
-
+<p><img src="2.png"></p>
 <h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>将刚刚下载的文件上传到虚拟主机域名下的htdocs文件夹并解压<br><img src="3.png"></p>
 <h4 id="安装程序-傻瓜式安装，以下内容可以忽略"><a href="#安装程序-傻瓜式安装，以下内容可以忽略" class="headerlink" title="安装程序(傻瓜式安装，以下内容可以忽略)"></a>安装程序(傻瓜式安装，以下内容可以忽略)</h4><p>打开你的应用程序网站后开始程序安装</p>
-<img src="4.png">
-
+<p><img src="4.png"></p>
 <p>选择中文后点击新建ApiKey进入新打开页面后复制API密钥返回安装页面填入。Set admin password为设置你网盘程序后台的密码。</p>
-<img src="5.png">
-
-
-
-
-
-
-<img src="6.png">
-
+<p><img src="5.png"></p>
+<p><img src="6.png"></p>
 <p>完成安装后进入网盘界面，点击登录并输入上一步自己设置的密码。登录后点击管理—设置进入设置页面。<br>设置页面可以设置各项设置，点击最下方进入添加Onedrive盘</p>
-<img src="7.png">
-
+<p><img src="7.png"></p>
 <p>之后安装教程就结束了，有疑问请在下方评论。</p>
 </body></html>]]></content>
   </entry>
@@ -1379,24 +1322,18 @@
 <p>演示：<a href="http://gethe.best/" target="_blank" rel="noopener">http://gethe.best/</a></p>
 <p>演示1：<a href="https://navigation.yexihe.workers.dev/" target="_blank" rel="noopener">https://navigation.yexihe.workers.dev/</a></p>
 <h4 id="2-申请worker"><a href="#2-申请worker" class="headerlink" title="2. 申请worker"></a>2. 申请worker</h4><p>登录cloudflare之后在左侧即可看到CF-Worker</p>
-<img src="CF-Worker-Dir-1.png">
-
+<p><img src="CF-Worker-Dir-1.png"></p>
 <p>点击进去之后，选择一个子域，具体如图：</p>
-<img src="CF-Worker-Dir-2.png">
-
+<p><img src="CF-Worker-Dir-2.png"></p>
 <p>点击“set up”之后，我们选择免费套餐，如图：</p>
-<img src="CF-Worker-Dir-3.png">
-
+<p><img src="CF-Worker-Dir-3.png"></p>
 <h4 id="3-创建worker"><a href="#3-创建worker" class="headerlink" title="3. 创建worker"></a>3. 创建worker</h4><p>申请好之后，开始创建一个Worker，如图：</p>
-<img src="CF-Worker-Dir-4.png">
-
+<p><img src="CF-Worker-Dir-4.png"></p>
 <p>之后，我们在Worker编辑页面左边粘贴 index.js 中的代码，具体代码如下：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="STATA"><figure class="iseeu highlight /stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  自定义网站配置 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> config = {</span><br><span class="line">  title: <span class="string">"自定义导航"</span>,                 <span class="comment">//write your website title</span></span><br><span class="line">  subtitle: <span class="string">"Cloudflare Workers Dir"</span>, <span class="comment">//write your website subtitle</span></span><br><span class="line">  logo_icon: <span class="string">"sitemap"</span>,               <span class="comment">//select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)</span></span><br><span class="line">  hitokoto: true,                     <span class="comment">//use hitokoto or not</span></span><br><span class="line">  <span class="keyword">search</span>:true,                        <span class="comment">//enable search function</span></span><br><span class="line">  search_engine:[                     <span class="comment">//choose search engine which you use</span></span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"百 度"</span>,</span><br><span class="line">      template:<span class="string">"https://www.baidu.com/s?wd=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"谷 歌"</span>,</span><br><span class="line">      template:<span class="string">"https://www.google.com/search?q=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"必 应"</span>,</span><br><span class="line">      template:<span class="string">"https://www.bing.com/search?q=$s"</span></span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"搜 狗"</span>,</span><br><span class="line">      template:<span class="string">"https://www.sogou.com/web?query=$s"</span></span><br><span class="line">    }</span><br><span class="line">  ],</span><br><span class="line">  selling_ads: true,                  <span class="comment">//Selling your domain or not.(turning on may be helpful for selling this domain by showing some ads.)</span></span><br><span class="line">  sell_info:{</span><br><span class="line">    domain:<span class="string">"example.com"</span>,</span><br><span class="line">    price:500,                        <span class="comment">//domain price</span></span><br><span class="line">    mon_unit:<span class="string">"yen sign"</span>,              <span class="comment">//monetary unit </span></span><br><span class="line">    contact:[                         <span class="comment">//how to contact you</span></span><br><span class="line">      {</span><br><span class="line">        <span class="keyword">type</span>:<span class="string">"envelope"</span>,               <span class="comment">//contact type ("weixin","qq","telegram plane","envelope" or "phone")</span></span><br><span class="line">        content:<span class="string">"info@example.com"</span></span><br><span class="line">      }</span><br><span class="line">    ]                        </span><br><span class="line">  },</span><br><span class="line">  lists: [                            <span class="comment">//Url list</span></span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"技术"</span>,</span><br><span class="line">      icon:<span class="string">"code"</span>,</span><br><span class="line">      <span class="keyword">list</span>:[</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://oschina.net/"</span>,</span><br><span class="line">          name:<span class="string">"开源中国"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://v2ex.com"</span>,</span><br><span class="line">          name:<span class="string">"V2EX"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://csdn.net/"</span>,</span><br><span class="line">          name:<span class="string">"CSDN技术社区"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://github.com/"</span>,</span><br><span class="line">          name:<span class="string">"Github"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">      ]</span><br><span class="line">    },</span><br><span class="line">    {</span><br><span class="line">      name:<span class="string">"学习"</span>,</span><br><span class="line">      icon:<span class="string">"graduation cap"</span>,</span><br><span class="line">      <span class="keyword">list</span>:[</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://w3school.com.cn/"</span>,</span><br><span class="line">          name:<span class="string">"W3school在线教程"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://runoob.com/"</span>,</span><br><span class="line">          name:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://segmentfault.com/"</span>,</span><br><span class="line">          name:<span class="string">"思否社区"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">        {</span><br><span class="line">          url:<span class="string">"https://jianshu.com/"</span>,</span><br><span class="line">          name:<span class="string">"简书"</span>,</span><br><span class="line">          <span class="keyword">desc</span>:<span class="string">"程序员集散地"</span></span><br><span class="line">        },</span><br><span class="line">      ]</span><br><span class="line">    }</span><br><span class="line">  ]</span><br><span class="line">}</span><br><span class="line"><span class="keyword">const</span> el = (tag, attrs, content) => `<<span class="variable">${tag}</span> <span class="variable">${attrs</span>.join(<span class="string">" "</span>)}><span class="variable">${content}</span></<span class="variable">${tag}</span>>`;</span><br><span class="line"></span><br><span class="line">async function handleRequest(request) {</span><br><span class="line">  <span class="keyword">const</span> init = {</span><br><span class="line">    headers: {</span><br><span class="line">      'content-<span class="keyword">type</span>': 'text/html;charset=UTF-8',</span><br><span class="line">    },</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> new Response(renderHTML(renderIndex(),config.selling_ads? renderSeller() :null), init);</span><br><span class="line">}</span><br><span class="line">addEventListener('fetch', event => {</span><br><span class="line">  <span class="keyword">return</span> event.respondWith(handleRequest(event.request))</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">/*通过分析链接 实时获取favicon</span></span><br><span class="line"><span class="comment">* @url 需要分析的Url地址</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">function getFavicon(url){</span><br><span class="line">  <span class="keyword">if</span>(url.<span class="built_in">match</span>(/https{0,1}:\/\<span class="comment">//)){</span></span><br><span class="line">    <span class="comment">//return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"https://www.google.cn/s2/favicons?sz=64&domain_url="</span> + url;</span><br><span class="line">  }<span class="keyword">else</span>{</span><br><span class="line">    <span class="comment">//return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"https://www.google.cn/s2/favicons?sz=64&domain_url=http://"</span> + url;</span><br><span class="line">  } </span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/** Render Functions</span></span><br><span class="line"><span class="comment"> *  渲染模块函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">function renderIndex(){</span><br><span class="line">  <span class="keyword">const</span> footer = <span class="built_in">el</span>('footer',[],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"footer"</span>'],'Powered <span class="keyword">by</span>' + <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"ui label"</span>','href=<span class="string">"https://github.com/sleepwood/cf-worker-dir"</span>','target=<span class="string">"_blank"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"github icon"</span>'],<span class="string">""</span>) + '<span class="keyword">Cf</span>-Worker-<span class="keyword">Dir</span>') + ' &<span class="keyword">copy</span>; Base <span class="keyword">on</span> ' + <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"ui label"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"balance scale icon"</span>'],<span class="string">""</span>) + 'MIT License')));</span><br><span class="line">  <span class="keyword">return</span> renderHeader() + renderMain() + footer;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderHeader(){</span><br><span class="line">  <span class="keyword">const</span> item = (template,name) => <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"item"</span>',`data-url=<span class="string">"${template}"</span>`],name);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> nav = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui large secondary inverted menu"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"item"</span>'],<span class="built_in">el</span>('p',['id=<span class="string">"hitokoto"</span>'],'条条大路通罗马')))</span><br><span class="line">  <span class="keyword">var</span> title = <span class="built_in">el</span>('h1',['<span class="keyword">class</span>=<span class="string">"ui inverted header"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${config.logo_icon} icon"</span>`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],config.title + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"sub header"</span>'],config.subtitle)));</span><br><span class="line">  <span class="keyword">var</span> menu = <span class="built_in">el</span>('div',['id=<span class="string">"sengine"</span>','<span class="keyword">class</span>=<span class="string">"ui bottom attached tabular inverted secondary menu"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"header item"</span>'],'&nbsp;') + config.search_engine.map((link,key) =>{</span><br><span class="line">    <span class="keyword">if</span>(key == 0){</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"active item"</span>',`data-url=<span class="string">"${link.template}"</span>`],link.name);</span><br><span class="line">    }<span class="keyword">else</span>{</span><br><span class="line">      <span class="keyword">return</span> item(link.template,link.name);</span><br><span class="line">    }</span><br><span class="line">  }).join(<span class="string">""</span>))</span><br><span class="line">  <span class="keyword">var</span> <span class="keyword">input</span> = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui left corner labeled right icon fluid large input"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui left corner label"</span>'],<span class="built_in">el</span>('img',['id=<span class="string">"search-fav"</span>','<span class="keyword">class</span>=<span class="string">"left floated avatar ui image"</span>','src=<span class="string">"https://www.baidu.com/favicon.ico"</span>'],<span class="string">""</span>)) + <span class="built_in">el</span>('<span class="keyword">input</span>',['id=<span class="string">"searchinput"</span>','<span class="keyword">type</span>=<span class="string">"search"</span>','placeholder=<span class="string">"搜索你想要知道的……"</span>','autocomplete=<span class="string">"off"</span>'],<span class="string">""</span>) + <span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"inverted circular search link icon"</span>'],<span class="string">""</span>));</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('header',[],<span class="built_in">el</span>('div',['id=<span class="string">"head"</span>','<span class="keyword">class</span>=<span class="string">"ui inverted vertical masthead center aligned segment"</span>'],(config.hitokoto ? <span class="built_in">el</span>('div',['id=<span class="string">"nav"</span>','<span class="keyword">class</span>=<span class="string">"ui container"</span>'],nav) : <span class="string">""</span>) + <span class="built_in">el</span>('div',['id=<span class="string">"title"</span>','<span class="keyword">class</span>=<span class="string">"ui text container"</span>'],title + (config.<span class="keyword">search</span> ? <span class="keyword">input</span> + menu :<span class="string">""</span>) + `<span class="variable">${config</span>.selling_ads ? '<div><a id=<span class="string">"menubtn"</span> <span class="keyword">class</span>=<span class="string">"red ui icon inverted button"</span>><i <span class="keyword">class</span>=<span class="string">"heart icon"</span>></i> 喜欢此域名 </a></div>' : ''}`)))</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderMain() {</span><br><span class="line">  <span class="keyword">var</span> main = config.lists.map((item) => {</span><br><span class="line">    <span class="keyword">const</span> card = (url,name,<span class="keyword">desc</span>)=> <span class="built_in">el</span>('a',['<span class="keyword">class</span>=<span class="string">"card"</span>',`href=<span class="variable">${url}</span>`,'target=<span class="string">"_blank"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],<span class="built_in">el</span>('img',['<span class="keyword">class</span>=<span class="string">"left floated avatar ui image"</span>',`src=<span class="variable">${getFavicon</span>(url)}`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"header"</span>'],name) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"meta"</span>'],<span class="keyword">desc</span>)));</span><br><span class="line">    <span class="keyword">const</span> divider = <span class="built_in">el</span>('h4',['<span class="keyword">class</span>=<span class="string">"ui horizontal divider header"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${item.icon} icon"</span>`],<span class="string">""</span>)+item.name);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> content = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui four stackable cards"</span>'],item.<span class="keyword">list</span>.map((link) =>{</span><br><span class="line">      <span class="keyword">return</span> card(link.url,link.name,link.<span class="keyword">desc</span>);</span><br><span class="line">    }).join(<span class="string">""</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic segment"</span>'],divider + content);</span><br><span class="line">  }).join(<span class="string">""</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('main',[],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui container"</span>'],main));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderSeller() {</span><br><span class="line">  <span class="keyword">const</span> item = (<span class="keyword">type</span>,content) => <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"item"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${type} icon"</span>`],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],content));</span><br><span class="line">  <span class="keyword">var</span> title = <span class="built_in">el</span>('h1',['<span class="keyword">class</span>=<span class="string">"ui yellow dividing header"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"gem outline icon"</span>'],<span class="string">""</span>) + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],config.sell_info.domain + ' 正在出售'));</span><br><span class="line">  <span class="keyword">var</span> action = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"actions"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic cancel inverted button"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"reply icon"</span>'],<span class="string">""</span>) + '返回'));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> contact = config.sell_info.contact.map((<span class="keyword">list</span>) => {</span><br><span class="line">    <span class="keyword">return</span> item(<span class="keyword">list</span>.<span class="keyword">type</span>,<span class="keyword">list</span>.content);</span><br><span class="line">  }).join(<span class="string">""</span>);</span><br><span class="line">  <span class="keyword">var</span> column = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"column"</span>'],<span class="built_in">el</span>('h3',['<span class="keyword">class</span>=<span class="string">"ui center aligned icon inverted header"</span>'],<span class="built_in">el</span>('i',['<span class="keyword">class</span>=<span class="string">"circular envelope open outline grey inverted icon"</span>'],<span class="string">""</span>) + '联系我') + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui relaxed celled large list"</span>'],contact));</span><br><span class="line">  <span class="keyword">var</span> price = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"column"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui large yellow statistic"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"value"</span>'],<span class="built_in">el</span>('i',[`<span class="keyword">class</span>=<span class="string">"${config.sell_info.mon_unit} icon"</span>`],<span class="string">""</span>) + config.sell_info.price)));</span><br><span class="line">  <span class="keyword">var</span> content = <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"content"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui basic segment"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui two column stackable center aligned grid"</span>'],<span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"ui inverted vertical divider"</span>'],'感兴趣？') + <span class="built_in">el</span>('div',['<span class="keyword">class</span>=<span class="string">"middle aligned row"</span>'],price + column))));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">el</span>('div',['id=<span class="string">"seller"</span>','<span class="keyword">class</span>=<span class="string">"ui basic modal"</span>'],title + content + action);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">function renderHTML(index,seller) {</span><br><span class="line">  <span class="keyword">return</span> `<!DOCTYPE html></span><br><span class="line">  <html lang=<span class="string">"en"</span>></span><br><span class="line">  <head></span><br><span class="line">      <<span class="keyword">meta</span> charset=<span class="string">"UTF-8"</span>></span><br><span class="line">      <<span class="keyword">meta</span> name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>></span><br><span class="line">      <<span class="keyword">meta</span> http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>></span><br><span class="line">      <title><span class="variable">${config</span>.title} - <span class="variable">${config</span>.subtitle}</title></span><br><span class="line">      <link href=<span class="string">"https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css"</span> rel=<span class="string">"stylesheet"</span>></span><br><span class="line">      <link href=<span class="string">"https://cdn.jsdelivr.net/gh/sleepwood/cf-worker-dir@0.1.1/style.css"</span> rel=<span class="string">"stylesheet"</span>></span><br><span class="line">      <script src=<span class="string">"https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"</span>></script></span><br><span class="line">      <script src=<span class="string">"https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"</span>></script></span><br><span class="line">  </head></span><br><span class="line">  <body></span><br><span class="line">    <span class="variable">${index}</span></span><br><span class="line">    <span class="variable">${config</span>.selling_ads ? seller : ''}</span><br><span class="line">    <script src=<span class="string">"https://v1.hitokoto.cn/?encode=js&select=%23hitokoto"</span> defer></script></span><br><span class="line">    <script></span><br><span class="line">      $('#sengine a').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">        $('#sengine a.active').toggleClass('active');</span><br><span class="line">        $(<span class="keyword">e</span>.target).toggleClass('active');</span><br><span class="line">        $('#<span class="keyword">search</span>-fav').attr('src',$(<span class="keyword">e</span>.target).data('url').<span class="built_in">match</span>(`+/https{0,1}:\/\/\S+\<span class="comment">//+`)[0] + '/favicon.ico') ;</span></span><br><span class="line">      });</span><br><span class="line">      $('.<span class="keyword">search</span>').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">          <span class="keyword">var</span> url = $('#sengine a.active').data('url');</span><br><span class="line">          url = url.<span class="keyword">replace</span>(`+/\<span class="variable">$s</span>/+`,$('#searchinput').val());</span><br><span class="line">          <span class="keyword">window</span>.<span class="keyword">open</span>(url);</span><br><span class="line">      });</span><br><span class="line">      <span class="comment">/* 鼠标聚焦时，回车事件 */</span></span><br><span class="line">      $(<span class="string">"#searchinput"</span>).bind(<span class="string">"keypress"</span>, function(){</span><br><span class="line">          <span class="keyword">if</span> (event.keyCode == 13){</span><br><span class="line">          <span class="comment">// 触发需要调用的方法</span></span><br><span class="line">          $(<span class="string">".search"</span>).click();</span><br><span class="line">          }</span><br><span class="line">      });</span><br><span class="line">      $('#menubtn').<span class="keyword">on</span>('click', function (<span class="keyword">e</span>) {</span><br><span class="line">          $('#seller').modal('show');</span><br><span class="line">      });</span><br><span class="line">    </script></span><br><span class="line">  </body></span><br><span class="line">  </html>`</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<img src="CF-Worker-Dir-5.png">
-
+<p><img src="CF-Worker-Dir-5.png"></p>
 <p>保存之后，点击右侧的“Preview”看到到效果，如图：</p>
-<img src="CF-Worker-Dir-6.png">
-
+<p><img src="CF-Worker-Dir-6.png"></p>
 <h4 id="4-自定义域名"><a href="#4-自定义域名" class="headerlink" title="4. 自定义域名"></a>4. 自定义域名</h4><ul>
 <li>根据上文快速安装完成，回到域名管理面板</li>
 <li>点击 Workers 进入Workers管理页面</li>
@@ -1413,20 +1350,15 @@
 <li>一个VPS或者Linux虚拟主机（<a href="http://wzfou.com/" target="_blank" rel="noopener">本人使用挖站否的虚机</a>,注册后收藏几篇文章即可拿到30积分换取免费虚机)</li>
 </ol>
 <h4 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h4><h5 id="虚拟主机设置"><a href="#虚拟主机设置" class="headerlink" title="虚拟主机设置"></a>虚拟主机设置</h5><p>登录到后台，，点击“登录到DirectAdmin”登录。</p>
-<img src="1.jpg">
-
+<p><img src="1.jpg"></p>
 <p>进入后选择“文件夹管理”，点击进入“public_html”</p>
-<img src="2.jpg">
-
-
+<p><img src="2.jpg"></p>
 <h5 id="oneindex下载"><a href="#oneindex下载" class="headerlink" title="oneindex下载"></a>oneindex下载</h5><p>某热心老哥的魔改版<a href="https://github.com/newcdn/oneindex" target="_blank" rel="noopener">下载地址</a></p>
 <p>本人自建站<a href="http://xiheye.wzfou.me/oneindex/Oneindex-master.zip" target="_blank" rel="noopener">下载地址</a></p>
 <p>然后我们上传到public_html里面并解压，把oneindex-master里面的东西移出来，像这样:</p>
-<img src="3.jpg">
-
+<p><img src="3.jpg"></p>
 <p>然后进入你在注册主机时用的域名或主机商给你的二级域名，开始进行安装</p>
-<img src="4.jpg">
-
+<p><img src="4.jpg"></p>
 <p>以上就是全部安装教程啦，我们下次再见！</p>
 <h5 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h5><h2 id="OneDrive另类用法-搭建OneIndex"><a href="#OneDrive另类用法-搭建OneIndex" class="headerlink" title="OneDrive另类用法-搭建OneIndex"></a><a href="https://zhuanlan.zhihu.com/p/79678905" target="_blank" rel="noopener">OneDrive另类用法-搭建OneIndex</a></h2><hr>
 <h4 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h4><p>由于挖站否空间的域名莫名其妙挂掉，本人改用 <a href="http://freela.ml/" target="_blank" rel="noopener">http://freela.ml/</a> 的空间</p>

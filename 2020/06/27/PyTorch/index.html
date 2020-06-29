@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="Hexo个人博客,NexT美化优化,程序员,Github Pages,搭建教程,demo,文章排行榜">
+  <meta name="keywords" content="PyTorch,python,">
 
 
 
@@ -104,12 +104,10 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629192811.png">
 <meta property="article:published_time" content="2020-06-27T02:23:55.000Z">
-<meta property="article:modified_time" content="2020-06-29T11:34:01.705Z">
+<meta property="article:modified_time" content="2020-06-29T11:57:47.602Z">
 <meta property="article:author" content="梦屿">
-<meta property="article:tag" content="IT">
-<meta property="article:tag" content="AI">
-<meta property="article:tag" content="程序员">
-<meta property="article:tag" content="博客">
+<meta property="article:tag" content="PyTorch">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628120613.png">
 
@@ -417,6 +415,37 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index">
+                    <span itemprop="name">人工智能</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">程序语言</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -489,48 +518,38 @@
 <h4 id="二分分类"><a href="#二分分类" class="headerlink" title="二分分类"></a>二分分类</h4><p>In a binary classification problem,the result is a discrete value output.</p>
 <h5 id="Example：Cat-vs-Non-Cat"><a href="#Example：Cat-vs-Non-Cat" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p>训练目标是训练一个分类器，其输入是由特征向量x表示的图像，并预测相应的标签y是1(这是猫的图像)还是0(这不是猫的图像)。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628161229.png" alt="图像被表示为红绿蓝三个矩阵"></p>
-<p>图像存储在计算机中的三个单独的矩阵中，对应于图像三个矩阵的大小与图像的大小相同，例如，猫的图像的分辨率为 64px * 64px，三个矩阵（RGB）分别为64px * 64px。</p>
+<p>图像存储在计算机中的三个单独的矩阵中，对应于图像三个矩阵的大小与图像的大小相同，例如，猫的图像的分辨率为 64px <em> 64px，三个矩阵（RGB）分别为64px </em> 64px。</p>
 <p>单元格中的值表示像素强度，机器学习中，特征向量表示一个对象，在这种情况下，是猫还是没有猫。若要创建特征向量x，像素强度值将分别表示为“unrol”或“reforme”，输入特征向量的维数 x :</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nx = 64 * 64 * 3 = 12288</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<hr>
+<script type="math/tex; mode=display">
+nx = 64 * 64 * 3 = 12288</script><hr>
 <h4 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h4><p>Logistic回归是一种用于有监督学习二分分类问题的学习算法。logistic回归的目标是使预测值与训练数据之间的误差最小化。</p>
 <h5 id="Example：Cat-vs-Non-Cat-1"><a href="#Example：Cat-vs-Non-Cat-1" class="headerlink" title="Example：Cat vs Non-Cat"></a>Example：Cat vs Non-Cat</h5><p> 给定一个由特征向量x表示的图像，该算法将评估猫在该图像中的概率。</p>
 <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="GML"><figure class="iseeu highlight /gml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给定 <span class="symbol">x</span>, 当 <span class="number">0</span>=<<span class="symbol">y</span><=<span class="number">1</span>时，有 <span class="symbol">y</span> = P(<span class="symbol">y</span>=<span class="number">1</span>|<span class="symbol">x</span>)</span><br></pre></td></tr></tbody></table></figure></div>
-
 <p><strong>Logistic回归中使用的参数有：</strong></p>
 <ul>
-<li><p>输入特征向量：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>输入特征向量：$x \in R^nx           $</p>
 </li>
-<li><p>训练特征标签：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = 1|0</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>训练特征标签：$y = 1|0 $</p>
 </li>
-<li><p>权重：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w \in R^nx</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>权重：$w \in R^nx $</p>
 </li>
-<li><p>阈值：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b \in R</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>阈值：$b \in R$</p>
 </li>
-<li><p>输出: </p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = \sigma(W^Tx+b)</span><br></pre></td></tr></tbody></table></figure></div>
+<li><p>输出: $y = \sigma(W^Tx+b)$</p>
 </li>
-<li><p>Sigmoid函数：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
-
+<li><p>Sigmoid函数：$s = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})$</p>
 </li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200628165814.png" alt="Sigmoid函数图像"></p>
 <hr>
 <h4 id="logistic-回归函数"><a href="#logistic-回归函数" class="headerlink" title="logistic 回归函数"></a>logistic 回归函数</h4><p>为了训练出 w 和 b ，我们需要定义函数的成本。<br>由上面内容可知：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y' = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</span><br></pre></td></tr></tbody></table></figure></div>
-<p>对于 y’ ，我们想要</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y' \approx y</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>损失函数</strong><br>损失函数测量预测值 y’ 与期望值 y 之间的差异，即损失函数计算单个训练实例的误差：</p>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= (y'^{(i)}-y^{(i)})^2/2</span><br></pre></td></tr></tbody></table></figure></div>
-<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">L(y'^{(i)},y^{(i)})= -y^{(i)}log(y'^{(i)})+(1-y^{(i)})log(1-y'^{(i)})</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>成本函数</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png" alt></p>
+<script type="math/tex; mode=display">
+y' = \sigma(W^Tx+b)=\sigma(z)=1/(1+e^{-z})</script><p>对于 y’ ，我们想要</p>
+<script type="math/tex; mode=display">
+y' \approx y</script><p><strong>损失函数</strong><br>损失函数测量预测值 y’ 与期望值 y 之间的差异，即损失函数计算单个训练实例的误差：</p>
+<script type="math/tex; mode=display">
+L(y'^{(i)},y^{(i)})= (y'^{(i)}-y^{(i)})^2/2</script><script type="math/tex; mode=display">
+L(y'^{(i)},y^{(i)})= -y^{(i)}log(y'^{(i)})+(1-y^{(i)})log(1-y'^{(i)})</script><p><strong>成本函数</strong><br><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629190010.png" alt></p>
 <p>成本函数是整个训练集的损失函数的平均值，我们要找到使得总成本函数最小化的参数w和b。</p>
 <hr>
 <h4 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h4><h5 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h5><p>在微积分里面，对多元函数的参数求∂偏导数，把求得的各个参数的偏导数以向量的形式写出来，就是梯度。比如函数f(x,y), 分别对x,y求偏导数，求得的梯度向量就是(∂f/∂x, ∂f/∂y)^T,简称grad f(x,y)或者▽f(x,y)。对于在点(x0,y0)的具体梯度向量就是(∂f/∂x0, ∂f/∂y0)^T.或者▽f(x0,y0)，如果是3个参数的向量梯度，就是(∂f/∂x, ∂f/∂y，∂f/∂z)^T,以此类推。　　　　<br>那么这个梯度向量求出来有什么意义呢？他的意义从几何意义上讲，就是函数变化增加最快的地方。具体来说，对于函数f(x,y),在点(x0,y0)，沿着梯度向量的方向就是(∂f/∂x0, ∂f/∂y0)T的方向是f(x,y)增加最快的地方。或者说，沿着梯度向量的方向，更加容易找到函数的最大值。反过来说，沿着梯度向量相反的方向，也就是 -(∂f/∂x0, ∂f/∂y0)^T的方向，梯度减少最快，也就是更加容易找到函数的最小值。</p>
@@ -538,7 +557,7 @@
 <h6 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h6><p><img src="https://cdn.jsdelivr.net/gh/yexihe-jpg/image/img/20200629192811.png" alt></p>
 <hr>
 <p>未完待续……</p>
-<h4 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h4><p><a href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm" target="_blank" rel="noopener">网易云课堂–吴恩达给你的人工智能第一课</a></p>
+<h4 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h4><p><a href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm" target="_blank" rel="noopener">网易云课堂—吴恩达给你的人工智能第一课</a></p>
 
 
         
@@ -569,7 +588,7 @@
   <p><span>本文标题:</span><a href="/2020/06/27/PyTorch/">PyTorch基本教程</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 梦屿 的个人博客">梦屿</a></p>
   <p><span>发布时间:</span>2020年06月27日 - 10:23:55</p>
-  <p><span>最后更新:</span>2020年06月29日 - 19:34:01</p>
+  <p><span>最后更新:</span>2020年06月29日 - 19:57:47</p>
   <p><span>原始链接:</span><a href="/2020/06/27/PyTorch/" title="PyTorch基本教程">http://yexihe-jpg.github.io/2020/06/27/PyTorch/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yexihe-jpg.github.io/2020/06/27/PyTorch/" aria-label="复制成功！"></i></span>
   </p>
@@ -640,6 +659,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PyTorch/" rel="tag"> <i class="fa fa-tag"></i> PyTorch</a>
+          
+            <a href="/tags/python/" rel="tag"> <i class="fa fa-tag"></i> python</a>
+          
+        </div>
       
 
       
@@ -780,7 +807,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1212,7 +1239,7 @@
       <h3 class="widget-title">Tag Cloud</h3>
       <div id="myCanvasContainer" class="widget tagcloud">
           <canvas width="250" height="250" id="resCanvas" style="width=100%">
-              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" rel="tag">AI,人工智能导论</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">CNN,深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/" rel="tag">flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onedrive/" rel="tag">onedrive</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oneindex/" rel="tag">oneindex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%81%E6%9C%89%E4%BA%91/" rel="tag">私有云</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E5%BC%80%E5%8F%91/" rel="tag">移动互联网开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/" rel="tag">马克思主义原理</a><span class="tag-list-count">2</span></li></ul>
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%BC%E8%AE%BA/" rel="tag">AI,人工智能导论</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">CNN,深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/" rel="tag">flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onedrive/" rel="tag">onedrive</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oneindex/" rel="tag">oneindex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%81%E6%9C%89%E4%BA%91/" rel="tag">私有云</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E5%BC%80%E5%8F%91/" rel="tag">移动互联网开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/" rel="tag">马克思主义原理</a><span class="tag-list-count">2</span></li></ul>
           </canvas>
       </div>
       </div>
@@ -1829,6 +1856,28 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
